@@ -1,0 +1,521 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel
+END
+SetupDialogManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/SetupDialogManager.cs
+END
+UIComponentCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/UIComponentCollection.cs
+END
+ToolkitFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/44/trunk/Promptu/UIModel/ToolkitFactory.cs
+END
+SkinInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/SkinInfo.cs
+END
+UIWidget.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIWidget.cs
+END
+ListMovedEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ListMovedEventArgs.cs
+END
+ComboBoxColumn.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ComboBoxColumn.cs
+END
+NewUserAction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/NewUserAction.cs
+END
+ItemCode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ItemCode.cs
+END
+UIMenuItemCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/UIMenuItemCollection.cs
+END
+OverwriteOptionExtraInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/promptu/!svn/ver/6/trunk/Promptu/UIModel/OverwriteOptionExtraInfo.cs
+END
+Keyboard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Keyboard.cs
+END
+UIComponent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/UIComponent.cs
+END
+EntryState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/EntryState.cs
+END
+PassthroughUIComponentCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/PassthroughUIComponentCollection.cs
+END
+UITabControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UITabControl.cs
+END
+UIContextMenu.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/UIContextMenu.cs
+END
+UIMessageBoxButtons.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMessageBoxButtons.cs
+END
+UITabPageCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/UITabPageCollection.cs
+END
+OverwriteOption.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/6/trunk/Promptu/UIModel/OverwriteOption.cs
+END
+GuiManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/GuiManager.cs
+END
+KeyboardSnapshot.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/KeyboardSnapshot.cs
+END
+OS.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/OS.cs
+END
+DragDropEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/35/trunk/Promptu/UIModel/DragDropEventArgs.cs
+END
+ObjectEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ObjectEventArgs.cs
+END
+StringRepresentation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/StringRepresentation.cs
+END
+UIMessageBoxResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMessageBoxResult.cs
+END
+NativeUICollectionBinding.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/NativeUICollectionBinding.cs
+END
+UIDialogResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIDialogResult.cs
+END
+HotkeyEvaluationContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/promptu/!svn/ver/23/trunk/Promptu/UIModel/HotkeyEvaluationContext.cs
+END
+HotkeyInUseResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/HotkeyInUseResult.cs
+END
+ItemInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/6/trunk/Promptu/UIModel/ItemInfo.cs
+END
+PartitionedUIContextMenu.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/PartitionedUIContextMenu.cs
+END
+ToolkitImages.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/32/trunk/Promptu/UIModel/ToolkitImages.cs
+END
+MessageSelectedEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/MessageSelectedEventArgs.cs
+END
+NativeUICollectionBridge.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/NativeUICollectionBridge.cs
+END
+NewUserDialogContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/NewUserDialogContext.cs
+END
+SystemFileVisibilitySettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/SystemFileVisibilitySettings.cs
+END
+UIMenuItemInternal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMenuItemInternal.cs
+END
+UIMenuSeparatorInternal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMenuSeparatorInternal.cs
+END
+UpdateAvailableResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/41/trunk/Promptu/UIModel/UpdateAvailableResult.cs
+END
+ToolkitHost.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/ToolkitHost.cs
+END
+GlobalHotkey.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/44/trunk/Promptu/UIModel/GlobalHotkey.cs
+END
+ValidationManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/31/trunk/Promptu/UIModel/ValidationManager.cs
+END
+IUIComponentCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/39/trunk/Promptu/UIModel/IUIComponentCollection.cs
+END
+BindingCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/31/trunk/Promptu/UIModel/BindingCollection.cs
+END
+MoveConflictAction.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/6/trunk/Promptu/UIModel/MoveConflictAction.cs
+END
+ItemCompareEntry.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ItemCompareEntry.cs
+END
+UIMenuItemCollectionBinding.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMenuItemCollectionBinding.cs
+END
+Column.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Column.cs
+END
+UITabPageInternal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UITabPageInternal.cs
+END
+Computer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Computer.cs
+END
+ListDataManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/ListDataManager.cs
+END
+UIDragDropEffects.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIDragDropEffects.cs
+END
+WindowManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/33/trunk/Promptu/UIModel/WindowManager.cs
+END
+TextColumn.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/TextColumn.cs
+END
+UIMessageBoxIcon.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMessageBoxIcon.cs
+END
+ListAddedOrDeletedEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ListAddedOrDeletedEventArgs.cs
+END
+HotkeyState.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/HotkeyState.cs
+END
+ItemCopyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ItemCopyInfo.cs
+END
+PassthroughNativeContextMenu.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/PassthroughNativeContextMenu.cs
+END
+RadioListItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/RadioListItem.cs
+END
+UIMenuItemBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/UIMenuItemBase.cs
+END
+ListDragDropEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/35/trunk/Promptu/UIModel/ListDragDropEventArgs.cs
+END
+SimpleColumnHeader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/27/trunk/Promptu/UIModel/SimpleColumnHeader.cs
+END
+InternationalizedValue.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/InternationalizedValue.cs
+END
+UIMenuItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/39/trunk/Promptu/UIModel/UIMenuItem.cs
+END
+EntryImportance.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/EntryImportance.cs
+END
+UIMenuSeparator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/UIMenuSeparator.cs
+END
+ClipboardCopyData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ClipboardCopyData.cs
+END
+CellAddress.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/CellAddress.cs
+END
+ButtonColumn.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ButtonColumn.cs
+END
+ConflictObjectType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ConflictObjectType.cs
+END
+CellValueEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/CellValueEventArgs.cs
+END
+UIMessageBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/UIMessageBox.cs
+END
+CellEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/CellEventArgs.cs
+END
+CellValidatingEventArgs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/CellValidatingEventArgs.cs
+END
+UITabPage.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/UITabPage.cs
+END
+ClipboardDataFormat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/44/trunk/Promptu/UIModel/ClipboardDataFormat.cs
+END
+ObjectConflictInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/ObjectConflictInfo.cs
+END
+CheckBoxColumn.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/CheckBoxColumn.cs
+END
+TextStyle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/promptu/!svn/ver/39/trunk/Promptu/UIModel/TextStyle.cs
+END
+ToolkitClipboard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/44/trunk/Promptu/UIModel/ToolkitClipboard.cs
+END
+NewProfileStep.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/NewProfileStep.cs
+END
+UIMessageBoxOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/UIMessageBoxOptions.cs
+END
+FlowContainer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/FlowContainer.cs
+END

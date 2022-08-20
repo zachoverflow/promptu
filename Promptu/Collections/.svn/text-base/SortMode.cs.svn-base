@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.Collections
+{
+    internal enum SortMode
+    {
+        Default = 0,
+        Alphabetical = 0,
+        DecendingFromLastAdded
+    }
+}

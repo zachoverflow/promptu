@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{036B07C1-74A8-4ABD-BCE1-3D338FA30746}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZachJohnson.Promptu.WpfUI</RootNamespace>
+    <AssemblyName>Promptu.WpfUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Promptu\bin\Debug\Common\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Promptu\bin\Debug\Common\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Effects">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BulkObservableCollection.cs" />
+    <Compile Include="ClassicSkin\ClassicSkin.cs" />
+    <Compile Include="ClassicSkin\ClassicPrompt.xaml.cs">
+      <DependentUpon>ClassicPrompt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClassicSkin\ClassicSkinFactory.cs" />
+    <Compile Include="ClassicSkin\ClassicSkinInstance.cs" />
+    <Compile Include="Collections\WindowDataExtractions.cs" />
+    <Compile Include="Configuration\CommandEditorSettings.cs" />
+    <Compile Include="Configuration\DataGridSettings.cs" />
+    <Compile Include="Configuration\ErrorPanelSettings.cs" />
+    <Compile Include="Configuration\FileSystemSuggestionEditorSettings.cs" />
+    <Compile Include="Configuration\FunctionEditorSettings.cs" />
+    <Compile Include="Configuration\FunctionInvocationEditorSettings.cs" />
+    <Compile Include="Configuration\FunctionViewerSettings.cs" />
+    <Compile Include="Configuration\ProfileTabSettings.cs" />
+    <Compile Include="Configuration\SetupPanelSettings.cs" />
+    <Compile Include="Configuration\TempObjectSettings.cs" />
+    <Compile Include="Configuration\ValueListEditorSettings.cs" />
+    <Compile Include="Configuration\ValueListSelectorSettings.cs" />
+    <Compile Include="Configuration\WindowSettings.cs" />
+    <Compile Include="Configuration\WpfToolkitSettings.cs" />
+    <Compile Include="DefaultSkin\DefaultLayoutManager.cs" />
+    <Compile Include="DefaultSkin\DefaultProgressInfoBox.xaml.cs">
+      <DependentUpon>DefaultProgressInfoBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSkin\DefaultPrompt.xaml.cs">
+      <DependentUpon>DefaultPrompt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSkin\DefaultTextInfoBox.xaml.cs">
+      <DependentUpon>DefaultTextInfoBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSkin\MouseActionType.cs" />
+    <Compile Include="DefaultSkin\Skin.cs" />
+    <Compile Include="DefaultSkin\DefaultSuggestionProvider.xaml.cs">
+      <DependentUpon>DefaultSuggestionProvider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSkin\SkinInstance.cs" />
+    <Compile Include="DefaultSkin\SkinInstanceFactory.cs" />
+    <Compile Include="DefaultSkin\SuggestionItemWrapper.cs" />
+    <Compile Include="DefaultSkin\WpfConvertedImages.cs" />
+    <Compile Include="Dummy\DummyLayoutManager.cs" />
+    <Compile Include="Dummy\DummyListBox.cs" />
+    <Compile Include="Dummy\DummyPrompt.cs" />
+    <Compile Include="Dummy\DummySkinInstance.cs" />
+    <Compile Include="Dummy\DummyCheckbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dummy\DummyMenuItem.cs" />
+    <Compile Include="Dummy\DummyMenuSeparator.cs" />
+    <Compile Include="Dummy\DummyNotifyIcon.cs" />
+    <Compile Include="Dummy\DummySkin.cs" />
+    <Compile Include="Dummy\DummySkinInstanceFactory.cs" />
+    <Compile Include="Dummy\DummySplashScreen.cs" />
+    <Compile Include="Dummy\DummySuggestionProvider.cs" />
+    <Compile Include="Dummy\DummyToolkitImages.cs" />
+    <Compile Include="ImageSourceWithPadding.cs" />
+    <Compile Include="IReportDragState.cs" />
+    <Compile Include="MainThreadDispatcher.cs" />
+    <Compile Include="OopsTryThatAgainException.cs" />
+    <Compile Include="PointFontSizeConverter.cs" />
+    <Compile Include="StockIconIdentifier.cs" />
+    <Compile Include="StockIconOptions.cs" />
+    <Compile Include="UIComponents\AboutPanel.xaml.cs">
+      <DependentUpon>AboutPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\BooleanSwitchConverter.cs" />
+    <Compile Include="UIComponents\CellValueGetterConverter.cs" />
+    <Compile Include="UIComponents\ColorInverterConverter.cs" />
+    <Compile Include="UIComponents\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\CtrlClickLinkConverter.cs" />
+    <Compile Include="UIComponents\DoubleClickWeakEventManager.cs" />
+    <Compile Include="UIComponents\DoubleRounderConverter.cs" />
+    <Compile Include="UIComponents\FontFamiliesGetter.cs" />
+    <Compile Include="UIComponents\GetPluginsPanel.xaml.cs">
+      <DependentUpon>GetPluginsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\HSVColorSlider.cs" />
+    <Compile Include="UIComponents\GroupingConversionInfoConverter.cs" />
+    <Compile Include="UIComponents\EnumSelectedValueConverter.cs" />
+    <Compile Include="UIComponents\EnumValuesConverter.cs" />
+    <Compile Include="UIComponents\HotkeyBindingWrapper.xaml.cs">
+      <DependentUpon>HotkeyBindingWrapper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\HSVColor.cs" />
+    <Compile Include="UIComponents\IndentConverter.cs" />
+    <Compile Include="UIComponents\InstalledPluginsPanel.xaml.cs">
+      <DependentUpon>InstalledPluginsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\IntCompareConverter.cs" />
+    <Compile Include="UIComponents\IntToVisibilityConverter.cs" />
+    <Compile Include="UIComponents\InvincibleBorder.cs" />
+    <Compile Include="UIComponents\ItemInfoAttributesConverter.cs" />
+    <Compile Include="UIComponents\NullableDoubleConverter.cs" />
+    <Compile Include="UIComponents\NumericUpDown.cs" />
+    <Compile Include="UIComponents\ObjectDisambiguator.xaml.cs">
+      <DependentUpon>ObjectDisambiguator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ObjectImageConverter.cs" />
+    <Compile Include="UIComponents\ObjectNameConverter.cs" />
+    <Compile Include="UIComponents\ObservableCollection.cs" />
+    <Compile Include="UIComponents\OptionsDialog.xaml.cs">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\OptionsLabel.cs" />
+    <Compile Include="UIComponents\OptionsSimplifyingContext.cs" />
+    <Compile Include="UIComponents\OptionsSimplifyingManager.cs" />
+    <Compile Include="UIComponents\OptionsTabPanel.xaml.cs">
+      <DependentUpon>OptionsTabPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\AppearanceTabPanel.xaml.cs">
+      <DependentUpon>AppearanceTabPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ArgumentDialog.xaml.cs">
+      <DependentUpon>ArgumentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ChooseNewOrExistingProfile.xaml.cs">
+      <DependentUpon>ChooseNewOrExistingProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ChooseOverrideOrNewHotkey.xaml.cs">
+      <DependentUpon>ChooseOverrideOrNewHotkey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\CollisionResolvingDialog.xaml.cs">
+      <DependentUpon>CollisionResolvingDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\CommandLink.cs" />
+    <Compile Include="UIComponents\ConditionalVisibilityConverter.cs" />
+    <Compile Include="UIComponents\ConflictObjectAttributesConverter.cs" />
+    <Compile Include="UIComponents\ContactLinkSanitizingConverter.cs" />
+    <Compile Include="UIComponents\ExistingProfile.xaml.cs">
+      <DependentUpon>ExistingProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\FeedbackStartConverter.cs" />
+    <Compile Include="UIComponents\FileSystemParameterSuggestionEditor.xaml.cs">
+      <DependentUpon>FileSystemParameterSuggestionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\FunctionEditor.xaml.cs">
+      <DependentUpon>FunctionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\FunctionInvocationEditor.xaml.cs">
+      <DependentUpon>FunctionInvocationEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\FunctionViewer.xaml.cs">
+      <DependentUpon>FunctionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\HotkeyControl.xaml.cs">
+      <DependentUpon>HotkeyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\HotkeyInUseDialog.xaml.cs">
+      <DependentUpon>HotkeyInUseDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\HotkeyInUseNewHotkey.xaml.cs">
+      <DependentUpon>HotkeyInUseNewHotkey.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ListViewSelectedIndexCollection.cs" />
+    <Compile Include="StandardImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StandardImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Taskbar.cs" />
+    <Compile Include="UIComponents\AssemblyReferenceEditor.xaml.cs">
+      <DependentUpon>AssemblyReferenceEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\BooleanInverter.cs" />
+    <Compile Include="UIComponents\Custom.cs" />
+    <Compile Include="UIComponents\CenteringListBox.cs" />
+    <Compile Include="UIComponents\CollectionEditor.xaml.cs">
+      <DependentUpon>CollectionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\CommandEditor.xaml.cs">
+      <DependentUpon>CommandEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\CompareBinding.cs" />
+    <Compile Include="UIComponents\ConfirmDialog.xaml.cs">
+      <DependentUpon>ConfirmDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\DataGridSelectedCellsBridge.cs" />
+    <Compile Include="UIComponents\DataTemplateAttachments.cs" />
+    <Compile Include="UIComponents\DrawingBrushConverter.cs" />
+    <Compile Include="UIComponents\DrawingBrushConverterExtension.cs" />
+    <Compile Include="UIComponents\ElementResizeSplitter.cs" />
+    <Compile Include="UIComponents\ErrorAdorner.cs" />
+    <Compile Include="UIComponents\ErrorPanel.xaml.cs">
+      <DependentUpon>ErrorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ErrorPanelIndexGetter.cs" />
+    <Compile Include="UIComponents\ErrorPanelDisplayMode.cs" />
+    <Compile Include="UIComponents\GetDrawingExtension.cs" />
+    <Compile Include="UIComponents\GridLengthAnimation.cs" />
+    <Compile Include="UIComponents\HeightDifferenceConverter.cs" />
+    <Compile Include="UIComponents\ImageAndText.cs" />
+    <Compile Include="UIComponents\LeftMarginConverter.cs" />
+    <Compile Include="UIComponents\ListSelector.xaml.cs">
+      <DependentUpon>ListSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\FeedbackTypeConverter.cs" />
+    <Compile Include="UIComponents\NewUserDialog.xaml.cs">
+      <DependentUpon>NewUserDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\NotEqualConverter.cs" />
+    <Compile Include="UIComponents\ConflictObjectTypeConverter.cs" />
+    <Compile Include="UIComponents\OptionsCollectionEditor.xaml.cs">
+      <DependentUpon>OptionsCollectionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\OptionsTemplateSelector.cs" />
+    <Compile Include="UIComponents\OverwriteDialog.xaml.cs">
+      <DependentUpon>OverwriteDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\PasswordBoxAttachments.cs" />
+    <Compile Include="UIComponents\PluginImageConverter.cs" />
+    <Compile Include="UIComponents\PluginsTabPanel.xaml.cs">
+      <DependentUpon>PluginsTabPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\PluginUpdateDialog.xaml.cs">
+      <DependentUpon>PluginUpdateDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProfileAdvanced.xaml.cs">
+      <DependentUpon>ProfileAdvanced.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProfileBasics.xaml.cs">
+      <DependentUpon>ProfileBasics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProfileConfigPanel.xaml.cs">
+      <DependentUpon>ProfileConfigPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProfileFinish.xaml.cs">
+      <DependentUpon>ProfileFinish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProfileTabPanel.xaml.cs">
+      <DependentUpon>ProfileTabPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ProgressColorConverter.cs" />
+    <Compile Include="UIComponents\PromptuOptionsPanel.xaml.cs">
+      <DependentUpon>PromptuOptionsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\LocalizedValueExtension.cs" />
+    <Compile Include="UIComponents\PromptuTextBoxAttachments.cs" />
+    <Compile Include="UIComponents\PromptuWindow.cs" />
+    <Compile Include="UIComponents\PromptuWindowBase.cs" />
+    <Compile Include="UIComponents\RenameDialog.xaml.cs">
+      <DependentUpon>RenameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ResourceGettingConverter.cs" />
+    <Compile Include="UIComponents\RgbHexConverter.cs" />
+    <Compile Include="UIComponents\SaturationConverter.cs" />
+    <Compile Include="UIComponents\SetupDialog.xaml.cs">
+      <DependentUpon>SetupDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\SetupPanel.xaml.cs">
+      <DependentUpon>SetupPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\SimpleCollectionViewer.cs" />
+    <Compile Include="UIComponents\FrameworkElementAttachments.cs" />
+    <Compile Include="UIComponents\SkinImageConverter.cs" />
+    <Compile Include="UIComponents\ImplicitConverterBinding.cs" />
+    <Compile Include="UIComponents\StockIcon.cs" />
+    <Compile Include="UIComponents\SuperTab.cs" />
+    <Compile Include="UIComponents\SuperTabControl.cs" />
+    <Compile Include="UIComponents\TextBoxCueAdorner.cs" />
+    <Compile Include="UIComponents\TextEntryTypeConverter.cs" />
+    <Compile Include="UIComponents\TextValidationRule.cs" />
+    <Compile Include="UIComponents\TypeConverterValueConverter.cs" />
+    <Compile Include="UIComponents\UnhandledExceptionDialog.xaml.cs">
+      <DependentUpon>UnhandledExceptionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\UpdateAvailableDialog.xaml.cs">
+      <DependentUpon>UpdateAvailableDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\UpdateDownloadProgress.xaml.cs">
+      <DependentUpon>UpdateDownloadProgress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ValueListEditor.xaml.cs">
+      <DependentUpon>ValueListEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\ValueListSelectorWindow.xaml.cs">
+      <DependentUpon>ValueListSelectorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\VersionConverter.cs" />
+    <Compile Include="UIComponents\VisibilityConverter.cs" />
+    <Compile Include="UIComponents\WeakEventSetter.cs" />
+    <Compile Include="UIComponents\WeakEventSetterHandlerConverter.cs" />
+    <Compile Include="UIComponents\WeakEventWrapper.cs" />
+    <Compile Include="UIComponents\WindowUtils.cs" />
+    <Compile Include="UIComponents\WpfButton.cs" />
+    <Compile Include="UIComponents\WpfCheckBox.cs" />
+    <Compile Include="UIComponents\WpfCheckBoxButton.cs" />
+    <Compile Include="UIComponents\WpfComboInput.cs" />
+    <Compile Include="UIComponents\WpfContextMenu.cs" />
+    <Compile Include="UIComponents\WpfDialogResult.cs" />
+    <Compile Include="UIComponents\WpfMenuItem.cs" />
+    <Compile Include="UIComponents\WpfMenuSeparator.cs" />
+    <Compile Include="UIComponents\WpfNotifyIcon.cs" />
+    <Compile Include="UIComponents\WpfOpenFileDialog.cs" />
+    <Compile Include="UIComponents\WpfListListBox.cs" />
+    <Compile Include="UIComponents\WpfOptionButton.xaml.cs">
+      <DependentUpon>WpfOptionButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\WpfOptionsProgressBar.xaml.cs">
+      <DependentUpon>WpfOptionsProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\WpfRadioButton.cs" />
+    <Compile Include="UIComponents\WpfSaveFileDialog.cs" />
+    <Compile Include="UIComponents\WpfSplashScreenWindow.xaml.cs">
+      <DependentUpon>WpfSplashScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponents\WpfSplitToolbarButton.cs" />
+    <Compile Include="UIComponents\WpfTabControl.cs" />
+    <Compile Include="UIComponents\WpfTabPage.cs" />
+    <Compile Include="UIComponents\PromptuTextBox.cs" />
+    <Compile Include="UIComponents\WpfToolbarButton.cs" />
+    <Compile Include="Collections\VirtualizingCollection.cs" />
+    <Compile Include="UIComponents\ZeroToOnePercentageConverter.cs" />
+    <Compile Include="WindowsHotkeyHook.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Win32Window.cs" />
+    <Compile Include="WindowDataExtraction.cs" />
+    <Compile Include="WindowLocator.cs" />
+    <Compile Include="WindowsComputer.cs" />
+    <Compile Include="WindowsGlobalHotkey.cs" />
+    <Compile Include="WindowsKeyboard.cs" />
+    <Compile Include="WindowsKeyboardSnapshot.cs" />
+    <Compile Include="WindowsMessages.cs" />
+    <Compile Include="WpfClipboard.cs" />
+    <Compile Include="WpfSplashScreen.cs" />
+    <Compile Include="WpfToolkitFactory.cs" />
+    <Compile Include="WpfToolkitHost.cs" />
+    <Compile Include="WpfToolkitImages.cs" />
+    <Compile Include="WpfInternalUndoManager.cs" />
+    <Compile Include="WpfUtilities.cs" />
+    <Compile Include="WpfWindowManager.cs" />
+    <Compile Include="UIComponents\RTLabel.xaml.cs">
+      <DependentUpon>RTLabel.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StandardImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StandardImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Images\AboutImageOverlay.design" />
+    <None Include="Images\PromptuIcons.design" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Resources\PromptResources.design" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Promptu\Promptu.csproj">
+      <Project>{00A1FCF0-6ABB-499D-803A-A28E5BA45B2B}</Project>
+      <Name>Promptu</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ClassicSkin\ClassicPrompt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DefaultSkin\DefaultProgressInfoBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultSkin\DefaultPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultSkin\DefaultSuggestionProvider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DefaultSkin\DefaultTextInfoBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Images\AboutResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Images\PromptuIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIComponents\AboutPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\GetPluginsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\HotkeyBindingWrapper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\InstalledPluginsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ObjectDisambiguator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\OptionsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\OptionsTabPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Resources\PromptResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIComponents\AppearanceTabPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ArgumentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\AssemblyReferenceEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ChooseNewOrExistingProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ChooseOverrideOrNewHotkey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\CollectionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\CollisionResolvingDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\CommandEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ConfirmDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ErrorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ExistingProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\FileSystemParameterSuggestionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\FunctionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\FunctionInvocationEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\FunctionViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\HotkeyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\HotkeyInUseDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\HotkeyInUseNewHotkey.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ListSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\NewUserDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\OptionsCollectionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\OverwriteDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\PluginsTabPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\PluginUpdateDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ProfileAdvanced.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ProfileBasics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ProfileConfigPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ProfileFinish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ProfileTabPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\PromptuOptionsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\RenameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\SetupDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\SetupPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIComponents\UnhandledExceptionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\UpdateAvailableDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\UpdateDownloadProgress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ValueListEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\ValueListSelectorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\WpfOptionButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\WpfOptionsProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIComponents\WpfSplashScreenWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIComponents\RTLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AboutBackground.jpg" />
+    <Resource Include="Images\AboutResources_Files\**\*.jpg;Images\AboutResources_Files\**\*.jpeg;Images\AboutResources_Files\**\*.png;Images\AboutResources_Files\**\*.bmp;Images\AboutResources_Files\**\*.gif;Images\AboutResources_Files\**\*.tif;Images\AboutResources_Files\**\*.tiff" />
+    <Resource Include="SplashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

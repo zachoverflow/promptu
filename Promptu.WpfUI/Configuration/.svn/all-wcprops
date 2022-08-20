@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration
+END
+TempObjectSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/Configuration/TempObjectSettings.cs
+END
+FunctionEditorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/16/trunk/Promptu.WpfUI/Configuration/FunctionEditorSettings.cs
+END
+DataGridSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/Configuration/DataGridSettings.cs
+END
+ValueListEditorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/16/trunk/Promptu.WpfUI/Configuration/ValueListEditorSettings.cs
+END
+SetupPanelSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/Configuration/SetupPanelSettings.cs
+END
+WpfToolkitSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/WpfToolkitSettings.cs
+END
+FileSystemSuggestionEditorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/FileSystemSuggestionEditorSettings.cs
+END
+CommandEditorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/CommandEditorSettings.cs
+END
+FunctionInvocationEditorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/FunctionInvocationEditorSettings.cs
+END
+WindowSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/WindowSettings.cs
+END
+FunctionViewerSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/FunctionViewerSettings.cs
+END
+ProfileTabSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/ProfileTabSettings.cs
+END
+ErrorPanelSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/41/trunk/Promptu.WpfUI/Configuration/ErrorPanelSettings.cs
+END
+ValueListSelectorSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/36/trunk/Promptu.WpfUI/Configuration/ValueListSelectorSettings.cs
+END

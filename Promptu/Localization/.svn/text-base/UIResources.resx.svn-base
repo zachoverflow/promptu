@@ -1,0 +1,1700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ImportOrLinkDialogFilter" xml:space="preserve">
+    <value>Promptu Package (*.pdc)|*.pdc</value>
+  </data>
+  <data name="ImportOrLinkDialogTitleForAppend" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="ImportOrLinkDialogTitleForLink" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="ImportText" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="ImportToolTip" xml:space="preserve">
+    <value>Import a list to your collection of lists.
+Promptu will not synchronize changes.</value>
+  </data>
+  <data name="ArgumentDialogInstructions" xml:space="preserve">
+    <value>Enter _arguments:</value>
+  </data>
+  <data name="ArgumentDialogText" xml:space="preserve">
+    <value>Arguments</value>
+  </data>
+  <data name="ArgumentsFeedbackLocation" xml:space="preserve">
+    <value>Arguments</value>
+  </data>
+  <data name="AssemblyReferenceCountPluralFormat" xml:space="preserve">
+    <value>{0} assembly references</value>
+  </data>
+  <data name="AssemblyReferenceCountSingularFormat" xml:space="preserve">
+    <value>{0} assembly reference</value>
+  </data>
+  <data name="AssemblyReferenceTypeName" xml:space="preserve">
+    <value>assembly reference</value>
+  </data>
+  <data name="BackButtonText" xml:space="preserve">
+    <value>_Back</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CollisionResolvingDialogMainInstructions" xml:space="preserve">
+    <value>There is a conflict between your changes and someone else's changes to the shared list</value>
+  </data>
+  <data name="CollisionResolvingDialogSubTextFormat" xml:space="preserve">
+    <value>Click on the {0} you want to keep</value>
+  </data>
+  <data name="CollisionResolvingDialogText" xml:space="preserve">
+    <value>Promptu</value>
+  </data>
+  <data name="CommandCountPluralFormat" xml:space="preserve">
+    <value>{0} commands</value>
+  </data>
+  <data name="CommandCountSingularFormat" xml:space="preserve">
+    <value>{0} command</value>
+  </data>
+  <data name="CommandDetailsArgumentsFormat" xml:space="preserve">
+    <value>Arguments: {0}</value>
+  </data>
+  <data name="CommandDetailsExecutionPathFormat" xml:space="preserve">
+    <value>Target: {0}</value>
+  </data>
+  <data name="CommandDetailsRunAsAdministratorFormat" xml:space="preserve">
+    <value>Run as administrator: {0}</value>
+  </data>
+  <data name="CommandDetailsShowParameterHistoryFormat" xml:space="preserve">
+    <value>Show parameter history: {0}</value>
+  </data>
+  <data name="CommandDetailsStartingWindowStateFormat" xml:space="preserve">
+    <value>Startup state: {0}</value>
+  </data>
+  <data name="CommandDetailsStartupDirectoryFormat" xml:space="preserve">
+    <value>Working directory: {0}</value>
+  </data>
+  <data name="CommandListSelectorLabelText" xml:space="preserve">
+    <value>Lists</value>
+  </data>
+  <data name="CommandTypeName" xml:space="preserve">
+    <value>command</value>
+  </data>
+  <data name="ConfirmExitCollisionResolvingDialog" xml:space="preserve">
+    <value>Are you sure you want to exit?  (All remaining conflicts will be resolved to your changes)</value>
+  </data>
+  <data name="ContextDeleteText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="ContextRenameText" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="ContextUnpublishText" xml:space="preserve">
+    <value>Unpublish</value>
+  </data>
+  <data name="ContextUnpublishToolTip" xml:space="preserve">
+    <value>Unpublishes the selected list.</value>
+  </data>
+  <data name="ContextUnsubscribeText" xml:space="preserve">
+    <value>Unsubscribe</value>
+  </data>
+  <data name="ContextUnsubscribeToolTip" xml:space="preserve">
+    <value>Stop the selected list from receiving changes.</value>
+  </data>
+  <data name="CreateNewProfile" xml:space="preserve">
+    <value>Create new profile</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="DeleteListToolTip" xml:space="preserve">
+    <value>Delete the selected list.</value>
+  </data>
+  <data name="DescriptionColumnHeader" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DoThisForTheNextConflictFormat" xml:space="preserve">
+    <value>Do this for the next conflict</value>
+  </data>
+  <data name="DoThisForAllRemainingConflicts" xml:space="preserve">
+    <value>Do this for all remaining conflicts</value>
+  </data>
+  <data name="ExecutesFeedbackLocation" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="ExportText" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportToolTip" xml:space="preserve">
+    <value>Export the selected list as a Promptu package.
+Promptu will not synchronize changes.</value>
+  </data>
+  <data name="ExternallySharedReference" xml:space="preserve">
+    <value>[Reference is from a package]</value>
+  </data>
+  <data name="FunctionCountPluralFormat" xml:space="preserve">
+    <value>{0} functions</value>
+  </data>
+  <data name="FunctionCountSingularFormat" xml:space="preserve">
+    <value>{0} function</value>
+  </data>
+  <data name="FunctionDetailsAssemblyReferenceNameFormat" xml:space="preserve">
+    <value>Assembly: {0}</value>
+  </data>
+  <data name="FunctionDetailsClassFormat" xml:space="preserve">
+    <value>Class: {0}</value>
+  </data>
+  <data name="FunctionDetailsMethodFormat" xml:space="preserve">
+    <value>Method: {0}</value>
+  </data>
+  <data name="FunctionDetailsParameterCountFormat" xml:space="preserve">
+    <value>Parameter count: {0}</value>
+  </data>
+  <data name="FunctionTypeName" xml:space="preserve">
+    <value>function</value>
+  </data>
+  <data name="SlickRunImportDialogFilter" xml:space="preserve">
+    <value>SlickRun MagicWords (*.qrs)|*.qrs</value>
+  </data>
+  <data name="SlickRunImportDialogTitle" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="SlickRunImportText" xml:space="preserve">
+    <value>Import from SlickRun</value>
+  </data>
+  <data name="SlickRunImportToolTip" xml:space="preserve">
+    <value>Import a SlickRun *.qrs file as a Promptu list.</value>
+  </data>
+  <data name="LinkText" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="LinkToolTip" xml:space="preserve">
+    <value>Add a shared list to your collection of lists and automatically synchronize changes.</value>
+  </data>
+  <data name="ListLocationFormat" xml:space="preserve">
+    <value>Location: '{0}'</value>
+  </data>
+  <data name="ListNotShared" xml:space="preserve">
+    <value>Not Shared</value>
+  </data>
+  <data name="ListShared" xml:space="preserve">
+    <value>Shared</value>
+  </data>
+  <data name="LocationText" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="MoveListDownToolTip" xml:space="preserve">
+    <value>Move the selected list lower in priority.</value>
+  </data>
+  <data name="MoveListUpToolTip" xml:space="preserve">
+    <value>Move the selected list higher in priority.</value>
+  </data>
+  <data name="NewListToolTip" xml:space="preserve">
+    <value>Create a new, empty list.</value>
+  </data>
+  <data name="NotPresentInList" xml:space="preserve">
+    <value>Not present in list</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>_OK</value>
+  </data>
+  <data name="ParameterCountFormatPlural" xml:space="preserve">
+    <value>{0} parameters</value>
+  </data>
+  <data name="ParameterCountFormatSingular" xml:space="preserve">
+    <value>{0} parameter</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PublishDialogFilter" xml:space="preserve">
+    <value>Promptu Package (*.pdc)|*.pdc</value>
+  </data>
+  <data name="PublishDialogTitleForExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="PublishDialogTitleForPublish" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="PublishListText" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="PublishListToolTip" xml:space="preserve">
+    <value>Publish the selected list so others can use it.
+Promptu will automatically synchronize changes.</value>
+  </data>
+  <data name="RenameDialogMainInstuctions" xml:space="preserve">
+    <value>_Enter a new name</value>
+  </data>
+  <data name="RenameDialogInstuctionsForNewProfile" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="RenameDialogTextForNewProfile" xml:space="preserve">
+    <value>Profile Name</value>
+  </data>
+  <data name="RenameListToolTip" xml:space="preserve">
+    <value>Rename the selected list.</value>
+  </data>
+  <data name="SuggesterDeleteItemText" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="SuggesterEditItemText" xml:space="preserve">
+    <value>_Edit</value>
+  </data>
+  <data name="SyncErrorListEntry" xml:space="preserve">
+    <value>{0}: </value>
+  </data>
+  <data name="SyncErrorMessageHeaderPlural" xml:space="preserve">
+    <value>The following errors occurred:</value>
+  </data>
+  <data name="SyncErrorMessageHeaderSingular" xml:space="preserve">
+    <value>The following error occurred:</value>
+  </data>
+  <data name="SyncToolTip" xml:space="preserve">
+    <value>Synchronize all linked/published lists.</value>
+  </data>
+  <data name="UnpublishToolTip" xml:space="preserve">
+    <value>Unpublish
+Unpublishes the selected list.</value>
+  </data>
+  <data name="UnsubscribeToolTip" xml:space="preserve">
+    <value>Stop the selected list from synchronizing changes.</value>
+  </data>
+  <data name="UseExistingProfile" xml:space="preserve">
+    <value>Use existing profile</value>
+  </data>
+  <data name="UseExistingProfileInstuctions" xml:space="preserve">
+    <value>Select a profile:</value>
+  </data>
+  <data name="WelcomeSceenText" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="WelcomeScreenInstructions" xml:space="preserve">
+    <value>Choose an option:</value>
+  </data>
+  <data name="WelcomeScreenTitle" xml:space="preserve">
+    <value>Welcome to Promptu!</value>
+  </data>
+  <data name="ConflictingChangeAlsoDeletesNotificationText" xml:space="preserve">
+    <value>The conflicting change requires the removal of your:</value>
+  </data>
+  <data name="YourChangeAlsoDeletesNotificationText" xml:space="preserve">
+    <value>Your change requires the removal of the incoming:</value>
+  </data>
+  <data name="CommandSetupPanelNewToolTip" xml:space="preserve">
+    <value>Create a new command.</value>
+  </data>
+  <data name="CommandSetupPanelDeleteToolTip" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CommandSetupPanelEditToolTip" xml:space="preserve">
+    <value>Edit the currently selected command(s)</value>
+  </data>
+  <data name="ListSynchronizeTimestampFormat" xml:space="preserve">
+    <value>Last sync: {0}</value>
+  </data>
+  <data name="ListSynchronizeTimestampToStringFormat" xml:space="preserve">
+    <value>ddd d MMM yyyy h:mm tt</value>
+  </data>
+  <data name="SkinNodeText" xml:space="preserve">
+    <value>Skin</value>
+  </data>
+  <data name="SuggesterNodeText" xml:space="preserve">
+    <value>Suggestion Provider</value>
+  </data>
+  <data name="PromptNodeText" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="SetupPanelContextDeleteItemText" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="SetupPanelContextEditItemText" xml:space="preserve">
+    <value>_Edit</value>
+  </data>
+  <data name="ExitPromptu" xml:space="preserve">
+    <value>E&amp;xit Promptu</value>
+  </data>
+  <data name="LockedProfileDialogText" xml:space="preserve">
+    <value>Locked Profile</value>
+  </data>
+  <data name="LockedProfileMainInstructions" xml:space="preserve">
+    <value>Your profile is currently being used by "{0}"</value>
+  </data>
+  <data name="NewProfileSetupDialogNameInstructions" xml:space="preserve">
+    <value>Please enter a name for your profile:</value>
+  </data>
+  <data name="NewProfileSetupDialogText" xml:space="preserve">
+    <value>Create New Promptu Profile</value>
+  </data>
+  <data name="NextButtonText" xml:space="preserve">
+    <value>_Next</value>
+  </data>
+  <data name="SelectedProfileLockedMessage" xml:space="preserve">
+    <value>"{0}" is unabled to be used because it is currently in use by "{1}".</value>
+  </data>
+  <data name="ConfirmExitCreateNewProfileDialog" xml:space="preserve">
+    <value>Are you sure you want to cancel creating the new profile?</value>
+  </data>
+  <data name="FinishButtonText" xml:space="preserve">
+    <value>_Finish</value>
+  </data>
+  <data name="NewProfileFurtherInstructions" xml:space="preserve">
+    <value>You can further configure your profile, add commands, and manage your lists in the setup dialog.  
+
+The setup dialog can be accessed using the "setup" command or from the right click context menu of the tray icon.
+
+After you click "Finish", pressing the hotkey combination you specified ({0}) will open the prompt where you type commands.  When you start typing in the prompt, Promptu will suggest based on the contents of your lists and your usage history.  After you find the command you want, press "Enter" and Promptu will execute that command.
+
+For more help, type "help" in the prompt or visit www.PromptuLauncher.com</value>
+  </data>
+  <data name="DisableButtonToolTip" xml:space="preserve">
+    <value>Disable the selected list.</value>
+  </data>
+  <data name="EnableButtonToolTip" xml:space="preserve">
+    <value>Enable the selected list.</value>
+  </data>
+  <data name="ContextDisableText" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="ContextDisableToolTip" xml:space="preserve">
+    <value>Disable the selected list.</value>
+  </data>
+  <data name="ContextEnableText" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="ContextEnableToolTip" xml:space="preserve">
+    <value>Enable the selected list.</value>
+  </data>
+  <data name="CommandEditorGuessWorkingDirectory" xml:space="preserve">
+    <value>_Guess the working directory based on your command's target</value>
+  </data>
+  <data name="UnableToLoadProfile" xml:space="preserve">
+    <value>Unable to load the profile '{0}'.</value>
+  </data>
+  <data name="UnabletoLoadProfileDialogText" xml:space="preserve">
+    <value>Profile Load Error</value>
+  </data>
+  <data name="ListHasAlreadyBeenAdded" xml:space="preserve">
+    <value>The list cannot be added because it is already present as '{0}'.</value>
+  </data>
+  <data name="SynchronizationComplete" xml:space="preserve">
+    <value>Synchronization complete.</value>
+  </data>
+  <data name="ListSearchOrderToolTip" xml:space="preserve">
+    <value>Higher lists take precedence over lower ones.
+If there are duplicate commands in lower lists, they will not be used.</value>
+  </data>
+  <data name="CommandEditorDropperToolTip" xml:space="preserve">
+    <value>Click and drag the dropper over a program's window to get the program's path.</value>
+  </data>
+  <data name="OrphanedAssemblyReference" xml:space="preserve">
+    <value>[Reference is orphaned]</value>
+  </data>
+  <data name="ConfirmExitPromptu" xml:space="preserve">
+    <value>Are you sure you want to exit Promptu?</value>
+  </data>
+  <data name="ValueListCountPluralFormat" xml:space="preserve">
+    <value>{0} value lists</value>
+  </data>
+  <data name="ValueListCountSingularFormat" xml:space="preserve">
+    <value>{0} value list</value>
+  </data>
+  <data name="ValueListValueAlreadyExists" xml:space="preserve">
+    <value>Error: The value '{0}' is already specified.</value>
+  </data>
+  <data name="ValueListDetailsItemsText" xml:space="preserve">
+    <value>Items:</value>
+  </data>
+  <data name="ValueListDetailsNoItems" xml:space="preserve">
+    <value>No items.</value>
+  </data>
+  <data name="ValueListDetailsUseItemTranslationsFormat" xml:space="preserve">
+    <value>Value translation enabled: {0}</value>
+  </data>
+  <data name="ValueListDetailsUseNamespaceInterpretationFormat" xml:space="preserve">
+    <value>Namespace interpretation enabled: {0}</value>
+  </data>
+  <data name="ValueListTypeName" xml:space="preserve">
+    <value>value list</value>
+  </data>
+  <data name="CommandParameterMetaInfoLabelText" xml:space="preserve">
+    <value>Parameters Information:</value>
+  </data>
+  <data name="ToolTipsNodeText" xml:space="preserve">
+    <value>ToolTips</value>
+  </data>
+  <data name="ValueListNamespaceHelp" xml:space="preserve">
+    <value>If checked, Promptu will interpret dots "." 
+in your values as namespace separators.</value>
+  </data>
+  <data name="ValueListTranslationHelp" xml:space="preserve">
+    <value>If checked, a "Translation value" column appears
+and Promptu will substitute the corresponding 
+translation when your value is requested.</value>
+  </data>
+  <data name="DefaultListText" xml:space="preserve">
+    <value>Default list</value>
+  </data>
+  <data name="DefaultListToolTip" xml:space="preserve">
+    <value>Create a new list populated with the default items.</value>
+  </data>
+  <data name="EmptyListText" xml:space="preserve">
+    <value>Empty list</value>
+  </data>
+  <data name="EmptyListToolTip" xml:space="preserve">
+    <value>Create a new, empty list.</value>
+  </data>
+  <data name="StartupDirectoryFeedbackLocation" xml:space="preserve">
+    <value>Working directory</value>
+  </data>
+  <data name="NotesNodeText" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="NoListsMessage" xml:space="preserve">
+    <value>No lists.  Use the buttons on the left to add a list.</value>
+  </data>
+  <data name="ConfirmIgnoreHotkey" xml:space="preserve">
+    <value>Are you sure you want to use Promptu without a working hotkey?</value>
+  </data>
+  <data name="ValueListValuesAlreadyExist" xml:space="preserve">
+    <value>Error: One or more values could not be pasted because they are already specified.</value>
+  </data>
+  <data name="UnhandledExceptionHeading" xml:space="preserve">
+    <value>An error occurred...</value>
+  </data>
+  <data name="UnhandledExceptionText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AltKeyText" xml:space="preserve">
+    <value>_Alt</value>
+  </data>
+  <data name="CtrlKeyText" xml:space="preserve">
+    <value>_Ctrl</value>
+  </data>
+  <data name="DefaultHotkeyTitle" xml:space="preserve">
+    <value>Hotkey</value>
+  </data>
+  <data name="ShiftKeyText" xml:space="preserve">
+    <value>_Shift</value>
+  </data>
+  <data name="WinKeyText" xml:space="preserve">
+    <value>_Windows</value>
+  </data>
+  <data name="HotkeyEnabledText" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="OverrideHotkeyText" xml:space="preserve">
+    <value>Override if already used</value>
+  </data>
+  <data name="IconAboutText" xml:space="preserve">
+    <value>_About</value>
+  </data>
+  <data name="IconCreateNewCommandInText" xml:space="preserve">
+    <value>Create new _command in...</value>
+  </data>
+  <data name="IconCreateNewCommandText" xml:space="preserve">
+    <value>Create new _command</value>
+  </data>
+  <data name="IconHelpText" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="IconOpenPromptText" xml:space="preserve">
+    <value>_Open prompt</value>
+  </data>
+  <data name="IconQuitText" xml:space="preserve">
+    <value>_Quit</value>
+  </data>
+  <data name="IconSetupText" xml:space="preserve">
+    <value>_Setup</value>
+  </data>
+  <data name="IconToolTipFormat" xml:space="preserve">
+    <value>Promptu ({0})</value>
+  </data>
+  <data name="UnableToMapHotkeyText" xml:space="preserve">
+    <value>hotkey could not be mapped</value>
+  </data>
+  <data name="CopyMenuItemText" xml:space="preserve">
+    <value>_Copy</value>
+  </data>
+  <data name="CutMenuItemText" xml:space="preserve">
+    <value>Cu_t</value>
+  </data>
+  <data name="PasteMenuItemText" xml:space="preserve">
+    <value>_Paste</value>
+  </data>
+  <data name="AssemblyNameColumnHeaderText" xml:space="preserve">
+    <value>Assembly name</value>
+  </data>
+  <data name="AssemblyPathColumnHeaderText" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditButtonText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="NewButtonText" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="AssemblyReferenceNameColumnHeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="AssemblyReferenceEditorText" xml:space="preserve">
+    <value>Assembly Reference Editor</value>
+  </data>
+  <data name="AssemblyReferenceNameLabelText" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="AssemblyReferencePathBrowserFilter" xml:space="preserve">
+    <value>Assemblies|*.dll;*.exe</value>
+  </data>
+  <data name="AssemblyReferencePathBrowserTitle" xml:space="preserve">
+    <value>Browse for Assembly</value>
+  </data>
+  <data name="AssemblyReferencePathLabelText" xml:space="preserve">
+    <value>_Path:</value>
+  </data>
+  <data name="BrowseButtonText" xml:space="preserve">
+    <value>_Browse...</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddParameterToolTip" xml:space="preserve">
+    <value>Add a new parameter.</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteParameterToolTip" xml:space="preserve">
+    <value>Delete the selected parameter.</value>
+  </data>
+  <data name="FollowingErrorsOccurred" xml:space="preserve">
+    <value>The following errors occurred:</value>
+  </data>
+  <data name="FunctionAssemblyHeaderText" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="FunctionClassHeaderText" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="FunctionEditorAssemblyLabelText" xml:space="preserve">
+    <value>Assembly:</value>
+  </data>
+  <data name="FunctionEditorClassLabelText" xml:space="preserve">
+    <value>Class:</value>
+  </data>
+  <data name="FunctionEditorMethodLabelText" xml:space="preserve">
+    <value>Method:</value>
+  </data>
+  <data name="FunctionEditorNameLabelText" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="FunctionEditorReturnsLabelText" xml:space="preserve">
+    <value>Return:</value>
+  </data>
+  <data name="FunctionEditorTestButtonText" xml:space="preserve">
+    <value>Test Function</value>
+  </data>
+  <data name="FunctionEditorText" xml:space="preserve">
+    <value>Function Editor</value>
+  </data>
+  <data name="FunctionMethodHeaderText" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="FunctionNameHeaderText" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="FunctionParameterPanelText" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="FunctionParameterPanelValueTypeHeaderText" xml:space="preserve">
+    <value>Value type</value>
+  </data>
+  <data name="MoveParameterDownToolTip" xml:space="preserve">
+    <value>Move the selected parameter down in position.</value>
+  </data>
+  <data name="MoveParameterUpToolTip" xml:space="preserve">
+    <value>Move the selected parameter up in position.</value>
+  </data>
+  <data name="PasteNewRows" xml:space="preserve">
+    <value>Paste new row(s)</value>
+  </data>
+  <data name="ShowHistoryColumnHeaderText" xml:space="preserve">
+    <value>Show history</value>
+  </data>
+  <data name="SuggestionModeColumnHeaderText" xml:space="preserve">
+    <value>Suggestion mode</value>
+  </data>
+  <data name="SuggestionModeFileSystem" xml:space="preserve">
+    <value>File system</value>
+  </data>
+  <data name="SuggestionModeFunctionReturn" xml:space="preserve">
+    <value>Function return value</value>
+  </data>
+  <data name="SuggestionModeNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="SuggestionModeValueList" xml:space="preserve">
+    <value>Value list</value>
+  </data>
+  <data name="StringArrayDataType" xml:space="preserve">
+    <value>String array (String[])</value>
+  </data>
+  <data name="StringDataType" xml:space="preserve">
+    <value>String</value>
+  </data>
+  <data name="ValueListContentsHeaderText" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="ValueListContentsPanelText" xml:space="preserve">
+    <value>Contents</value>
+  </data>
+  <data name="ValueListContentsTranslationHeaderText" xml:space="preserve">
+    <value>Translation value</value>
+  </data>
+  <data name="ValueListContentsValueHeaderText" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="ValueListDataType" xml:space="preserve">
+    <value>ValueList</value>
+  </data>
+  <data name="ValueListEditorNameLabelText" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="ValueListEditorNamespaceText" xml:space="preserve">
+    <value>Use namespace _interpretation</value>
+  </data>
+  <data name="ValueListEditorText" xml:space="preserve">
+    <value>Value List Editor</value>
+  </data>
+  <data name="ValueListEditorTranslationText" xml:space="preserve">
+    <value>Enable value _translation</value>
+  </data>
+  <data name="ValueListNameHeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ValueListNamespaceInterpretationHeaderText" xml:space="preserve">
+    <value>Namespace interpretation</value>
+  </data>
+  <data name="ValueListTranslationHeaderText" xml:space="preserve">
+    <value>Value translation</value>
+  </data>
+  <data name="ValueListSelectorMessage" xml:space="preserve">
+    <value>Select a value list</value>
+  </data>
+  <data name="ValueListSelectorText" xml:space="preserve">
+    <value>Value Lists</value>
+  </data>
+  <data name="ErrorListCaption" xml:space="preserve">
+    <value>Error List</value>
+  </data>
+  <data name="ErrorPluralFormat" xml:space="preserve">
+    <value>{0} Errors</value>
+  </data>
+  <data name="ErrorSingularFormat" xml:space="preserve">
+    <value>{0} Error</value>
+  </data>
+  <data name="MessagePluralFormat" xml:space="preserve">
+    <value>{0} Messages</value>
+  </data>
+  <data name="MessageSingularFormat" xml:space="preserve">
+    <value>{0} Message</value>
+  </data>
+  <data name="WarningPluralFormat" xml:space="preserve">
+    <value>{0} Warnings</value>
+  </data>
+  <data name="WarningSingularFormat" xml:space="preserve">
+    <value>{0} Warning</value>
+  </data>
+  <data name="AboutTabText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AppearanceTabText" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="CommandEditorArgumentsLabelText" xml:space="preserve">
+    <value>_Arguments:</value>
+  </data>
+  <data name="CommandEditorExecutesLabelText" xml:space="preserve">
+    <value>_Target:</value>
+  </data>
+  <data name="CommandEditorNameLabelText" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="CommandEditorNotesLabelText" xml:space="preserve">
+    <value>Not_es:</value>
+  </data>
+  <data name="CommandEditorRunAsAdminText" xml:space="preserve">
+    <value>_Run as administrator</value>
+  </data>
+  <data name="CommandEditorShowParamHistory" xml:space="preserve">
+    <value>Show parameter _history</value>
+  </data>
+  <data name="CommandEditorStartingWindowStateLabelText" xml:space="preserve">
+    <value>Startup _state:</value>
+  </data>
+  <data name="CommandEditorStartupDirectoryLabelText" xml:space="preserve">
+    <value>Working _directory:</value>
+  </data>
+  <data name="CommandEditorTestButtonText" xml:space="preserve">
+    <value>Test _command</value>
+  </data>
+  <data name="CommandEditorText" xml:space="preserve">
+    <value>Command Editor</value>
+  </data>
+  <data name="CommandEditorViewAvailableFunctionsText" xml:space="preserve">
+    <value>_View available functions</value>
+  </data>
+  <data name="CommandParameterInfoAddToolTip" xml:space="preserve">
+    <value>Add a new parameter entry.</value>
+  </data>
+  <data name="CommandParameterInfoDeleteToolTip" xml:space="preserve">
+    <value>Delete the selected parameter entry.</value>
+  </data>
+  <data name="CommandParameterInfoDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="CommandParameterInfoMessage" xml:space="preserve">
+    <value>No parameter information specified.  Click 'Add' to add information about a parameter.</value>
+  </data>
+  <data name="CommandParameterInfoMoveDownToolTip" xml:space="preserve">
+    <value>Move the selected parameter entry lower in priority.</value>
+  </data>
+  <data name="CommandParameterInfoMoveUpToolTip" xml:space="preserve">
+    <value>Move the selected parameter entry higher in priority.</value>
+  </data>
+  <data name="CommandParameterInfoNumberOrRange" xml:space="preserve">
+    <value>Parameter(s)</value>
+  </data>
+  <data name="CommandParameterInfoShowHistory" xml:space="preserve">
+    <value>Show history</value>
+  </data>
+  <data name="CommandParameterInfoSuggestionMode" xml:space="preserve">
+    <value>Suggestion mode</value>
+  </data>
+  <data name="CommandParameterInfoText" xml:space="preserve">
+    <value>Parameter information</value>
+  </data>
+  <data name="CommandSetupPanelArgumentsHeader" xml:space="preserve">
+    <value>Arguments</value>
+  </data>
+  <data name="CommandSetupPanelExecutesHeader" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="CommandSetupPanelNameHeader" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CommandSetupPanelNotesHeader" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="FileSystemParameterMainInstructions" xml:space="preserve">
+    <value>_Enter a filter expression:</value>
+  </data>
+  <data name="FileSystemSuggestionEditorFilterLocation" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FileSystemSuggestionEditorText" xml:space="preserve">
+    <value>File System Suggestion Editor</value>
+  </data>
+  <data name="FunctionInvocationEditorMessage" xml:space="preserve">
+    <value>_Enter an expression that uses a function returning a String[] or ValueList:</value>
+  </data>
+  <data name="FunctionInvocationEditorText" xml:space="preserve">
+    <value>Function Invocation Editor</value>
+  </data>
+  <data name="FunctionViewerFunctionHeader" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="FunctionViewerListFromHeader" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="FunctionViewerText" xml:space="preserve">
+    <value>Available Functions</value>
+  </data>
+  <data name="MultipleFilterHint" xml:space="preserve">
+    <value>You can separate multiple filters using the "|" character.
+If you would like a filter to not show files that match it, place a "!" at its beginning.
+You can use a "!" by itself to hide all files (and only show folders).</value>
+  </data>
+  <data name="OptionsTabText" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ProfileTabText" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="SetupDialogText" xml:space="preserve">
+    <value>Promptu Setup</value>
+  </data>
+  <data name="StartingWindowStateMaximized" xml:space="preserve">
+    <value>Maximized</value>
+  </data>
+  <data name="StartingWindowStateMinimized" xml:space="preserve">
+    <value>Minimized</value>
+  </data>
+  <data name="StartingWindowStateNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ConflictingChangeLabelText" xml:space="preserve">
+    <value>Conflicting change:</value>
+  </data>
+  <data name="YourChangeLabelText" xml:space="preserve">
+    <value>Your change:</value>
+  </data>
+  <data name="AssemblyReferencesTabText" xml:space="preserve">
+    <value>Assembly references</value>
+  </data>
+  <data name="CommandsTabText" xml:space="preserve">
+    <value>Commands</value>
+  </data>
+  <data name="FunctionsTabText" xml:space="preserve">
+    <value>Functions</value>
+  </data>
+  <data name="SlickRunNameExpansionFormat" xml:space="preserve">
+    <value>From SlickRun{+}</value>
+  </data>
+  <data name="ValueListsTabText" xml:space="preserve">
+    <value>Value lists</value>
+  </data>
+  <data name="DownloadProgressDialogText" xml:space="preserve">
+    <value>Update Download Progress</value>
+  </data>
+  <data name="AdvancedOptionsTabText" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="BasicOptionsTabText" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="PromptuPromptHotkey" xml:space="preserve">
+    <value>Promptu Prompt Hotkey</value>
+  </data>
+  <data name="NoProxyText" xml:space="preserve">
+    <value>Don't use a proxy.</value>
+  </data>
+  <data name="ProxyAddressLabelText" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="ProxyPasswordLabelText" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="ProxySettingsInformation" xml:space="preserve">
+    <value>If you use a proxy server (typically used in corporate environments), you can configure your settings here so Promptu can check for updates.</value>
+  </data>
+  <data name="ProxySettingsTitle" xml:space="preserve">
+    <value>Proxy Settings</value>
+  </data>
+  <data name="ProxyUsernameLabelText" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="UseCustomProxySettings" xml:space="preserve">
+    <value>Use custom proxy server: 
+Example: http://myproxy:8080
+(Username and password may be optional)</value>
+  </data>
+  <data name="UseProxySettingsFromIE" xml:space="preserve">
+    <value>Use settings from Internet Explorer
+(may not work in all environments)</value>
+  </data>
+  <data name="GenerationDirectoryCache" xml:space="preserve">
+    <value>Please wait while Promptu generates the directory cache.</value>
+  </data>
+  <data name="OverwriteDialogChooseAnOption" xml:space="preserve">
+    <value>Choose an option:</value>
+  </data>
+  <data name="OverwriteDialogDoForAll" xml:space="preserve">
+    <value>Do this for all conflicts</value>
+  </data>
+  <data name="OverwriteDialogText" xml:space="preserve">
+    <value>Move Item</value>
+  </data>
+  <data name="CommandEditorMainInstructions" xml:space="preserve">
+    <value>Configure your command</value>
+  </data>
+  <data name="LocationColumnHeader" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="PositionColumnHeader" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="AssemblyReferenceEditorMainInstructions" xml:space="preserve">
+    <value>Configure your assembly reference</value>
+  </data>
+  <data name="AssemblyReferenceFileNotFound" xml:space="preserve">
+    <value>Your assembly reference's file was not found</value>
+  </data>
+  <data name="AssemblyReferenceFileNotFoundSupplement" xml:space="preserve">
+    <value>Without the associated file, Promptu will not be able to run any functions that use your assembly reference.</value>
+  </data>
+  <data name="ContinueAnywayButtonText" xml:space="preserve">
+    <value>Continue _anyway</value>
+  </data>
+  <data name="DefaultConfigureSuggestionMode" xml:space="preserve">
+    <value>Configure Suggestion</value>
+  </data>
+  <data name="FileSystemFilterFormat" xml:space="preserve">
+    <value>Filter: "{0}"</value>
+  </data>
+  <data name="FileSystemNoFilter" xml:space="preserve">
+    <value>No filter</value>
+  </data>
+  <data name="FunctionEditorMainInstructions" xml:space="preserve">
+    <value>Configure your function</value>
+  </data>
+  <data name="FunctionParameterLabelText" xml:space="preserve">
+    <value>Parameters:</value>
+  </data>
+  <data name="ValueListSuggestionModeDisplayFormat" xml:space="preserve">
+    <value>Value List: {0}</value>
+  </data>
+  <data name="CreateNewProfileLabel" xml:space="preserve">
+    <value>Create a _new profile</value>
+  </data>
+  <data name="CreateNewProfileSupplement" xml:space="preserve">
+    <value>If you are a new user, you should choose this option.</value>
+  </data>
+  <data name="ExitPromptuLabel" xml:space="preserve">
+    <value>E_xit Promptu</value>
+  </data>
+  <data name="NewOrUsedProfileMainInstructions" xml:space="preserve">
+    <value>How would you like to get started with Promptu?</value>
+  </data>
+  <data name="UseExistingProfileLabel" xml:space="preserve">
+    <value>Use an _existing profile</value>
+  </data>
+  <data name="ValueListEditorMainInstructions" xml:space="preserve">
+    <value>Configure your value list</value>
+  </data>
+  <data name="ValueListItemAddToolTip" xml:space="preserve">
+    <value>Add a new row.</value>
+  </data>
+  <data name="ValueListItemDeleteToolTip" xml:space="preserve">
+    <value>Delete the selected row(s).</value>
+  </data>
+  <data name="ValueListItemPasteNewRowsToolTip" xml:space="preserve">
+    <value>Attempt to paste the current data on the clipboard as new rows.</value>
+  </data>
+  <data name="ProfileAdvancedMainInstructions" xml:space="preserve">
+    <value>When your hotkey is pressed, where should Promptu appear?</value>
+  </data>
+  <data name="ProfileBasicsHotkeyLabel" xml:space="preserve">
+    <value>Hotkey:</value>
+  </data>
+  <data name="ProfileBasicsHotkeySupplement" xml:space="preserve">
+    <value>You should choose a hotkey that feels comfortable to you.  If you want a different one later, you can always change it.</value>
+  </data>
+  <data name="ProfileBasicsMainInstructions" xml:space="preserve">
+    <value>Choose a profile name and a hotkey</value>
+  </data>
+  <data name="ProfileBasicsNameLabel" xml:space="preserve">
+    <value>_Name:</value>
+  </data>
+  <data name="ProfileFinishMainInstructions" xml:space="preserve">
+    <value>Congratulations, your profile is ready to use</value>
+  </data>
+  <data name="ProfileFinishSupplementalInstructions" xml:space="preserve">
+    <value>After you click Finish, you can press your hotkey to open Promptu. To add commands and change settings, type "setup" in the prompt.
+
+If you would like more help, type "help" in the prompt.</value>
+  </data>
+  <data name="ProfilePromptCurrentScreen" xml:space="preserve">
+    <value>Horizontally centered on the screen containing the mouse pointer</value>
+  </data>
+  <data name="ProfilePromptFollowMouse" xml:space="preserve">
+    <value>Next to the mouse pointer</value>
+  </data>
+  <data name="ProfilePromptNoPositioning" xml:space="preserve">
+    <value>Manual position</value>
+  </data>
+  <data name="ExistingProfileMainInstructions" xml:space="preserve">
+    <value>_Choose a profile</value>
+  </data>
+  <data name="HotkeyStateAvailable" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="HotkeyStateUnavailable" xml:space="preserve">
+    <value>Unavailable</value>
+  </data>
+  <data name="ChooseADifferentProfile" xml:space="preserve">
+    <value>Choose a _different profile</value>
+  </data>
+  <data name="ProfileFinishStartPromptuWithComputer" xml:space="preserve">
+    <value>Start Promptu when I log on to my computer</value>
+  </data>
+  <data name="ProfileCorruptedMainInstructions" xml:space="preserve">
+    <value>Your profile is corrupted and was unable to be loaded</value>
+  </data>
+  <data name="HotkeyInUseMainInstructions" xml:space="preserve">
+    <value>Your hotkey is being used by another program</value>
+  </data>
+  <data name="HotkeyInUseNewHotkeyLabel" xml:space="preserve">
+    <value>Choose a _different hotkey</value>
+  </data>
+  <data name="HotkeyInUseNewHotkeyMainInstructions" xml:space="preserve">
+    <value>Choose a hotkey</value>
+  </data>
+  <data name="HotkeyInUseOverrideLabel" xml:space="preserve">
+    <value>_Override the hotkey</value>
+  </data>
+  <data name="HotkeyInUseOverrideSupplement" xml:space="preserve">
+    <value>The other program will no longer receive notifications about the hotkey.</value>
+  </data>
+  <data name="ConflictKeepMyChangeLabel" xml:space="preserve">
+    <value>Keep my change</value>
+  </data>
+  <data name="ConflictKeepMyChangeSupplement" xml:space="preserve">
+    <value>The outside change will be overwritten and any conflicts removed.</value>
+  </data>
+  <data name="ConflictKeepOutsideChangeLabel" xml:space="preserve">
+    <value>Keep the outside change</value>
+  </data>
+  <data name="ConflictKeepOutsideChangeSupplement" xml:space="preserve">
+    <value>Your change will be overwritten and any conflicts removed.</value>
+  </data>
+  <data name="FunctionViewerMainInstructions" xml:space="preserve">
+    <value>Here are your available functions</value>
+  </data>
+  <data name="ValueListItemsCountPlural" xml:space="preserve">
+    <value>{0} items</value>
+  </data>
+  <data name="ValueListItemsCountSingular" xml:space="preserve">
+    <value>{0} item</value>
+  </data>
+  <data name="FunctionDetailsParameterCountPlural" xml:space="preserve">
+    <value>{0} parameters</value>
+  </data>
+  <data name="FunctionDetailsParameterCountSingular" xml:space="preserve">
+    <value>{0} parameter</value>
+  </data>
+  <data name="AppearanceTabPanelMainInstructions" xml:space="preserve">
+    <value>Choose a skin</value>
+  </data>
+  <data name="ContactLinkInvalid" xml:space="preserve">
+    <value>An error occured while attempting to visit the contact link.  The contact link might be invalid.</value>
+  </data>
+  <data name="CreatorByLabel" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="NoNameSkin" xml:space="preserve">
+    <value>&lt;no name&gt;</value>
+  </data>
+  <data name="GeneralPopularOptionsLabel" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="PopularOptionsMainInstructions" xml:space="preserve">
+    <value>Change popular options in Promptu</value>
+  </data>
+  <data name="PopularOptionsTabText" xml:space="preserve">
+    <value>Popular</value>
+  </data>
+  <data name="PromptHotkeyLabel" xml:space="preserve">
+    <value>Hotkey</value>
+  </data>
+  <data name="AutoDetectFileAndFolderVisibilityLabel" xml:space="preserve">
+    <value>Auto-detect file and folder visibility</value>
+  </data>
+  <data name="FolderBrowsingGroupLabel" xml:space="preserve">
+    <value>Folder browsing</value>
+  </data>
+  <data name="PositioningModeCurrentScreen" xml:space="preserve">
+    <value>Middle of the current screen</value>
+  </data>
+  <data name="PositioningModeFollowMouse" xml:space="preserve">
+    <value>Next to the mouse pointer</value>
+  </data>
+  <data name="PositioningModeNone" xml:space="preserve">
+    <value>Manual position</value>
+  </data>
+  <data name="PromptGroupLabel" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="PromptPositioningModeLabel" xml:space="preserve">
+    <value>Positioning mode:</value>
+  </data>
+  <data name="ShowHiddenFilesAndFolders" xml:space="preserve">
+    <value>Show hidden files and folders</value>
+  </data>
+  <data name="ShowSystemFilesAndFolders" xml:space="preserve">
+    <value>Show system files and folders</value>
+  </data>
+  <data name="StartPromptuWithComputer" xml:space="preserve">
+    <value>Start Promptu when I log on to my computer</value>
+  </data>
+  <data name="SuggestionsOptionPanelMainInstructions" xml:space="preserve">
+    <value>Change options about how Promptu provides suggestions</value>
+  </data>
+  <data name="SuggestionsTabText" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="ClearHistoryButtonText" xml:space="preserve">
+    <value>Clear _history</value>
+  </data>
+  <data name="CurrentProfileGroupLabel" xml:space="preserve">
+    <value>Current profile</value>
+  </data>
+  <data name="ProfileOtherGroupLabel" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="NewProfileButtonText" xml:space="preserve">
+    <value>_New profile</value>
+  </data>
+  <data name="NoProxyServerLabel" xml:space="preserve">
+    <value>I don't use a proxy server (or my proxy is transparent)</value>
+  </data>
+  <data name="PreReleaseUpdatesLabel" xml:space="preserve">
+    <value>Download pre-release updates</value>
+  </data>
+  <data name="PreReleaseUpdatesSupplement" xml:space="preserve">
+    <value>Pre-release updates allow you to preview new features, but may not be as stable as normal updates.</value>
+  </data>
+  <data name="PreReleaseUsingPreReleaseSupplement" xml:space="preserve">
+    <value>Because you are using a pre-release version of Promptu, you will continue to get pre-release updates until a normal update is released.</value>
+  </data>
+  <data name="ProfileOptionPanelMainInstructions" xml:space="preserve">
+    <value>Change your profile</value>
+  </data>
+  <data name="ProfileOptionsTabText" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="RenameButtonText" xml:space="preserve">
+    <value>_Rename</value>
+  </data>
+  <data name="RenameProfileMainInstructions" xml:space="preserve">
+    <value>_Enter a new name for your profile</value>
+  </data>
+  <data name="UpdatesGeneralGroupLabel" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="UpdatesOptionPanelMainInstructions" xml:space="preserve">
+    <value>Change options about how Promptu checks for updates</value>
+  </data>
+  <data name="UpdatesOptionsTabText" xml:space="preserve">
+    <value>Updates</value>
+  </data>
+  <data name="UpdatesProxyGroupLabel" xml:space="preserve">
+    <value>Proxy server settings</value>
+  </data>
+  <data name="UseCustomProxyServerLabel" xml:space="preserve">
+    <value>Use custom proxy server settings (username and password may be optional)</value>
+  </data>
+  <data name="UseIEProxyServerLabel" xml:space="preserve">
+    <value>Try to use settings from Internet Explorer (may not work in all environments)</value>
+  </data>
+  <data name="BrightnessLabel" xml:space="preserve">
+    <value>Brightness:</value>
+  </data>
+  <data name="DefaultPromptBackgroundColorText" xml:space="preserve">
+    <value>Background:</value>
+  </data>
+  <data name="DefaultPromptOptionsAppearanceGroup" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="DefaultPromptOptionsFontSizeLabel" xml:space="preserve">
+    <value>Font size:</value>
+  </data>
+  <data name="DefaultPromptOptionsMainInstructions" xml:space="preserve">
+    <value>Change how the prompt looks</value>
+  </data>
+  <data name="DefaultPromptTextColorText" xml:space="preserve">
+    <value>Text color:</value>
+  </data>
+  <data name="DefaultSPBackgroundColorText" xml:space="preserve">
+    <value>Background:</value>
+  </data>
+  <data name="DefaultSPOptionsAppearanceGroup" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="DefaultSPOptionsFontSizeLabel" xml:space="preserve">
+    <value>Font size:</value>
+  </data>
+  <data name="DefaultSPTextColorText" xml:space="preserve">
+    <value>Text color:</value>
+  </data>
+  <data name="HexValueLabel" xml:space="preserve">
+    <value>Hex value:</value>
+  </data>
+  <data name="HueLabel" xml:space="preserve">
+    <value>Hue:</value>
+  </data>
+  <data name="PromptConfigurationTabText" xml:space="preserve">
+    <value>Prompt</value>
+  </data>
+  <data name="SaturationLabel" xml:space="preserve">
+    <value>Saturation:</value>
+  </data>
+  <data name="StandardPromptOptionsMainInstructions" xml:space="preserve">
+    <value>Change options on your prompt</value>
+  </data>
+  <data name="StandardSuggestionProviderOptionsMainInstructions" xml:space="preserve">
+    <value>Change options on your suggestion provider</value>
+  </data>
+  <data name="SuggestionProviderConfigurationTabText" xml:space="preserve">
+    <value>Suggestion provider</value>
+  </data>
+  <data name="SuggestionProviderOptionsMainInstructions" xml:space="preserve">
+    <value>Change how the suggestion provider looks</value>
+  </data>
+  <data name="DefaultIBOptionsAppearanceGroup" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="DefaultIBOptionsFontSizeLabel" xml:space="preserve">
+    <value>Font size:</value>
+  </data>
+  <data name="StandardTooltipOptionsMainInstructions" xml:space="preserve">
+    <value>Change options on your tooltips</value>
+  </data>
+  <data name="ToolTipConfigurationTabText" xml:space="preserve">
+    <value>Tooltips</value>
+  </data>
+  <data name="AssemblyReferenceReplaceSupplementCopy" xml:space="preserve">
+    <value>Replace the assembly reference in the destination list with the assembly refererence you are copying:</value>
+  </data>
+  <data name="AssemblyReferenceReplaceSupplementMove" xml:space="preserve">
+    <value>Replace the assembly reference in the destination list with the assembly refererence you are moving:</value>
+  </data>
+  <data name="AssemblyReferenceSkipSupplement" xml:space="preserve">
+    <value>No assembly references will be changed.  Leave this assembly reference in the destination list:</value>
+  </data>
+  <data name="CheckForUpdatesText" xml:space="preserve">
+    <value>Check for _updates</value>
+  </data>
+  <data name="CommandNameFormat" xml:space="preserve">
+    <value>"{0}"</value>
+  </data>
+  <data name="CommandReplaceSupplementCopyPlural" xml:space="preserve">
+    <value>Replace the commands in the destination list with the command you are copying:</value>
+  </data>
+  <data name="CommandReplaceSupplementCopySingular" xml:space="preserve">
+    <value>Replace the command in the destination list with the command you are copying:</value>
+  </data>
+  <data name="CommandReplaceSupplementMovePlural" xml:space="preserve">
+    <value>Replace the commands in the destination list with the command you are moving:</value>
+  </data>
+  <data name="CommandReplaceSupplementMoveSingular" xml:space="preserve">
+    <value>Replace the command in the destination list with the command you are moving:</value>
+  </data>
+  <data name="CommandSkipSupplementPlural" xml:space="preserve">
+    <value>No commands will be changed.  Leave these commands in the destination list:</value>
+  </data>
+  <data name="CommandSkipSupplementSingular" xml:space="preserve">
+    <value>No commands will be changed.  Leave this command in the destination list:</value>
+  </data>
+  <data name="CopyAndReplace" xml:space="preserve">
+    <value>Copy and replace</value>
+  </data>
+  <data name="CopyAssemblyReferenceTitle" xml:space="preserve">
+    <value>Copy Assembly Reference</value>
+  </data>
+  <data name="CopyCommandTitle" xml:space="preserve">
+    <value>Copy Command</value>
+  </data>
+  <data name="CopyFunctionTitle" xml:space="preserve">
+    <value>Copy Function</value>
+  </data>
+  <data name="CopyKeepAllCommands" xml:space="preserve">
+    <value>Copy, but keep all commands</value>
+  </data>
+  <data name="CopyKeepBothAssemblyReferences" xml:space="preserve">
+    <value>Copy, but keep both assembly references</value>
+  </data>
+  <data name="CopyKeepBothCommands" xml:space="preserve">
+    <value>Copy. but keep both commands</value>
+  </data>
+  <data name="CopyKeepBothFunctions" xml:space="preserve">
+    <value>Copy, but keep both functions</value>
+  </data>
+  <data name="CopyKeepBothValueLists" xml:space="preserve">
+    <value>Copy, but keep both value lists</value>
+  </data>
+  <data name="CopyValueListTitle" xml:space="preserve">
+    <value>Copy Value List</value>
+  </data>
+  <data name="CtrlClickToFollowLink" xml:space="preserve">
+    <value>Ctrl+Click to follow link</value>
+  </data>
+  <data name="DefaultIBFontFamilyLabel" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="DefaultPromptFontFamilyLabel" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="DefaultSPFontFamilyLabel" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="DontCopy" xml:space="preserve">
+    <value>Don't copy</value>
+  </data>
+  <data name="DontMove" xml:space="preserve">
+    <value>Don't move</value>
+  </data>
+  <data name="FunctionReplaceSupplementCopy" xml:space="preserve">
+    <value>Replace the function in the destination list with the function you are copying:</value>
+  </data>
+  <data name="FunctionReplaceSupplementMove" xml:space="preserve">
+    <value>Replace the function in the destination list with the function you are moving:</value>
+  </data>
+  <data name="FunctionSkipSupplement" xml:space="preserve">
+    <value>No functions will be changed.  Leave this function in the destination list:</value>
+  </data>
+  <data name="MoveAndReplace" xml:space="preserve">
+    <value>Move and replace</value>
+  </data>
+  <data name="MoveAssemblyReferenceTitle" xml:space="preserve">
+    <value>Move Assembly Reference</value>
+  </data>
+  <data name="MoveCommandTitle" xml:space="preserve">
+    <value>Move Command</value>
+  </data>
+  <data name="MoveFunctionTitle" xml:space="preserve">
+    <value>Move Function</value>
+  </data>
+  <data name="MoveKeepAllCommands" xml:space="preserve">
+    <value>Move, but keep all commands</value>
+  </data>
+  <data name="MoveKeepBothAssemblyReferences" xml:space="preserve">
+    <value>Move, but keep both assembly references</value>
+  </data>
+  <data name="MoveKeepBothCommands" xml:space="preserve">
+    <value>Move. but keep both commands</value>
+  </data>
+  <data name="MoveKeepBothFunctions" xml:space="preserve">
+    <value>Move, but keep both functions</value>
+  </data>
+  <data name="MoveKeepBothValueLists" xml:space="preserve">
+    <value>Move, but keep both value lists</value>
+  </data>
+  <data name="MoveValueListTitle" xml:space="preserve">
+    <value>Move Value List</value>
+  </data>
+  <data name="MultipleCommandsOverwriteName" xml:space="preserve">
+    <value>Multiple commands</value>
+  </data>
+  <data name="OverwriteAssemblyReferenceMainInstructionsSingular" xml:space="preserve">
+    <value>There is already an assembly reference with the same name in this list</value>
+  </data>
+  <data name="OverwriteCommandMainInstructionsPlural" xml:space="preserve">
+    <value>There are already commands with the same names in this list</value>
+  </data>
+  <data name="OverwriteCommandMainInstructionsSingular" xml:space="preserve">
+    <value>There is already a command with the same name in this list</value>
+  </data>
+  <data name="OverwriteFunctionMainInstructionsSingular" xml:space="preserve">
+    <value>There is already a function with the same name in this list</value>
+  </data>
+  <data name="OverwriteValueListMainInstructionsSingular" xml:space="preserve">
+    <value>There is already a value list with the same name in this list</value>
+  </data>
+  <data name="ProfileShowSplashScreenLabel" xml:space="preserve">
+    <value>Show splash screen on startup</value>
+  </data>
+  <data name="RenameAssemblyReferenceCopy" xml:space="preserve">
+    <value>The assembly reference you are copying will be renamed "{0}"</value>
+  </data>
+  <data name="RenameAssemblyReferenceMove" xml:space="preserve">
+    <value>The assembly reference you are moving will be renamed "{0}"</value>
+  </data>
+  <data name="RenameCommandCopy" xml:space="preserve">
+    <value>The command you are copying will be renamed "{0}"</value>
+  </data>
+  <data name="RenameCommandMove" xml:space="preserve">
+    <value>The command you are moving will be renamed "{0}"</value>
+  </data>
+  <data name="RenameFunctionCopy" xml:space="preserve">
+    <value>The function you are copying will be renamed "{0}"</value>
+  </data>
+  <data name="RenameFunctionMove" xml:space="preserve">
+    <value>The function you are moving will be renamed "{0}"</value>
+  </data>
+  <data name="RenameValueListCopy" xml:space="preserve">
+    <value>The value list you are copying will be renamed "{0}"</value>
+  </data>
+  <data name="RenameValueListMove" xml:space="preserve">
+    <value>The value list you are moving will be renamed "{0}"</value>
+  </data>
+  <data name="ValueListReplaceSupplementCopy" xml:space="preserve">
+    <value>Replace the value list in the destination list with the value list you are copying:</value>
+  </data>
+  <data name="ValueListReplaceSupplementMove" xml:space="preserve">
+    <value>Replace the value list in the destination list with the value list you are moving:</value>
+  </data>
+  <data name="ValueListSkipSupplement" xml:space="preserve">
+    <value>No value lists will be changed.  Leave this value list in the destination list:</value>
+  </data>
+  <data name="CommandEditorNameCue" xml:space="preserve">
+    <value>Enter name here (required)</value>
+  </data>
+  <data name="CommandEditorTargetCue" xml:space="preserve">
+    <value>Enter path to program, folder, file, web address, etc (required)</value>
+  </data>
+  <data name="ProfileTabMainInstructions" xml:space="preserve">
+    <value>Edit your commands and lists</value>
+  </data>
+  <data name="ValueListEditorNameCue" xml:space="preserve">
+    <value>Enter name here (required)</value>
+  </data>
+  <data name="PluginsTabText" xml:space="preserve">
+    <value>Plugins</value>
+  </data>
+  <data name="ConfigureButtonText" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="DisabledPluginHeaderAddition" xml:space="preserve">
+    <value>(disabled)</value>
+  </data>
+  <data name="DisablePluginButtonText" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="EnablePluginButtonText" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="IncompatiblePlugin" xml:space="preserve">
+    <value>Incompatible</value>
+  </data>
+  <data name="AlreadyInstalledPlugin" xml:space="preserve">
+    <value>Installed</value>
+  </data>
+  <data name="BrowseForPluginsFilter" xml:space="preserve">
+    <value>Promptu Plugin|*.pxi</value>
+  </data>
+  <data name="BrowseForPluginsTitle" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="DefaultPromptBorderColorText" xml:space="preserve">
+    <value>Border:</value>
+  </data>
+  <data name="GetPluginsMainInstructions" xml:space="preserve">
+    <value>Find and install plugins</value>
+  </data>
+  <data name="GetPluginsTabText" xml:space="preserve">
+    <value>Get plugins</value>
+  </data>
+  <data name="InstalledPluginsMainInstructions" xml:space="preserve">
+    <value>Configure your installed plugins</value>
+  </data>
+  <data name="InstalledPluginsTabText" xml:space="preserve">
+    <value>Plugins</value>
+  </data>
+  <data name="InstallPluginButtonText" xml:space="preserve">
+    <value>Install</value>
+  </data>
+  <data name="InvalidPluginFileMessage" xml:space="preserve">
+    <value>The file does not appear to be a valid Promptu plugin.</value>
+  </data>
+  <data name="NoInstalledPluginsMessage" xml:space="preserve">
+    <value>No plugins are installed.
+Use "Get plugins" on the left to find and install plugins.</value>
+  </data>
+  <data name="OptionsDialogDefaultText" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="RemovePluginToolTip" xml:space="preserve">
+    <value>Remove this plugin</value>
+  </data>
+  <data name="RenameListDialogMainInstructions" xml:space="preserve">
+    <value>_Enter a new name for your list</value>
+  </data>
+  <data name="DeleteObjectDisambiguatorMainInstructions" xml:space="preserve">
+    <value>Select the item you want to delete</value>
+  </data>
+  <data name="EditObjectDisambiguatorMainInstructions" xml:space="preserve">
+    <value>Select the item you would like to edit</value>
+  </data>
+  <data name="PluginUpdateInstallUpdatesText" xml:space="preserve">
+    <value>_Install now</value>
+  </data>
+  <data name="PluginUpdateLaterButonText" xml:space="preserve">
+    <value>_Remind me later</value>
+  </data>
+  <data name="PluginUpdatesMainInstructionsPlural" xml:space="preserve">
+    <value>Updates are available for your plugins</value>
+  </data>
+  <data name="PluginUpdatesMainInstructionsSingular" xml:space="preserve">
+    <value>An update is available for one of your plugins</value>
+  </data>
+  <data name="PluginUpdateFileError" xml:space="preserve">
+    <value>Error unpacking the update</value>
+  </data>
+  <data name="PluginUpdateWebError" xml:space="preserve">
+    <value>Error during download</value>
+  </data>
+  <data name="InstallNowButtonText" xml:space="preserve">
+    <value>_Install now</value>
+  </data>
+  <data name="PluginInstalledStatus" xml:space="preserve">
+    <value>Installation complete.</value>
+  </data>
+  <data name="PluginInstallingStatus" xml:space="preserve">
+    <value>Installing...</value>
+  </data>
+  <data name="RemindMeLaterButtonText" xml:space="preserve">
+    <value>_Remind me later</value>
+  </data>
+  <data name="UpdateAvailableMainInstructions" xml:space="preserve">
+    <value>An update to Promptu is available</value>
+  </data>
+  <data name="UpdateAvailableSupplement" xml:space="preserve">
+    <value>Updates may include bugfixes, new features, and other improvements.</value>
+  </data>
+  <data name="UpdateDownloadProgressMainInstructions" xml:space="preserve">
+    <value>Updating Promptu</value>
+  </data>
+  <data name="AllFilesFilter" xml:space="preserve">
+    <value>All files|*.*</value>
+  </data>
+  <data name="NoPluginUpdatesMessage" xml:space="preserve">
+    <value>Your plugins are all up to date.</value>
+  </data>
+  <data name="PluginCheckForUpdatesText" xml:space="preserve">
+    <value>Check for _updates</value>
+  </data>
+  <data name="AutoFetchFaviconsLabel" xml:space="preserve">
+    <value>Automatically download icons for websites</value>
+  </data>
+  <data name="RefreshIconsButtonText" xml:space="preserve">
+    <value>Refresh all icons now</value>
+  </data>
+  <data name="RefreshIconsProgressText" xml:space="preserve">
+    <value>Refreshing icons...</value>
+  </data>
+  <data name="ShowTargetIconsLabel" xml:space="preserve">
+    <value>Show underlying icons associated with command targets</value>
+  </data>
+  <data name="SuggestionIconsGroupLabel" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="DefaultSPSelectionBackgroundColorText" xml:space="preserve">
+    <value>Selection background:</value>
+  </data>
+  <data name="DefaultSPSelectionTextColorText" xml:space="preserve">
+    <value>Selection text:</value>
+  </data>
+  <data name="ProcessPathAccessIsDenied" xml:space="preserve">
+    <value>The path could not be retrieved because access is denied. This
+might be fixed by running Promptu with elevated permissions.</value>
+  </data>
+  <data name="ErrorRestartingPromptu" xml:space="preserve">
+    <value>There was an error while attempting to restart Promptu.</value>
+  </data>
+  <data name="ProcessPathAccessIsDeniedElevated" xml:space="preserve">
+    <value>The path could not be retrieved because access is denied.</value>
+  </data>
+  <data name="RestartPromptuUAC" xml:space="preserve">
+    <value>Restart Promptu elevated</value>
+  </data>
+</root>

@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections
+END
+AssemblyReferenceCollectionWrapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/promptu/!svn/ver/45/trunk/Promptu/UserModel/Collections/AssemblyReferenceCollectionWrapper.cs
+END
+HistoryCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections/HistoryCollection.cs
+END
+HistoricalCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/HistoricalCollection.cs
+END
+FunctionsCommandsComposite.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/FunctionsCommandsComposite.cs
+END
+CommandCollectionComposite.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/CommandCollectionComposite.cs
+END
+CommandParameterHistoryCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/CommandParameterHistoryCollection.cs
+END
+CommandParameterMetaInfoCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/CommandParameterMetaInfoCollection.cs
+END
+FunctionHistoryCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/FunctionHistoryCollection.cs
+END
+ValueListCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/ValueListCollection.cs
+END
+FunctionCollectionComposite.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/FunctionCollectionComposite.cs
+END
+ValueListCollectionWrapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections/ValueListCollectionWrapper.cs
+END
+ListCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/ListCollection.cs
+END
+CommandCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/CommandCollection.cs
+END
+CommandCollectionWrapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections/CommandCollectionWrapper.cs
+END
+ProfilePlacemarkCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/ProfilePlacemarkCollection.cs
+END
+AssemblyReferenceCollectionComposite.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/AssemblyReferenceCollectionComposite.cs
+END
+IItemsWithIdList.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/IItemsWithIdList.cs
+END
+FunctionCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/31/trunk/Promptu/UserModel/Collections/FunctionCollection.cs
+END
+FunctionParameterCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/FunctionParameterCollection.cs
+END
+FunctionCollectionWrapper.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections/FunctionCollectionWrapper.cs
+END
+FunctionsCommandsCompositeMediator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/promptu/!svn/ver/40/trunk/Promptu/UserModel/Collections/FunctionsCommandsCompositeMediator.cs
+END
+LoadedAssemblyCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/LoadedAssemblyCollection.cs
+END
+ComplexHistoryCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/ComplexHistoryCollection.cs
+END
+AssemblyReferencesManifest.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/promptu/!svn/ver/19/trunk/Promptu/UserModel/Collections/AssemblyReferencesManifest.cs
+END
+AssemblyReferenceCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/promptu/!svn/ver/45/trunk/Promptu/UserModel/Collections/AssemblyReferenceCollection.cs
+END
+SkinDataCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/2/trunk/Promptu/UserModel/Collections/SkinDataCollection.cs
+END

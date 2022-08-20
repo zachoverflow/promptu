@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/promptu/!svn/ver/44/trunk/Promptu/FileFileSystem
+END
+FileFileCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/promptu/!svn/ver/44/trunk/Promptu/FileFileSystem/FileFileCollection.cs
+END
+BadLineException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/BadLineException.cs
+END
+BadFileFormatException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/BadFileFormatException.cs
+END
+InvalidFileHeaderException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/InvalidFileHeaderException.cs
+END
+FileFile.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/42/trunk/Promptu/FileFileSystem/FileFile.cs
+END
+FileFileDirectoryCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/FileFileDirectoryCollection.cs
+END
+OffsetStream.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/OffsetStream.cs
+END
+FileFileSystemException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/FileFileSystemException.cs
+END
+InvalidDirectoryHeaderException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/InvalidDirectoryHeaderException.cs
+END
+FileFileDirectory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/42/trunk/Promptu/FileFileSystem/FileFileDirectory.cs
+END
+CustomStreamReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/CustomStreamReader.cs
+END
+FileFileSystemVersion.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/promptu/!svn/ver/2/trunk/Promptu/FileFileSystem/FileFileSystemVersion.cs
+END

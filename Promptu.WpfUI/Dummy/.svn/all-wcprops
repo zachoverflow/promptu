@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/promptu/!svn/ver/48/trunk/Promptu.WpfUI/Dummy
+END
+DummySuggestionProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/promptu/!svn/ver/48/trunk/Promptu.WpfUI/Dummy/DummySuggestionProvider.cs
+END
+DummyCollectionEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyCollectionEditor.cs
+END
+DummySkin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/promptu/!svn/ver/47/trunk/Promptu.WpfUI/Dummy/DummySkin.cs
+END
+DummyMenu.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyMenu.cs
+END
+DummyTextInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyTextInput.cs
+END
+DummyToolbarMenuItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyToolbarMenuItem.cs
+END
+DummyLayoutManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/47/trunk/Promptu.WpfUI/Dummy/DummyLayoutManager.cs
+END
+DummyErrorPanel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyErrorPanel.cs
+END
+DummyToolkitImages.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/47/trunk/Promptu.WpfUI/Dummy/DummyToolkitImages.cs
+END
+DummyButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyButton.cs
+END
+DummyComboInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyComboInput.cs
+END
+DummyListBox.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyListBox.xaml
+END
+DummySkinInstanceFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/47/trunk/Promptu.WpfUI/Dummy/DummySkinInstanceFactory.cs
+END
+DummyPrompt.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/48/trunk/Promptu.WpfUI/Dummy/DummyPrompt.cs
+END
+DummyNotifyIcon.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/45/trunk/Promptu.WpfUI/Dummy/DummyNotifyIcon.cs
+END
+DummyMenuItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/46/trunk/Promptu.WpfUI/Dummy/DummyMenuItem.cs
+END
+DummyListBox.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyListBox.xaml.cs
+END
+DummyListBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/50/trunk/Promptu.WpfUI/Dummy/DummyListBox.cs
+END
+DummyMenuSeparator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/promptu/!svn/ver/46/trunk/Promptu.WpfUI/Dummy/DummyMenuSeparator.cs
+END
+DummyCheckbox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/15/trunk/Promptu.WpfUI/Dummy/DummyCheckbox.cs
+END
+DummySkinInstance.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/50/trunk/Promptu.WpfUI/Dummy/DummySkinInstance.cs
+END
+DummySplashScreen.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/46/trunk/Promptu.WpfUI/Dummy/DummySplashScreen.cs
+END
+DummyRadioButton.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/2/trunk/Promptu.WpfUI/Dummy/DummyRadioButton.cs
+END

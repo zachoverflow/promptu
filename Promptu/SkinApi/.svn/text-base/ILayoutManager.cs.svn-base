@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Drawing;
+
+namespace ZachJohnson.Promptu.SkinApi
+{
+    public interface ILayoutManager
+    {
+        void PositionPrompt(PositioningContext context, PositioningMode mode, Point? suggestedPosition);
+
+        void PositionSuggestionProvider(PositioningContext context);
+
+        void PositionItemInfoBox(PositioningContext context, IInfoBox itemInfoBox, out Size preferredSize);
+
+        void PositionParameterHelpBox(PositioningContext context, IInfoBox parameterHelpBox, out Size preferredSize);
+
+        void PositionProgressBox(PositioningContext context, IInfoBox progressBox, out Size preferredSize);
+
+        void PositionInfoBox(PositioningContext context, IInfoBox infoBox, out Size preferredSize);
+    }
+}

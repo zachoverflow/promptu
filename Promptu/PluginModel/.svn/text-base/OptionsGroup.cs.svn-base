@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.UIModel;
+using System.ComponentModel;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    public class OptionsGroup : BindingCollection<object>
+    {
+        private string id;
+        private string label;
+
+        public OptionsGroup(string id, string label)
+        {
+            if (id == null)
+            {
+                throw new ArgumentNullException("id");
+            }
+            else if (label == null)
+            {
+                throw new ArgumentNullException("label");
+            }
+
+            this.id = id;
+            this.label = label;
+        }
+
+        public string Id
+        {
+            get { return this.id; }
+        }
+
+        public string Label
+        {
+            get
+            {
+                return this.label;
+            }
+
+            set
+            {
+                this.label = value;
+                this.OnPropertyChanged(new PropertyChangedEventArgs("Label"));
+            }
+        }
+    }
+}

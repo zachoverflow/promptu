@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters
+END
+FunctionInvocationEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/FunctionInvocationEditorPresenter.cs
+END
+HotkeyInUseDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/HotkeyInUseDialogPresenter.cs
+END
+NewProfileDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Presenters/NewProfileDialogPresenter.cs
+END
+FunctionEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/FunctionEditorPresenter.cs
+END
+UnhandledExceptionDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/UnhandledExceptionDialogPresenter.cs
+END
+ArgumentDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/ArgumentDialogPresenter.cs
+END
+CollectionEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/promptu/!svn/ver/39/trunk/Promptu/UIModel/Presenters/CollectionEditorPresenter.cs
+END
+UpdateAvailableDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/promptu/!svn/ver/41/trunk/Promptu/UIModel/Presenters/UpdateAvailableDialogPresenter.cs
+END
+HotkeyControlPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/15/trunk/Promptu/UIModel/Presenters/HotkeyControlPresenter.cs
+END
+AssemblyReferenceEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/AssemblyReferenceEditorPresenter.cs
+END
+NewUserDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/NewUserDialogPresenter.cs
+END
+PresenterBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/31/trunk/Promptu/UIModel/Presenters/PresenterBase.cs
+END
+ConfirmDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/ConfirmDialogPresenter.cs
+END
+ValueListEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/ValueListEditorPresenter.cs
+END
+NotifyIconPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/Presenters/NotifyIconPresenter.cs
+END
+PluginUpdateDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/promptu/!svn/ver/41/trunk/Promptu/UIModel/Presenters/PluginUpdateDialogPresenter.cs
+END
+CommandEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/CommandEditorPresenter.cs
+END
+FunctionSetupPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/FunctionSetupPanelPresenter.cs
+END
+RenameDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/RenameDialogPresenter.cs
+END
+AssemblyReferenceSetupPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/AssemblyReferenceSetupPanelPresenter.cs
+END
+DialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Presenters/DialogPresenter.cs
+END
+ValueListSelectorWindowPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/ValueListSelectorWindowPresenter.cs
+END
+CollisionResolvingDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/CollisionResolvingDialogPresenter.cs
+END
+FileSystemParameterSuggestionEditorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/FileSystemParameterSuggestionEditorPresenter.cs
+END
+ListConversionInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/2/trunk/Promptu/UIModel/Presenters/ListConversionInfo.cs
+END
+SimpleCollectionPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/promptu/!svn/ver/27/trunk/Promptu/UIModel/Presenters/SimpleCollectionPresenter.cs
+END
+OverwriteDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/19/trunk/Promptu/UIModel/Presenters/OverwriteDialogPresenter.cs
+END
+FunctionParameterPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/FunctionParameterPanelPresenter.cs
+END
+ValueListContentsPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/ValueListContentsPanelPresenter.cs
+END
+FunctionViewerPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/35/trunk/Promptu/UIModel/Presenters/FunctionViewerPresenter.cs
+END
+ErrorPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/ErrorPanelPresenter.cs
+END
+ValueListSetupPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/ValueListSetupPanelPresenter.cs
+END
+OptionsDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/33/trunk/Promptu/UIModel/Presenters/OptionsDialogPresenter.cs
+END
+ListSelectorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/48/trunk/Promptu/UIModel/Presenters/ListSelectorPresenter.cs
+END
+DownloadProgressDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/promptu/!svn/ver/41/trunk/Promptu/UIModel/Presenters/DownloadProgressDialogPresenter.cs
+END
+CommandSetupPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/CommandSetupPanelPresenter.cs
+END
+SetupPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/SetupPanelPresenter.cs
+END
+SetupDialogPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/49/trunk/Promptu/UIModel/Presenters/SetupDialogPresenter.cs
+END
+ObjectDisambiguatorPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/promptu/!svn/ver/40/trunk/Promptu/UIModel/Presenters/ObjectDisambiguatorPresenter.cs
+END
+CommandParameterMetaInfoPanelPresenter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/promptu/!svn/ver/42/trunk/Promptu/UIModel/Presenters/CommandParameterMetaInfoPanelPresenter.cs
+END

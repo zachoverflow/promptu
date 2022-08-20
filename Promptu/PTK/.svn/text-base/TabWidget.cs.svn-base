@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.UIModel.Interfaces;
+
+namespace ZachJohnson.Promptu.PTK
+{
+    internal class TabWidget : TabWidgetBase<TabPage, ITabPage>
+    {
+        public TabWidget(string id)
+            : this(id, InternalGlobals.GuiManager.ToolkitHost.Factory.ConstructTabControl())
+        {
+        }
+
+        internal TabWidget(string id, ITabControl nativeInterface)
+            : base(id, nativeInterface)
+        {
+        }
+    }
+}

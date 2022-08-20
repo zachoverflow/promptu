@@ -1,0 +1,320 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace ZachJohnson.Promptu.WinformsUI
+{
+    internal class HotkeyHook
+    {
+        private const int KEYEVENTF_KEYUP = 0x2;
+        private const int KEYEVENTF_EXTENDEDKEY = 0x1;
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WM_KEYDOWN = 0x0100;
+        private const int WM_KEYUP = 0x0101;
+        private const int WM_SYSKEYDOWN = 0x0104;
+        private const int WM_SYSKEYUP = 0x0105;
+        private LowLevelKeyboardProc proc;
+        private IntPtr hookID = IntPtr.Zero;
+        private bool started;
+        private bool keyPressed;
+        private bool keyComeUp = true;
+        private bool winComeUp = true;
+        private Keys key;
+        private HotkeyModifierKeys modifierKeys;
+
+        public HotkeyHook(Keys key, HotkeyModifierKeys modifierKeys)
+        {
+            this.proc = this.HookCallback;
+            this.key = key;
+            this.modifierKeys = modifierKeys;
+        }
+
+        ~HotkeyHook()
+        {
+            this.Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            this.Stop();
+        }
+        //private static bool winDown;
+
+        //public static void Main()
+        //{
+        //    hookID = SetHook(proc);
+        //    Application.Run();
+        //    UnhookWindowsHookEx(hookID);
+        //}
+
+        public event EventHandler Pressed;
+
+        public void Start()
+        {
+            if (!started)
+            {
+                hookID = SetHook(proc);
+                started = true;
+            }
+        }
+
+        public void Stop()
+        {
+            if (started)
+            {
+                UnhookWindowsHookEx(hookID);
+                started = false;
+            }
+        }
+
+        private void OnPressed(EventArgs e)
+        {
+            EventHandler handler = Pressed;
+            if (handler != null)
+            {
+                handler(null, e);
+            }
+        }
+
+        public Keys Key
+        {
+            get 
+            { 
+                return this.key; 
+            }
+
+            set
+            {
+                bool restart = this.started;
+                this.Stop();
+                this.key = value;
+                if (restart)
+                {
+                    this.Start();
+                }
+            }
+        }
+
+        public HotkeyModifierKeys ModifierKeys
+        {
+            get
+            {
+                return this.modifierKeys;
+            }
+
+            set
+            {
+                bool restart = this.started;
+                this.Stop();
+                this.modifierKeys = value;
+                if (restart)
+                {
+                    this.Start();
+                }
+            }
+        }
+
+        private IntPtr SetHook(LowLevelKeyboardProc proc)
+        {
+            using (Process curProcess = Process.GetCurrentProcess())
+            using (ProcessModule curModule = curProcess.MainModule)
+            {
+                return SetWindowsHookEx(WH_KEYBOARD_LL, proc,
+                    GetModuleHandle(curModule.ModuleName), 0);
+            }
+        }
+
+        //public static void TEST()
+        //{
+        //    keybd_event(Keys.RWin, 0x45, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        //    keybd_event(Keys.RWin, 0x45, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+        //}
+
+        private delegate IntPtr LowLevelKeyboardProc(
+            int nCode, IntPtr wParam, IntPtr lParam);
+
+        private IntPtr HookCallback(
+            int nCode, IntPtr wParam, IntPtr lParam)
+        {
+            IntPtr? retValue = null;
+            if (nCode == 0)
+            {
+                int wParamInt = (int)wParam;
+                if (this.modifierKeys == HotkeyModifierKeys.Win)
+                {
+                    switch (wParamInt)
+                    {
+                        case WM_KEYDOWN:
+                        case WM_SYSKEYDOWN:
+                        case WM_KEYUP:
+                        case WM_SYSKEYUP:
+                            int vkCode = Marshal.ReadInt32(lParam);
+                            Keys pressedKey = (Keys)vkCode;
+                            if ((wParamInt == WM_SYSKEYUP || wParamInt == WM_KEYUP))
+                            {
+                                if (pressedKey == Keys.RWin || pressedKey == Keys.LWin)
+                                {
+                                    if (keyPressed)
+                                    {
+                                        winComeUp = true;
+                                        if (keyComeUp)
+                                        {
+                                            keyPressed = false;
+                                            //keybd_event(Keys.RWin, 0, 0, (UIntPtr)0);
+                                            //keybd_event(Keys.RWin, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+                                            //PromptuSettings.IgnoreActivationLost = false;
+                                            OnPressed(EventArgs.Empty);
+                                        }
+                                        else
+                                        {
+                                            //rPressed = false;
+                                            retValue = CallNextHookEx(hookID, nCode, wParam, lParam);
+                                            //System.Threading.Thread.Sleep(10);
+                                            keybd_event(Keys.Escape, 0x45, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+                                            keybd_event(Keys.Escape, 0x45, KEYEVENTF_EXTENDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+                                            //OnPressed(EventArgs.Empty);
+                                            //rPressed = true;
+                                        }
+                                    }
+                                }
+                                else if (pressedKey == this.key)
+                                {
+                                    keyComeUp = true;
+                                    if (keyPressed && winComeUp)
+                                    {
+                                        keyPressed = false;
+                                        //PromptuSettings.IgnoreActivationLost = false;
+                                        //keybd_event(Keys.RWin, 0, 0, (UIntPtr)0);
+                                        //keybd_event(Keys.RWin, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+                                        OnPressed(EventArgs.Empty);
+                                    }
+                                }
+                                //OnPressed(EventArgs.Empty);
+                                //if ((key == Keys.RWin || key == Keys.LWin) && winDown)
+                                //{
+                                //    winDown = false;
+                                //    IntPtr result = CallNextHookEx(hookID, nCode, wParam, lParam);
+
+                                //    OnPressed(EventArgs.Empty);
+                                //    return result;
+                                //}
+                                //else if ((key == Keys.R && rDown))
+                                //{
+                                //    winDown = false;
+                                //    IntPtr result = CallNextHookEx(hookID, nCode, wParam, lParam);
+
+                                //    OnPressed(EventArgs.Empty);
+                                //    return result;
+                                //}
+                            }
+                            else
+                            {
+                                if (pressedKey == this.key
+                                    && (IsPressed(Keys.RWin) || IsPressed(Keys.LWin))
+                                    && !IsPressed(Keys.RShiftKey)
+                                    && !IsPressed(Keys.LShiftKey)
+                                    && !IsPressed(Keys.RControlKey)
+                                    && !IsPressed(Keys.LControlKey)
+                                    && !IsPressed(Keys.RMenu)
+                                    && !IsPressed(Keys.LMenu))
+                                {
+                                    if (!keyPressed)
+                                    {
+                                        keyPressed = true;
+                                        //OnPressed(EventArgs.Empty);
+                                        //PromptuSettings.IgnoreActivationLost = true;
+                                        //Skins.PromptHandler.GetInstance().ClosePrompt();
+                                    }
+
+                                    keyComeUp = false;
+                                    winComeUp = false;
+                                    return (IntPtr)1;
+                                }
+                            }
+
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (wParamInt)
+                    {
+                        case WM_KEYDOWN:
+                        case WM_SYSKEYDOWN:
+                            int vkCode = Marshal.ReadInt32(lParam);
+                            Keys pressedKey = (Keys)vkCode;
+
+                            if (pressedKey == this.key && this.ModifiersAreInCorrectState)
+                            {
+                                this.OnPressed(EventArgs.Empty);
+                                return (IntPtr)1;
+                            }
+
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            if (retValue == null)
+            {
+                return CallNextHookEx(hookID, nCode, wParam, lParam);
+            }
+            else
+            {
+                return retValue.Value;
+            }
+        }
+
+        private bool ModifiersAreInCorrectState
+        {
+            get
+            {
+                return (((this.modifierKeys & HotkeyModifierKeys.Win) != 0) == (IsPressed(Keys.RWin) || IsPressed(Keys.LWin)))
+                    && (((this.modifierKeys & HotkeyModifierKeys.Ctrl) != 0) == (IsPressed(Keys.RControlKey) || IsPressed(Keys.LControlKey)))
+                    && (((this.modifierKeys & HotkeyModifierKeys.Shift) != 0) == (IsPressed(Keys.RShiftKey) || IsPressed(Keys.LShiftKey)))
+                    && (((this.modifierKeys & HotkeyModifierKeys.Alt) != 0) == (IsPressed(Keys.RMenu) || IsPressed(Keys.LMenu)));
+            }
+        }
+
+        private static bool IsPressed(Keys key)
+        {
+            return (GetKeyState(key) & 0x8000) != 0;
+        }
+
+        [DllImport("user32.dll")]
+        static extern void keybd_event(Keys bVk, byte bScan, uint dwFlags,
+           UIntPtr dwExtraInfo);
+
+        [DllImport("user32.dll")]
+        static extern short GetKeyState(Keys key);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr SetWindowsHookEx(int idHook,
+            LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
+            IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetModuleHandle(string lpModuleName);
+    }
+}
+

@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00A1FCF0-6ABB-499D-803A-A28E5BA45B2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZachJohnson.Promptu</RootNamespace>
+    <AssemblyName>Promptu</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BETA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;BETA</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionSyncManager.cs" />
+    <Compile Include="AssemblyCaching\AssemblyCache.cs" />
+    <Compile Include="AssemblyCaching\CachedAssembly.cs" />
+    <Compile Include="AssemblyCaching\CachedAssemblyCollection.cs" />
+    <Compile Include="AssemblyCaching\CachedAssemblyNotFoundException.cs" />
+    <Compile Include="BackgroundWorkQueue.cs" />
+    <Compile Include="Collections\CaseSensitivity.cs" />
+    <Compile Include="Collections\FailedToSaveFileCollection.cs" />
+    <Compile Include="Collections\IHasCount.cs" />
+    <Compile Include="Collections\IIndexedCollection.cs" />
+    <Compile Include="Collections\IKeyAbstractionCollection.cs" />
+    <Compile Include="Collections\InheritableList.cs" />
+    <Compile Include="Collections\IntRangeCollection.cs" />
+    <Compile Include="Collections\ITrie.cs" />
+    <Compile Include="Collections\ItemAndIndexEventArgs.cs" />
+    <Compile Include="Collections\ItemWithIdChangeNotifiedList.cs" />
+    <Compile Include="Collections\KeyAbstractionCollection.cs" />
+    <Compile Include="Collections\TrieDictionary.cs" />
+    <Compile Include="Collections\TrieDictionaryListAbstractionLayer.cs" />
+    <Compile Include="Collections\CompositeList.cs" />
+    <Compile Include="Collections\TrieNodeBase.cs" />
+    <Compile Include="CommandIconLoadOrder.cs" />
+    <Compile Include="CommandQueue.cs" />
+    <Compile Include="CustomFileSystemWatcher.cs" />
+    <Compile Include="CustomTimer.cs" />
+    <Compile Include="CustomTraceListener.cs" />
+    <Compile Include="Diagnostics\DeadlockMonitor.cs" />
+    <Compile Include="DocumentationAttribute.cs" />
+    <Compile Include="ExceptionLogger.cs" />
+    <Compile Include="Experimental.cs" />
+    <Compile Include="Extensions\System\Collections\Generic\Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\System\Drawing\Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\System\Drawing\Extensions\ImageExtensions.cs" />
+    <Compile Include="Extensions\System\Drawing\Extensions\RectangleExtensions.cs" />
+    <Compile Include="Extensions\System\Extensions\BreakApartMode.cs" />
+    <Compile Include="Extensions\System\Extensions\BreakingCharAction.cs" />
+    <Compile Include="Extensions\System\Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\System\Extensions\Quotes.cs" />
+    <Compile Include="Extensions\System\Extensions\Spaces.cs" />
+    <Compile Include="Extensions\System\Globalization\Exensions\CultureInfoExtensions.cs" />
+    <Compile Include="Extensions\System\Security\Extensions\SecureStringExtensions.cs" />
+    <Compile Include="Extensions\System\Threading\Extensions\WaitHandleExtensions.cs" />
+    <Compile Include="Extensions\ZachJohnson\Promptu\Extensions\DelegateExtensions.cs" />
+    <Compile Include="ExternalCodeObject.cs" />
+    <Compile Include="FailedToSaveFile.cs" />
+    <Compile Include="FileIconLoadOrder.cs" />
+    <Compile Include="FileSystemFileConverter.cs" />
+    <Compile Include="GlobalizedDocumentationAttribute.cs" />
+    <Compile Include="GlobalizedParameterDocumentationAttribute.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="GlobalSettings.cs" />
+    <Compile Include="IconLoadOrder.cs" />
+    <Compile Include="IconSize.cs" />
+    <Compile Include="Int32Encapsulator.cs" />
+    <Compile Include="IIndicatesProgress.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\NotEnoughArgumentsConversionException.cs" />
+    <Compile Include="Itl\IItlScanner.cs" />
+    <Compile Include="Itl\InlineItlScanner.cs" />
+    <Compile Include="Itl\ItlType.cs" />
+    <Compile Include="Itl\ItlUtilities.cs" />
+    <Compile Include="LastModifiedDictionary.cs" />
+    <Compile Include="Localization\Documentation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Documentation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OopsTryThatAgainException.cs" />
+    <Compile Include="PluginModel\AppliedObjectProperty.cs" />
+    <Compile Include="PluginModel\BackedObjectProperty.cs" />
+    <Compile Include="PluginModel\BooleanConversionInfo.cs" />
+    <Compile Include="PluginModel\BoundObjectProperty.cs" />
+    <Compile Include="PluginModel\CallbackObjectProperty.cs" />
+    <Compile Include="PluginModel\EnumConversionInfo.cs" />
+    <Compile Include="PluginModel\EnumValueInfo.cs" />
+    <Compile Include="PluginModel\ExternalObject.cs" />
+    <Compile Include="PluginModel\FileConversionInfo.cs" />
+    <Compile Include="PluginModel\FileDialogType.cs" />
+    <Compile Include="PluginModel\GroupingConversionInfo.cs" />
+    <Compile Include="PluginModel\Hooks\CommandExecutingHook.cs" />
+    <Compile Include="PluginModel\Hooks\HookAction.cs" />
+    <Compile Include="PluginModel\Hooks\HookBase.cs" />
+    <Compile Include="PluginModel\Hooks\Hooks.cs" />
+    <Compile Include="PluginModel\IAppliable.cs" />
+    <Compile Include="PluginModel\IdAttribute.cs" />
+    <Compile Include="PluginModel\Internals\PromptuAssemblyResolver.cs" />
+    <Compile Include="PluginModel\Internals\BindingContextManager.cs" />
+    <Compile Include="PluginModel\Internals\BindingExpression.cs" />
+    <Compile Include="PluginModel\Internals\BindingNode.cs" />
+    <Compile Include="PluginModel\Internals\CompatibilityAnalyzer.cs" />
+    <Compile Include="PluginModel\Internals\ErrorConsole.cs" />
+    <Compile Include="PluginModel\Internals\LazyExternalObject.cs" />
+    <Compile Include="PluginModel\Internals\LazyObject.cs" />
+    <Compile Include="PluginModel\Internals\PluginConfigWindowManager.cs" />
+    <Compile Include="PluginModel\Internals\PluginUpdate.cs" />
+    <Compile Include="PluginModel\Internals\PromptuHookManager.cs" />
+    <Compile Include="PluginModel\IPropertyEditor.cs" />
+    <Compile Include="PluginModel\IPropertyEditorFactory.cs" />
+    <Compile Include="PluginModel\NamedOptionPage.cs" />
+    <Compile Include="PluginModel\PromptuMenus.cs" />
+    <Compile Include="PluginModel\ObjectProperty.cs" />
+    <Compile Include="PluginModel\ObjectPropertyBase.cs" />
+    <Compile Include="PluginModel\ObjectPropertyCollection.cs" />
+    <Compile Include="PluginModel\OptionPage.cs" />
+    <Compile Include="PluginModel\OptionsGroup.cs" />
+    <Compile Include="PluginModel\OptionsGroupCollection.cs" />
+    <Compile Include="PluginModel\PromptuPluginCollection.cs" />
+    <Compile Include="PluginModel\PromptuHooks.cs" />
+    <Compile Include="PluginModel\PromptuPlugin.cs" />
+    <Compile Include="PluginModel\ObjectPropertyChangedEventArgs.cs" />
+    <Compile Include="PluginModel\PromptuPluginEntryPoint.cs" />
+    <Compile Include="PluginModel\PromptuPluginFactory.cs" />
+    <Compile Include="PluginModel\PropertiesAndOptions.cs" />
+    <Compile Include="PluginModel\UIComponentCollectionOverlay.cs" />
+    <Compile Include="ProgressIndicator.cs" />
+    <Compile Include="PromptuWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkinApi\IHasOptionsAndProperties.cs" />
+    <Compile Include="SkinApi\ISkinInstanceFactory.cs" />
+    <Compile Include="SkinApi\PromptuSkinInstance.cs" />
+    <Compile Include="SkinApi\SkinsSetting.cs" />
+    <Compile Include="PluginModel\TextConversionInfo.cs" />
+    <Compile Include="PromptuSkinSetupWrapper.cs" />
+    <Compile Include="PTK\HotkeyWidget.cs" />
+    <Compile Include="PTK\SuperTabPage.cs" />
+    <Compile Include="PTK\SuperTabWidget.cs" />
+    <Compile Include="PTK\TabPageBase.cs" />
+    <Compile Include="PTK\TabWidgetBase.cs" />
+    <Compile Include="PTK\WidgetCollectionWidget.cs" />
+    <Compile Include="PTK\ExternalWidget.cs" />
+    <Compile Include="PTK\FlowWidget.cs" />
+    <Compile Include="PTK\GenericWidget.cs" />
+    <Compile Include="PTK\IWidgetHost.cs" />
+    <Compile Include="PTK\Orientation.cs" />
+    <Compile Include="PTK\ScaledQuantity.cs" />
+    <Compile Include="PTK\TabPage.cs" />
+    <Compile Include="PTK\TabPageEventArgs.cs" />
+    <Compile Include="PTK\TabWidget.cs" />
+    <Compile Include="PTK\Widget.cs" />
+    <Compile Include="PTK\WidgetEventArgs.cs" />
+    <Compile Include="SkinApi\ImageClickEventArgs.cs" />
+    <Compile Include="SkinApi\InfoBoxes.cs" />
+    <Compile Include="SkinApi\InfoType.cs" />
+    <Compile Include="SkinApi\IProgressInfoBox.cs" />
+    <Compile Include="SkinApi\ITextInfoBox.cs" />
+    <Compile Include="SkinApi\IUIElement.cs" />
+    <Compile Include="SkinApi\PositioningContext.cs" />
+    <Compile Include="SkinApi\PositioningMode.cs" />
+    <Compile Include="SkinApi\IInfoBox.cs" />
+    <Compile Include="SkinApi\ILayoutManager.cs" />
+    <Compile Include="SkinApi\IPrompt.cs" />
+    <Compile Include="SkinApi\ISuggestionProvider.cs" />
+    <Compile Include="SkinApi\PromptuSkin.cs" />
+    <Compile Include="SkinApi\SuggestionItem.cs" />
+    <Compile Include="SkinApi\SuggestionItemType.cs" />
+    <Compile Include="Skins\MessageBoxProvider.cs" />
+    <Compile Include="Skins\MockSuggester.cs" />
+    <Compile Include="Skins\SkinCollection.cs" />
+    <Compile Include="Skins\Skin.cs" />
+    <Compile Include="Skins\ToolTipSettings.cs" />
+    <Compile Include="UIModel\BindingCollection.cs" />
+    <Compile Include="UIModel\ButtonColumn.cs" />
+    <Compile Include="UIModel\CellAddress.cs" />
+    <Compile Include="UIModel\CellEventArgs.cs" />
+    <Compile Include="UIModel\CellValidatingEventArgs.cs" />
+    <Compile Include="UIModel\CellValueEventArgs.cs" />
+    <Compile Include="UIModel\CheckBoxColumn.cs" />
+    <Compile Include="UIModel\ClipboardDataFormat.cs" />
+    <Compile Include="Configuration\SettingsGroup.cs" />
+    <Compile Include="UIModel\DragDropEventArgs.cs" />
+    <Compile Include="UIModel\Interfaces\IOptionsProgressBar.cs" />
+    <Compile Include="UIModel\Interfaces\IPluginUpdateDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IProgressReporter.cs" />
+    <Compile Include="UIModel\Interfaces\IUpdateAvailableDialog.cs" />
+    <Compile Include="UIModel\PartitionedUIContextMenu.cs" />
+    <Compile Include="UIModel\PassthroughNativeContextMenu.cs" />
+    <Compile Include="UIModel\NativeUICollectionBridge.cs" />
+    <Compile Include="UIModel\Interfaces\IAboutPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IGetPluginsPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IInstalledPluginsPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IPluginsTabPanel.cs" />
+    <Compile Include="UIModel\Interfaces\ISuperTabPage.cs" />
+    <Compile Include="UIModel\ItemInfo.cs" />
+    <Compile Include="UIModel\IUIComponentCollection.cs" />
+    <Compile Include="UIModel\ListDragDropEventArgs.cs" />
+    <Compile Include="UIModel\OverwriteOptionExtraInfo.cs" />
+    <Compile Include="UIModel\PassthroughUIComponentCollection.cs" />
+    <Compile Include="UIModel\Presenters\PluginUpdateDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\UpdateAvailableDialogPresenter.cs" />
+    <Compile Include="UIModel\SetupDialogManager.cs" />
+    <Compile Include="UIModel\SimpleColumnHeader.cs" />
+    <Compile Include="UIModel\ToolkitClipboard.cs" />
+    <Compile Include="UIModel\HotkeyEvaluationContext.cs" />
+    <Compile Include="UIModel\Interfaces\ICustomProxySettingsPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IObjectPropertyCollectionEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IOptionButton.cs" />
+    <Compile Include="UIModel\Interfaces\IOptionsTabPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IProfileConfigPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IPromptuOptionsPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IOptionsDialog.cs" />
+    <Compile Include="UIModel\ObjectEventArgs.cs" />
+    <Compile Include="UIModel\Column.cs" />
+    <Compile Include="UIModel\ComboBoxColumn.cs" />
+    <Compile Include="UIModel\Computer.cs" />
+    <Compile Include="UIModel\Configuration\ToolkitSettings.cs" />
+    <Compile Include="Configuration\ObjectSettings.cs" />
+    <Compile Include="UIModel\ConflictObjectType.cs" />
+    <Compile Include="UIModel\EntryImportance.cs" />
+    <Compile Include="UIModel\EntryState.cs" />
+    <Compile Include="UIModel\FlowContainer.cs" />
+    <Compile Include="UIModel\GlobalHotkey.cs" />
+    <Compile Include="UIModel\GuiManager.cs" />
+    <Compile Include="UIModel\HotkeyInUseResult.cs" />
+    <Compile Include="UIModel\HotkeyState.cs" />
+    <Compile Include="UIModel\Interfaces\HotkeyInUseResolutionStep.cs" />
+    <Compile Include="UIModel\Interfaces\IAppearanceTabPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IArgumentDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IAssemblyReferenceEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IBorderedHotkeyControl.cs" />
+    <Compile Include="UIModel\Interfaces\IButton.cs" />
+    <Compile Include="UIModel\Interfaces\ICheckBox.cs" />
+    <Compile Include="UIModel\Interfaces\ICheckBoxButton.cs" />
+    <Compile Include="UIModel\Interfaces\IChooseNewOrUsedProfile.cs" />
+    <Compile Include="UIModel\Interfaces\IChooseOverrideOrNewHotkey.cs" />
+    <Compile Include="UIModel\Interfaces\ICollectionEditor.cs" />
+    <Compile Include="UIModel\Interfaces\ICollectionWidget.cs" />
+    <Compile Include="UIModel\Interfaces\ICollisionResolvingDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IComboInput.cs" />
+    <Compile Include="UIModel\Interfaces\ICommandEditor.cs" />
+    <Compile Include="UIModel\Interfaces\ICommandLink.cs" />
+    <Compile Include="UIModel\Interfaces\IConfirmDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IContainerControl.cs" />
+    <Compile Include="UIModel\Interfaces\IContentHost.cs" />
+    <Compile Include="UIModel\Interfaces\IDownloadProgressDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IDragSource.cs" />
+    <Compile Include="UIModel\Interfaces\IErrorPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IExistingProfile.cs" />
+    <Compile Include="UIModel\Interfaces\IFileSystemParameterSuggestionEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IFlowContainer.cs" />
+    <Compile Include="UIModel\Interfaces\IObjectDisambiguator.cs" />
+    <Compile Include="UIModel\Interfaces\IFunctionEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IFunctionInvocationEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IFunctionViewer.cs" />
+    <Compile Include="UIModel\Interfaces\IGenericToolbarItem.cs" />
+    <Compile Include="UIModel\Interfaces\IHasCancelButton.cs" />
+    <Compile Include="UIModel\Interfaces\IHotkeyInUseNewHotkey.cs" />
+    <Compile Include="UIModel\Interfaces\ILabel.cs" />
+    <Compile Include="UIModel\Interfaces\IListSelector.cs" />
+    <Compile Include="UIModel\Interfaces\IMenuButton.cs" />
+    <Compile Include="UIModel\Interfaces\INativeContextMenu.cs" />
+    <Compile Include="UIModel\Interfaces\INativeUICollection.cs" />
+    <Compile Include="UIModel\Interfaces\IGenericMenuItem.cs" />
+    <Compile Include="UIModel\Interfaces\IHotkeyInUseDialog.cs" />
+    <Compile Include="UIModel\Interfaces\ILockedInternal.cs" />
+    <Compile Include="UIModel\Interfaces\IMenuItem.cs" />
+    <Compile Include="UIModel\Interfaces\IMenuSeparator.cs" />
+    <Compile Include="UIModel\Interfaces\IGlobalHotkey.cs" />
+    <Compile Include="UIModel\Interfaces\IOverwriteDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IProfileAdvanced.cs" />
+    <Compile Include="UIModel\Interfaces\IProfileBasics.cs" />
+    <Compile Include="UIModel\Interfaces\IProfileFinish.cs" />
+    <Compile Include="UIModel\Interfaces\IProxySettingsPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IStackWidget.cs" />
+    <Compile Include="UIModel\Interfaces\IOpenFileDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IProfileTabPanel.cs" />
+    <Compile Include="UIModel\Interfaces\IRadioButton.cs" />
+    <Compile Include="UIModel\Interfaces\IRenameDialog.cs" />
+    <Compile Include="UIModel\Interfaces\ISaveFileDialog.cs" />
+    <Compile Include="UIModel\Interfaces\ISetupDialog.cs" />
+    <Compile Include="UIModel\Interfaces\ISetupPanel.cs" />
+    <Compile Include="UIModel\Interfaces\ISimpleCollectionViewer.cs" />
+    <Compile Include="UIModel\Interfaces\ITabControl.cs" />
+    <Compile Include="UIModel\Interfaces\ITabPage.cs" />
+    <Compile Include="UIModel\Interfaces\ITextInput.cs" />
+    <Compile Include="UIModel\Interfaces\IToolbarButton.cs" />
+    <Compile Include="UIModel\Interfaces\IToolbarMenuItem.cs" />
+    <Compile Include="UIModel\Interfaces\IToolbarSeparator.cs" />
+    <Compile Include="UIModel\Interfaces\IToolTippedButton.cs" />
+    <Compile Include="UIModel\Interfaces\IValueListEditor.cs" />
+    <Compile Include="UIModel\Interfaces\IValueListSelectorWindow.cs" />
+    <Compile Include="UIModel\Interfaces\ISplitToolbarButton.cs" />
+    <Compile Include="UIModel\Interfaces\IWidgetOwner.cs" />
+    <Compile Include="UIModel\InternationalizedValue.cs" />
+    <Compile Include="UIModel\ItemCompareEntry.cs" />
+    <Compile Include="UIModel\Interfaces\IThreadingInvoke.cs" />
+    <Compile Include="UIModel\Keyboard.cs" />
+    <Compile Include="UIModel\KeyboardSnapshot.cs" />
+    <Compile Include="UIModel\NativeUICollectionBinding.cs" />
+    <Compile Include="UIModel\NewUserDialogContext.cs" />
+    <Compile Include="UIModel\ObjectConflictInfo.cs" />
+    <Compile Include="PluginModel\OptionsTextEntry.cs" />
+    <Compile Include="UIModel\OS.cs" />
+    <Compile Include="UIModel\OverwriteOption.cs" />
+    <Compile Include="UIModel\Presenters\ArgumentDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\AssemblyReferenceEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\AssemblyReferenceSetupPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\CollectionEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\CollisionResolvingDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\CommandEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\CommandParameterMetaInfoPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\CommandSetupPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ConfirmDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\DialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\DownloadProgressDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ErrorPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FileSystemParameterSuggestionEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ObjectDisambiguatorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FunctionEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FunctionInvocationEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FunctionParameterPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FunctionSetupPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\FunctionViewerPresenter.cs" />
+    <Compile Include="UIModel\Presenters\HotkeyInUseDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ListConversionInfo.cs" />
+    <Compile Include="UIModel\Presenters\ListSelectorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\OptionsDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\OverwriteDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\PresenterBase.cs" />
+    <Compile Include="UIModel\Presenters\RenameDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\SetupDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\SetupPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\SimpleCollectionPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ValueListContentsPanelPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ValueListEditorPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ValueListSelectorWindowPresenter.cs" />
+    <Compile Include="UIModel\Presenters\ValueListSetupPanelPresenter.cs" />
+    <Compile Include="UIModel\NewProfileStep.cs" />
+    <Compile Include="UIModel\RadioListItem.cs" />
+    <Compile Include="UIModel\RichText\LineBreak.cs" />
+    <Compile Include="UIModel\RichText\RTGroup.cs" />
+    <Compile Include="UIModel\RichText\KeyedImage.cs" />
+    <Compile Include="UIModel\RichText\RTElement.cs" />
+    <Compile Include="UIModel\RichText\Text.cs" />
+    <Compile Include="UIModel\RichText\TextStyle.cs" />
+    <Compile Include="UIModel\RichText\Space.cs" />
+    <Compile Include="UIModel\SkinInfo.cs" />
+    <Compile Include="UIModel\SystemFileVisibilitySettings.cs" />
+    <Compile Include="UIModel\TextColumn.cs" />
+    <Compile Include="PluginModel\TextEntryType.cs" />
+    <Compile Include="UIModel\TextStyle.cs" />
+    <Compile Include="UIModel\ToolkitImages.cs" />
+    <Compile Include="UIModel\UIComponent.cs" />
+    <Compile Include="UIModel\UIComponentCollection.cs" />
+    <Compile Include="UIModel\UIContextMenu.cs" />
+    <Compile Include="UIModel\UIDragDropEffects.cs" />
+    <Compile Include="UIModel\UIMenuItemCollectionBinding.cs" />
+    <Compile Include="UIModel\UIMenuItemCollection.cs" />
+    <Compile Include="UIModel\Presenters\HotkeyControlPresenter.cs" />
+    <Compile Include="UIModel\Interfaces\IBatchUpdatable.cs" />
+    <Compile Include="UIModel\Interfaces\IDialog.cs" />
+    <Compile Include="UIModel\Interfaces\IHasOkButton.cs" />
+    <Compile Include="UIModel\Interfaces\IHotkeyControl.cs" />
+    <Compile Include="UIModel\Interfaces\INewUserDialog.cs" />
+    <Compile Include="UIModel\Interfaces\INotifyIcon.cs" />
+    <Compile Include="UIModel\Interfaces\INewProfileDialog.cs" />
+    <Compile Include="UIModel\Interfaces\ISplashScreen.cs" />
+    <Compile Include="UIModel\Interfaces\IUnhandledExceptionDialog.cs" />
+    <Compile Include="UIModel\Presenters\NewUserDialogPresenter.cs" />
+    <Compile Include="UIModel\Presenters\NotifyIconPresenter.cs" />
+    <Compile Include="UIModel\Presenters\NewProfileDialogPresenter.cs" />
+    <Compile Include="UIModel\ToolkitFactory.cs" />
+    <Compile Include="UIModel\ToolkitHost.cs" />
+    <Compile Include="UIModel\UIDialogResult.cs" />
+    <Compile Include="UIModel\UIMenuItem.cs" />
+    <Compile Include="UIModel\UIMenuItemBase.cs" />
+    <Compile Include="UIModel\UIMenuItemInternal.cs" />
+    <Compile Include="UIModel\UIMenuSeparator.cs" />
+    <Compile Include="UIModel\UIMenuSeparatorInternal.cs" />
+    <Compile Include="UIModel\UIMessageBox.cs" />
+    <Compile Include="UIModel\UIMessageBoxButtons.cs" />
+    <Compile Include="UIModel\UIMessageBoxIcon.cs" />
+    <Compile Include="UIModel\UIMessageBoxOptions.cs" />
+    <Compile Include="UIModel\UIMessageBoxResult.cs" />
+    <Compile Include="UIModel\Presenters\UnhandledExceptionDialogPresenter.cs" />
+    <Compile Include="UIModel\UITabControl.cs" />
+    <Compile Include="UIModel\UITabPage.cs" />
+    <Compile Include="UIModel\UITabPageCollection.cs" />
+    <Compile Include="UIModel\ClipboardCopyData.cs" />
+    <Compile Include="UIModel\UITabPageInternal.cs" />
+    <Compile Include="UIModel\UIWidget.cs" />
+    <Compile Include="UIModel\UpdateAvailableResult.cs" />
+    <Compile Include="ValueValidationResult.cs" />
+    <Compile Include="UIModel\WindowManager.cs" />
+    <Compile Include="UI\InvalidValueException.cs" />
+    <Compile Include="UIModel\ListDataManager.cs" />
+    <Compile Include="UIModel\MoveConflictAction.cs" />
+    <Compile Include="ParameterDocumentationAttribute.cs" />
+    <Compile Include="PdcMeta.cs" />
+    <Compile Include="ProxyMode.cs" />
+    <Compile Include="ProxySettings.cs" />
+    <Compile Include="ReleaseVersion.cs" />
+    <Compile Include="Skins\DoPopulationInfo.cs" />
+    <Compile Include="Skins\InvisibleEndQuote.cs" />
+    <Compile Include="Skins\ItemValidator.cs" />
+    <Compile Include="Skins\FunctionAndCommandContextItemValidator.cs" />
+    <Compile Include="Skins\PopulationInfo.cs" />
+    <Compile Include="Skins\PopulationProvider.cs" />
+    <Compile Include="Skins\SuggestionProvider.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="UserModel\Configuration\GenericSettings.cs" />
+    <Compile Include="UserModel\Configuration\Settings.cs" />
+    <Compile Include="UserModel\Configuration\SettingsBase.cs" />
+    <Compile Include="UIModel\ValidationManager.cs" />
+    <Compile Include="UserModel\Collections\CommandCollectionComposite.cs" />
+    <Compile Include="UserModel\Collections\CommandParameterHistoryCollection.cs" />
+    <Compile Include="UserModel\Collections\CommandParameterMetaInfoCollection.cs" />
+    <Compile Include="UserModel\Collections\ComplexHistoryCollection.cs" />
+    <Compile Include="UserModel\Collections\FunctionHistoryCollection.cs" />
+    <Compile Include="UserModel\Collections\HistoricalCollection.cs" />
+    <Compile Include="UserModel\Collections\ValueListCollection.cs" />
+    <Compile Include="UserModel\Collections\ValueListCollectionWrapper.cs" />
+    <Compile Include="UserModel\CommandParameterHistory.cs" />
+    <Compile Include="UserModel\CommandParameterMetaInfo.cs" />
+    <Compile Include="UserModel\CommandValidation.cs" />
+    <Compile Include="UserModel\Configuration\NotesSettings.cs" />
+    <Compile Include="UserModel\Differencing\IChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\ValueListAutoChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\ValueListChangeFinder.cs" />
+    <Compile Include="UserModel\Differencing\ValueListDiff.cs" />
+    <Compile Include="UserModel\Differencing\ValueListDiffDiff.cs" />
+    <Compile Include="UserModel\Differencing\ValueListDiffDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\ValueListDiffMaker.cs" />
+    <Compile Include="UserModel\FunctionHistory.cs" />
+    <Compile Include="Skins\FunctionSuggestionProvider.cs" />
+    <Compile Include="Skins\InformationBoxLayoutManager.cs" />
+    <Compile Include="Skins\InformationBoxManager.cs" />
+    <Compile Include="Skins\InformationBoxType.cs" />
+    <Compile Include="Skins\ParameterHelpContext.cs" />
+    <Compile Include="Skins\SeparateSuggestionHandler.cs" />
+    <Compile Include="Shortcut.cs" />
+    <Compile Include="Skins\IInstanceOnDemand.cs" />
+    <Compile Include="Skins\SuggestionUtilities.cs" />
+    <Compile Include="SuggestionMode.cs" />
+    <Compile Include="ReleaseType.cs" />
+    <Compile Include="UI\SpecialImages.cs" />
+    <Compile Include="Updater.cs" />
+    <Compile Include="UserModel\Collections\FunctionParameterCollection.cs" />
+    <Compile Include="UserModel\Collections\FunctionsCommandsCompositeMediator.cs" />
+    <Compile Include="UserModel\FileSystemParameterSuggestion.cs" />
+    <Compile Include="UserModel\FunctionParameter.cs" />
+    <Compile Include="UserModel\FunctionParameterValueType.cs" />
+    <Compile Include="UserModel\FunctionReturnParameterSuggestion.cs" />
+    <Compile Include="UserModel\HotkeyException.cs" />
+    <Compile Include="UserModel\IDiffable.cs" />
+    <Compile Include="UserModel\IHasNonIdIdentifier.cs" />
+    <Compile Include="IntRange.cs" />
+    <Compile Include="UserModel\LoadedAssembly.cs" />
+    <Compile Include="SkinApi\Direction.cs" />
+    <Compile Include="Skins\SuggestionHandler.cs" />
+    <Compile Include="SyncSynchronizer.cs" />
+    <Compile Include="UI\IHasFallbackImageIndex.cs" />
+    <Compile Include="UIModel\StringRepresentation.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceAutoChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceChangeFinder.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceDiff.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceDiffDiff.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceDiffDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\AssemblyReferenceDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\AutoChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\CommandAutoChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\CommandChangeFinder.cs" />
+    <Compile Include="UserModel\Differencing\CommandDiff.cs" />
+    <Compile Include="UserModel\Differencing\CommandDiffDiff.cs" />
+    <Compile Include="UserModel\Differencing\CommandDiffDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\CommandDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\Diff.cs" />
+    <Compile Include="UserModel\Differencing\DiffCollection.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiff.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffBase.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffCollection.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffEntry.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffEntryBase.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\DiffDiffType.cs" />
+    <Compile Include="UserModel\Differencing\DiffVersion.cs" />
+    <Compile Include="UserModel\Differencing\FunctionAutoChangeResolver.cs" />
+    <Compile Include="UserModel\Differencing\FunctionChangeFinder.cs" />
+    <Compile Include="UserModel\Differencing\FunctionDiffDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\FunctionDiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\DiffMaker.cs" />
+    <Compile Include="UserModel\Differencing\DiffEntry.cs" />
+    <Compile Include="UserModel\Differencing\FunctionDiff.cs" />
+    <Compile Include="UserModel\Differencing\FunctionDiffDiff.cs" />
+    <Compile Include="UserModel\Differencing\ChangeFinder.cs" />
+    <Compile Include="UserModel\Differencing\ItemType.cs" />
+    <Compile Include="UserModel\Differencing\DiffStatus.cs" />
+    <Compile Include="UserModel\Differencing\ResolverMissingException.cs" />
+    <Compile Include="UserModel\Differencing\ValueComparisons.cs" />
+    <Compile Include="ExecuteMode.cs" />
+    <Compile Include="Extensions\System\Collections\Generic\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\System\Drawing\Extensions\PointExtensions.cs" />
+    <Compile Include="Extensions\System\Extensions\CharExtensions.cs" />
+    <Compile Include="Extensions\System\Extensions\StringExtensions.cs" />
+    <Compile Include="FileFileSystem\BadFileFormatException.cs" />
+    <Compile Include="FileFileSystem\BadLineException.cs" />
+    <Compile Include="FileFileSystem\CustomStreamReader.cs" />
+    <Compile Include="FileFileSystem\FileFile.cs" />
+    <Compile Include="FileFileSystem\FileFileCollection.cs" />
+    <Compile Include="FileFileSystem\FileFileDirectory.cs" />
+    <Compile Include="FileFileSystem\FileFileDirectoryCollection.cs" />
+    <Compile Include="FileFileSystem\FileFileSystemException.cs" />
+    <Compile Include="FileFileSystem\FileFileSystemVersion.cs" />
+    <Compile Include="FileSystemDirectory.cs" />
+    <Compile Include="FileSystemFile.cs" />
+    <Compile Include="FileFileSystem\InvalidDirectoryHeaderException.cs" />
+    <Compile Include="FileFileSystem\InvalidFileHeaderException.cs" />
+    <Compile Include="FileFileSystem\OffsetStream.cs" />
+    <Compile Include="Extensions\System\IO\Extensions\StreamExtensions.cs" />
+    <Compile Include="GeneralUtilities.cs" />
+    <Compile Include="INamed.cs" />
+    <Compile Include="IncrementingValueCannotBeFoundException.cs" />
+    <Compile Include="InsertBase.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\ArgumentSubstitution.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\Expression.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\ExpressionGroup.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\FunctionCall.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\Identifier.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\ImperativeSubstitution.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\OptionalSubsitution.cs" />
+    <Compile Include="Itl\AbstractSyntaxTree\StringLiteral.cs" />
+    <Compile Include="FeedbackCollection.cs" />
+    <Compile Include="FeedbackMessage.cs" />
+    <Compile Include="FeedbackType.cs" />
+    <Compile Include="Itl\ItlCompiler.cs" />
+    <Compile Include="Itl\ItlParser.cs" />
+    <Compile Include="Itl\StandardItlScanner.cs" />
+    <Compile Include="ParseException.cs" />
+    <Compile Include="Itl\ScanToken.cs" />
+    <Compile Include="Itl\ScanTokenLiteral.cs" />
+    <Compile Include="Extensions\System\IO\Extensions\StringReaderExtensions.cs" />
+    <Compile Include="Localization\ItlMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItlMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\UIResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageCollection.cs" />
+    <Compile Include="PromptuUtilities.cs" />
+    <Compile Include="CharComparer.cs" />
+    <Compile Include="Collections\ChangeNotifiedList.cs" />
+    <Compile Include="ItemEventArgs.cs" />
+    <Compile Include="UIModel\ItemCode.cs" />
+    <Compile Include="UIModel\ItemCopyInfo.cs" />
+    <Compile Include="UI\IHasImageIndex.cs" />
+    <Compile Include="UI\ItemsEventArgs.cs" />
+    <Compile Include="UIModel\MessageSelectedEventArgs.cs" />
+    <Compile Include="UserModel\Differencing\VisualDisplayInfo.cs" />
+    <Compile Include="UserModel\Collections\FunctionsCommandsComposite.cs" />
+    <Compile Include="UserModel\GetConflictsMode.cs" />
+    <Compile Include="UserModel\GroupedCompositeItem.cs" />
+    <Compile Include="UserModel\HistoryDetails.cs" />
+    <Compile Include="UserModel\IdGenerator.cs" />
+    <Compile Include="UserModel\IHasId.cs" />
+    <Compile Include="UserModel\Collections\IItemsWithIdList.cs" />
+    <Compile Include="UserModel\ListSyncInfo.cs" />
+    <Compile Include="UserModel\Collections\LoadedAssemblyCollection.cs" />
+    <Compile Include="UserModel\LoadedFunctionInfo.cs" />
+    <Compile Include="UserModel\LockedProfileException.cs" />
+    <Compile Include="UserModel\NewerPackageVersionException.cs" />
+    <Compile Include="UserModel\ParameterSuggestion.cs" />
+    <Compile Include="UserModel\PersistingProperties.cs" />
+    <Compile Include="UserModel\PluginMeta.cs" />
+    <Compile Include="UserModel\PluginMetaCollection.cs" />
+    <Compile Include="UserModel\ProfileBase.cs" />
+    <Compile Include="UserModel\ProfileLoadException.cs" />
+    <Compile Include="UserModel\ProfilePlacemark.cs" />
+    <Compile Include="Configuration\SettingsBase.cs" />
+    <Compile Include="UserModel\Configuration\SetupDialogSettings.cs" />
+    <Compile Include="UserModel\Configuration\TabControlSettings.cs" />
+    <Compile Include="UserModel\Id.cs" />
+    <Compile Include="UserModel\Configuration\UISettings.cs" />
+    <Compile Include="UserModel\Collections\AssemblyReferenceCollection.cs" />
+    <Compile Include="UserModel\Collections\CommandCollection.cs" />
+    <Compile Include="UserModel\Collections\FunctionCollection.cs" />
+    <Compile Include="Collections\SkinCollection.cs" />
+    <Compile Include="UserModel\Command.cs" />
+    <Compile Include="UserModel\CommandDeletedEventArgs.cs" />
+    <Compile Include="Delegates.cs" />
+    <Compile Include="UserModel\AssemblyReference.cs" />
+    <Compile Include="ConversionException.cs" />
+    <Compile Include="ExecutionData.cs" />
+    <Compile Include="UserModel\Function.cs" />
+    <Compile Include="Extensions\System\Collections\Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Extensions\System\Drawing\Extensions\BitmapExtensions.cs" />
+    <Compile Include="Extensions\System\Xml\Extensions\XmlDocumentExtensions.cs" />
+    <Compile Include="Extensions\System\Xml\Extensions\XmlNodeExtensions.cs" />
+    <Compile Include="FatalLoadException.cs" />
+    <Compile Include="Collections\TrieList.cs" />
+    <Compile Include="Localization\ExceptionFormats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionFormats.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UIModel\ListAddedOrDeletedEventArgs.cs" />
+    <Compile Include="UIModel\ListMovedEventArgs.cs" />
+    <Compile Include="UIModel\NewUserAction.cs" />
+    <Compile Include="UserModel\Collections\AssemblyReferenceCollectionComposite.cs" />
+    <Compile Include="UserModel\Collections\AssemblyReferenceCollectionWrapper.cs" />
+    <Compile Include="UserModel\Collections\AssemblyReferencesManifest.cs" />
+    <Compile Include="UserModel\Collections\CommandCollectionWrapper.cs" />
+    <Compile Include="UserModel\CommandDefaults.cs" />
+    <Compile Include="UserModel\CompositeItem.cs" />
+    <Compile Include="UserModel\CorruptPackageException.cs" />
+    <Compile Include="UserModel\Collections\FunctionCollectionComposite.cs" />
+    <Compile Include="UserModel\Collections\FunctionCollectionWrapper.cs" />
+    <Compile Include="Localization\MessageFormats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageFormats.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\Promptu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Promptu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HotkeyChangedEventArgs.cs" />
+    <Compile Include="UI\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interop\SlickRun.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="InternalGlobals.cs" />
+    <Compile Include="HotkeyModifierKeys.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Localization\Documentation.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Documentation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ItlMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ItlMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\UIResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\ExceptionFormats.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionFormats.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\MessageFormats.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageFormats.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\Promptu.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Promptu.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserModel\Defaults.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Defaults.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SkinEventArgs.cs" />
+    <Compile Include="SkinApi\KeyPressedEventArgs.cs" />
+    <Compile Include="Skins\PromptHandler.cs" />
+    <Compile Include="Skins\Skin-Old.cs" />
+    <Compile Include="Skins\SkinFinder.cs" />
+    <Compile Include="Skins\PropertiesMiddleMan.cs" />
+    <Compile Include="Collections\SortMode.cs" />
+    <Compile Include="SystemEvents.cs" />
+    <Compile Include="System\Runtime\CompilerServices\ExtensionAttribute.cs" />
+    <Compile Include="UserModel\Collections\HistoryCollection.cs" />
+    <Compile Include="UserModel\KeySuggestionConfig.cs" />
+    <Compile Include="UserModel\List.cs" />
+    <Compile Include="UserModel\Collections\ListCollection.cs" />
+    <Compile Include="UserModel\ListEventArgs.cs" />
+    <Compile Include="UserModel\NoSyncLocationException.cs" />
+    <Compile Include="UserModel\Profile.cs" />
+    <Compile Include="UserModel\Collections\ProfilePlacemarkCollection.cs" />
+    <Compile Include="UserModel\Defaults.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Defaults.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserModel\ReturnValue.cs" />
+    <Compile Include="UserModel\SelfReferencingCommandException.cs" />
+    <Compile Include="UserModel\SkinData.cs" />
+    <Compile Include="UserModel\Collections\SkinDataCollection.cs" />
+    <Compile Include="UserModel\SuggestionConfig.cs" />
+    <Compile Include="UserModel\SuggestionModeTypes.cs" />
+    <Compile Include="UserModel\SyncLocation.cs" />
+    <Compile Include="UserModel\TimeUnit.cs" />
+    <Compile Include="UserModel\UserCookie.cs" />
+    <Compile Include="UserModel\Configuration\WindowSettings.cs" />
+    <Compile Include="UserModel\ValueList.cs" />
+    <Compile Include="UserModel\ValueListItem.cs" />
+    <Compile Include="UserModel\ValueListParameterSuggestion.cs" />
+    <Compile Include="UserModel\WindowsROverride.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="ValidHotkeyKey.cs" />
+    <Compile Include="ValidHotkeyKeys.cs" />
+    <Compile Include="WeakReference.cs" />
+    <Compile Include="WildCardExpression.cs" />
+    <Compile Include="XmlUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Dropper.png" />
+    <None Include="Icons\DropperPlusHotspot.png" />
+    <None Include="Icons\Delete.png" />
+    <None Include="Icons\DownArrow.png" />
+    <None Include="Icons\New.png" />
+    <None Include="Icons\Rename.png" />
+    <None Include="Icons\Append.png" />
+    <None Include="Icons\Link.png" />
+    <None Include="Icons\NewList.png" />
+    <None Include="Icons\Publish.png" />
+    <None Include="Icons\Sync.png" />
+    <None Include="Icons\Import.png" />
+    <None Include="Icons\ListIn.png" />
+    <None Include="Icons\ListOut.png" />
+    <None Include="Icons\Export.png" />
+    <None Include="Icons\Error.png" />
+    <None Include="Icons\ErrorSmall.png" />
+    <None Include="Icons\MessageSmall.png" />
+    <None Include="Icons\Message.png" />
+    <None Include="Icons\Close.png" />
+    <None Include="Icons\Hide.png" />
+    <None Include="Icons\RightArrowSmall.png" />
+    <None Include="Icons\Command.png" />
+    <None Include="Icons\Function.png" />
+    <None Include="Icons\History.png" />
+    <None Include="Icons\NativeCommand.png" />
+    <None Include="Icons\Namespace.png" />
+    <None Include="Icons\File.png" />
+    <None Include="Icons\NamespaceOverlay.png" />
+    <None Include="Icons\Edit.png" />
+    <None Include="Icons\NewOverlay.png" />
+    <None Include="Icons\NewCommand.png" />
+    <None Include="Icons\NewFunction.png" />
+    <None Include="Icons\NewAssemblyReference.png" />
+    <None Include="Icons\GrayX.png" />
+    <None Include="Icons\GreenCheckmark.png" />
+    <None Include="Icons\Icon.png" />
+    <None Include="bin\Debug\Profiles\Basic\0\AssemblyReferences.xml" />
+    <None Include="bin\Debug\Profiles\Basic\0\AssemblyReferencesManifest.xml" />
+    <None Include="bin\Debug\Profiles\Basic\0\Commands.xml" />
+    <None Include="bin\Debug\Profiles\Basic\0\Functions.xml" />
+    <None Include="bin\Debug\Profiles\Basic\0\List.xml" />
+    <None Include="bin\Debug\Profiles\Basic\Profile.xml" />
+    <None Include="bin\Debug\Profiles\Basic\0\ValueLists.xml" />
+    <Content Include="Icon.ico" />
+    <None Include="Icons\SplashScreen.png" />
+    <None Include="Icons\AboutBox.png" />
+    <None Include="Icons\ListSearchArrow.png" />
+    <None Include="Icons\GreenPlus.png" />
+    <None Include="Icons\OrangeX.png" />
+    <None Include="Icons\RedX.png" />
+    <None Include="Icons\OverloadDown.png" />
+    <None Include="Icons\OverloadUp.png" />
+    <None Include="Icons\NewValueList.png" />
+    <None Include="Icons\Copy.png" />
+    <None Include="Icons\Cut.png" />
+    <None Include="Icons\Paste.png" />
+    <None Include="Icons\GreenPlusPlus.png" />
+    <Content Include="Icons\TuxIcon.png" />
+    <None Include="Icons\ValueListItem.png" />
+    <None Include="Icons\ValueList.png" />
+    <None Include="Icons\Unhide.png" />
+    <None Include="Icons\Unclose.png" />
+    <None Include="Icons\WarningSmall.png" />
+    <None Include="Icons\Warning.png" />
+    <None Include="Icons\Unsubscribe.png" />
+    <None Include="Icons\Unpublish.png" />
+    <None Include="Icons\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

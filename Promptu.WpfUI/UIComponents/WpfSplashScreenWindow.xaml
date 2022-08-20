@@ -1,0 +1,76 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:ClassModifier="internal"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="ZachJohnson.Promptu.WpfUI.WpfSplashScreenWindow"
+	x:Name="Window"
+	Width="457" Height="382" AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" ResizeMode="NoResize" Background="{x:Null}" WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True">
+	<Border BorderThickness="1" Margin="0" SnapsToDevicePixels="True" CornerRadius="10">
+		<Grid>
+			<Border BorderBrush="#FF838383" BorderThickness="0,1,0,0" Margin="0" VerticalAlignment="Bottom" Height="170" SnapsToDevicePixels="True" CornerRadius="10" Visibility="Collapsed">
+				<Border.Background>
+					<RadialGradientBrush RadiusX="0.716" RadiusY="1.164" Center="0.501,0.739" GradientOrigin="0.501,0.739">
+						<GradientStop Color="#FFCACACA" Offset="0.889"/>
+						<GradientStop Color="White" Offset="0.729"/>
+					</RadialGradientBrush>
+				</Border.Background>
+			</Border>
+			<Grid Margin="0,20,0,0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid x:Name="LayoutRoot" Margin="0" Width="445" Height="240">
+					<!--Rectangle x:Name="Mask_Copy" Height="220" Margin="12,10,0,0" Stroke="Black" VerticalAlignment="Top" RadiusX="10" RadiusY="10" Width="420" HorizontalAlignment="Left" Fill="#FFF4F4F5" StrokeThickness="0"/>
+					<Rectangle x:Name="Mask" Fill="#FFF4F4F5" Height="220" Margin="12,10,0,0" Stroke="Black" VerticalAlignment="Top" RadiusX="10" RadiusY="10" Width="420" HorizontalAlignment="Left" StrokeThickness="0"/-->
+					<Border BorderBrush="#FF345E21" BorderThickness="1" Margin="8" CornerRadius="11" Width="423" Height="224" SnapsToDevicePixels="True">
+						<Border.Background>
+							<ImageBrush ImageSource="/Promptu.WpfUI;component/SplashScreen.jpg" />
+						</Border.Background>
+						<!--Image Source="/Promptu.WpfUI;component/SplashScreen.jpg" Height="222" VerticalAlignment="Top" HorizontalAlignment="Left" Width="422" Margin="0">
+							<Image.OpacityMask>
+								<VisualBrush Visual="{Binding ElementName=Mask}"/>
+							</Image.OpacityMask>
+						</Image-->
+					</Border>
+					<!--Rectangle x:Name="Mask_Copy1" Height="222" Margin="12,10,0,0" VerticalAlignment="Top" RadiusX="10" RadiusY="10" Width="422" HorizontalAlignment="Left" StrokeThickness="0"/-->
+				</Grid>
+				<Border Grid.Row="1" RenderTransformOrigin="0.5,0.5" Margin="8,0" Padding="2,0,4,0" VerticalAlignment="Top">
+					<Border.Effect>
+						<BlurEffect/>
+					</Border.Effect>
+					<Grid>
+						<Grid.OpacityMask>
+							<LinearGradientBrush EndPoint="0.837,0.462" StartPoint="0.154,0.458">
+								<GradientStop Color="White" Offset="0.332"/>
+								<GradientStop Color="#DAFFFFFF" Offset="1"/>
+								<GradientStop Color="#91FFFFFF" Offset="0.004"/>
+							</LinearGradientBrush>
+						</Grid.OpacityMask>
+						<Rectangle RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-140" Width="423" Height="240" VerticalAlignment="Top">
+							<Rectangle.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform ScaleY="-1"/>
+									<SkewTransform/>
+									<RotateTransform/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Rectangle.RenderTransform>
+							<Rectangle.OpacityMask>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#00000000" Offset="0.63"/>
+									<GradientStop Color="#90FFFFFF" Offset="1"/>
+									<GradientStop Color="#36464646" Offset="0.847"/>
+								</LinearGradientBrush>
+							</Rectangle.OpacityMask>
+							<Rectangle.Fill>
+								<VisualBrush Visual="{Binding ElementName=LayoutRoot}"/>
+							</Rectangle.Fill>
+						</Rectangle>
+					</Grid>
+				</Border>
+			</Grid>
+		</Grid>
+	</Border>
+</Window>

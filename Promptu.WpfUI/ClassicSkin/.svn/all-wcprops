@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/promptu/!svn/ver/48/trunk/Promptu.WpfUI/ClassicSkin
+END
+ClassicSkinInstance.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/ClassicSkin/ClassicSkinInstance.cs
+END
+ClassicPromptOld.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/35/trunk/Promptu.WpfUI/ClassicSkin/ClassicPromptOld.xaml
+END
+ClassicSkinFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/ClassicSkin/ClassicSkinFactory.cs
+END
+ClassicPrompt.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/promptu/!svn/ver/37/trunk/Promptu.WpfUI/ClassicSkin/ClassicPrompt.xaml
+END
+ClassicPromptOld.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/35/trunk/Promptu.WpfUI/ClassicSkin/ClassicPromptOld.xaml.cs
+END
+ClassicPrompt.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/48/trunk/Promptu.WpfUI/ClassicSkin/ClassicPrompt.xaml.cs
+END
+ClassicSkin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/promptu/!svn/ver/38/trunk/Promptu.WpfUI/ClassicSkin/ClassicSkin.cs
+END

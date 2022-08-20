@@ -1,0 +1,30 @@
+<start> := <
+<end> := >
+
+<expr> := <function>
+			| <string>
+			| <sub_imper>
+			| <sub_opt>
+			| <expr> <expr>
+
+<string> := " <string_elem>* "
+<string_elem> := <any char other than ">
+
+<ident> := <char> <ident_rest>*
+<ident_rest>  <char> | <digit>
+
+<digit_zero> := 0
+<digit_non_zero> := 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+
+<actual_arg_num> := <digit_non_zero> (<digit_zero> | <digit_non_zero>*)
+<any_arg_num> := <actual_arg_num> | n
+
+<arg_sub_elem> := <any_arg_num>
+			| <actual_arg_num> - <any_arg_num>
+
+<sub_imper> := ! <arg_sub_elem> !
+
+<sub_opt> := ? <arg_sub_elem> ?
+			| ? <arg_sub_elem> : <string> ?
+
+<function> := <ident> ( (<expr> (, <expr>)*)? )

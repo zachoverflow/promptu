@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.Collections
+{
+    internal interface IKeyAbstractionCollection : IEnumerable<string>
+    {
+        int Count { get; }
+
+        string this[int index] { get; }
+
+        bool Contains(string key);
+    }
+}

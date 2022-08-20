@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    public class OptionPage
+    {
+        private string mainInstructions;
+        private OptionsGroupCollection groups;
+
+        public OptionPage()
+            : this(null)
+        {
+        }
+
+        public OptionPage(string mainInstructions)
+        {
+            this.mainInstructions = mainInstructions;
+            this.groups = new OptionsGroupCollection();
+        }
+
+        public string MainInstructions
+        {
+            get { return this.mainInstructions; }
+        }
+
+        public OptionsGroupCollection Groups
+        {
+            get { return this.groups; }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Collections.ObjectModel;
+using System.Xml;
+using System.IO;
+using System.ComponentModel;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    internal class PromptuPluginCollection : Collection<PromptuPlugin>
+    {
+        private bool ignoreChanges;
+
+        public PromptuPluginCollection()
+        {
+        }
+
+        internal event EventHandler ChildSettingOrPropertyChanged;
+
+        internal event PropertyChangedEventHandler ChildPropertyChanged;
+
+        public PromptuPlugin TryGet(string id)
+        {
+            foreach (PromptuPlugin plugin in this)
+            {
+                if (plugin != null && plugin.Id == id)
+                {
+                    return plugin;
+                }
+            }
+
+            return null;
+        }
+
+        public bool Contains(string id)
+        {
+            foreach (PromptuPlugin plugin in this)
+            {
+                if (plugin != null && plugin.Id == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        protected override void InsertItem(int index, PromptuPlugin item)
+        {
+            base.InsertItem(index, item);
+            this.AttachTo(item);
+        }
+
+        protected override void ClearItems()
+        {
+            foreach (PromptuPlugin plugin in this)
+            {
+                this.DetachFrom(plugin);
+            }
+
+            base.ClearItems();
+        }
+
+        protected override void RemoveItem(int index)
+        {
+            if (index >= 0 && index < this.Count)
+            {
+                this.DetachFrom(this[index]);
+            }
+
+            base.RemoveItem(index);
+        }
+
+        protected override void SetItem(int index, PromptuPlugin item)
+        {
+            if (index >= 0 && index < this.Count)
+            {
+                this.DetachFrom(this[index]);
+            }
+
+            base.SetItem(index, item);
+
+            this.AttachTo(item);
+        }
+
+        //public PromptuPlugin TryGet(string id, out bool found)
+        //{
+        //    foreach (PromptuPlugin plugin in this)
+        //    {
+        //        if (plugin != null && plugin.Id == id)
+        //        {
+        //            found = true;
+        //            return plugin;
+        //        }
+        //    }
+
+        //    found = false;
+        //    return null;
+        //}
+
+        private void AttachTo(PromptuPlugin item)
+        {
+            if (item != null)
+            {
+                item.PropertyChanged += this.HandlePluginPropertyChanged;
+                item.SettingOrPropertyChanged += this.HandlePluginSettingOrPropertyChanged;
+            }
+        }
+
+        private void DetachFrom(PromptuPlugin item)
+        {
+            if (item != null)
+            {
+                item.PropertyChanged -= this.HandlePluginPropertyChanged;
+                item.SettingOrPropertyChanged -= this.HandlePluginSettingOrPropertyChanged;
+            }
+        }
+
+        private void HandlePluginPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (!this.ignoreChanges)// && (e.PropertyName == "Enabled" || e.PropertyName == "IsCompatible"))
+            {
+                this.OnChildPropertyChanged(e);
+                //InternalGlobals.CurrentProfile.PluginMeta.SaveMetadata(this);
+            }
+        }
+
+        private void HandlePluginSettingOrPropertyChanged(object sender, EventArgs e)
+        {
+            this.OnChildSettingOrPropertyChanged(EventArgs.Empty);
+            //InternalGlobals.CurrentProfile.PluginMeta.SaveMetadata(this);
+        }
+
+        protected virtual void OnChildPropertyChanged(PropertyChangedEventArgs e)
+        {
+            PropertyChangedEventHandler handler = this.ChildPropertyChanged;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        protected virtual void OnChildSettingOrPropertyChanged(EventArgs e)
+        {
+            EventHandler handler = this.ChildSettingOrPropertyChanged;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        public void DisableAndResetAll()
+        {
+            try
+            {
+                this.ignoreChanges = true;
+                foreach (PromptuPlugin plugin in this)
+                {
+                    plugin.Enabled = false;
+                    plugin.IsInstalled = false;
+                }
+            }
+            finally
+            {
+                this.ignoreChanges = false;
+            }
+        }
+    }
+}

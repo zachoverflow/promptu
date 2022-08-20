@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.Collections
+{
+    internal interface ITrie
+    {
+        int Count { get; }
+
+        bool Contains(string value, CaseSensitivity caseSensitivity);
+    }
+}

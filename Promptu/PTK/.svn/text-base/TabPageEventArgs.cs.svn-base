@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.UIModel.Interfaces;
+
+namespace ZachJohnson.Promptu.PTK
+{
+    internal class TabPageEventArgs<TPage, TTabPage> : EventArgs 
+        where TPage : TabPageBase<TPage, TTabPage>
+        where TTabPage : ITabPage
+    {
+        private TPage tabPage;
+
+        public TabPageEventArgs(TPage tabPage)
+        {
+            this.tabPage = tabPage;
+        }
+
+        public TPage TabPage
+        {
+            get { return this.tabPage; }
+        }
+    }
+}

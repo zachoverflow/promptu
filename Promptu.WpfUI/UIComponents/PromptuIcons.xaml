@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingBrush x:Key="Command" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Geometry="F1 M 7.87306e-007,0L 16,0L 16,16L 7.87306e-007,16L 7.87306e-007,0 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.5,0.5" EndPoint="1.00907,0.5">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#00A1CBFF" Offset="0"/>
+									<GradientStop Color="#00629DE5" Offset="0.697674"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Geometry="F1 M 4.22919,7.02893L 8.40065,2.64172L 12.0504,5.33899L 7.87898,9.7262L 4.22919,7.02893 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.511343,0.852729" EndPoint="1.06862,0.852729">
+								<LinearGradientBrush.RelativeTransform>
+									<TransformGroup>
+										<SkewTransform CenterX="0.511343" CenterY="0.852729" AngleX="1.33442" AngleY="0"/>
+										<RotateTransform CenterX="0.511343" CenterY="0.852729" Angle="265.038"/>
+									</TransformGroup>
+								</LinearGradientBrush.RelativeTransform>
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FFAED1FD" Offset="0"/>
+									<GradientStop Color="#FF7DB5F9" Offset="0.790698"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF074593" Geometry="F1 M 12.0593,5.33386L 7.85749,9.73425L 7.86464,13.3463L 12.0665,8.94592L 12.0593,5.33386 Z "/>
+					<GeometryDrawing Brush="#FF689EE2" Geometry="F1 M 4.23461,7.04578L 7.86134,9.71582L 7.85037,13.3583L 4.22363,10.6882L 4.23461,7.04578 Z "/>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+	<DrawingBrush x:Key="History" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Geometry="F1 M 16.1425,0.142456L 31.8575,0.142456L 31.8575,15.8575L 16.1425,15.8575L 16.1425,0.142456 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.5,0.5" EndPoint="1.00907,0.5">
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#00A1CBFF" Offset="0"/>
+									<GradientStop Color="#00629DE5" Offset="0.697674"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Geometry="F1 M 20.2964,7.04626L 24.3935,2.73718L 27.9783,5.38635L 23.8811,9.69531L 20.2964,7.04626 Z ">
+						<GeometryDrawing.Brush>
+							<LinearGradientBrush StartPoint="0.511343,0.852739" EndPoint="1.06863,0.852739">
+								<LinearGradientBrush.RelativeTransform>
+									<TransformGroup>
+										<SkewTransform CenterX="0.511343" CenterY="0.852739" AngleX="1.33503" AngleY="0"/>
+										<RotateTransform CenterX="0.511343" CenterY="0.852739" Angle="265.038"/>
+									</TransformGroup>
+								</LinearGradientBrush.RelativeTransform>
+								<LinearGradientBrush.GradientStops>
+									<GradientStop Color="#FFAED1FD" Offset="0"/>
+									<GradientStop Color="#FF7DB5F9" Offset="0.790698"/>
+								</LinearGradientBrush.GradientStops>
+							</LinearGradientBrush>
+						</GeometryDrawing.Brush>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF074593" Geometry="F1 M 27.987,5.38123L 23.86,9.70325L 23.8671,13.2511L 27.9941,8.92908L 27.987,5.38123 Z "/>
+					<GeometryDrawing Brush="#FF689EE2" Geometry="F1 M 20.3017,7.06274L 23.8638,9.68518L 23.853,13.2628L 20.2909,10.6403L 20.3017,7.06274 Z "/>
+					<GeometryDrawing Brush="#FFCEA100" Geometry="F1 M 23.269,7.65381C 23.269,7.76428 23.2593,7.83118 23.2401,7.85486C 23.2208,7.87842 23.1664,7.88538 23.0768,7.87573C 22.4951,7.8457 21.9085,7.8457 21.3171,7.87573C 21.2015,7.8822 21.1281,7.87366 21.0968,7.84998C 21.0655,7.82642 21.0498,7.77014 21.0498,7.68115C 21.0498,7.56213 21.1331,7.48987 21.2997,7.46399C 21.5646,7.42761 21.6971,7.27747 21.6971,7.01379L 21.6971,5.04553C 21.6971,4.90186 21.6826,4.80591 21.6537,4.75769C 21.6248,4.70935 21.5564,4.6853 21.4486,4.6853L 18.3741,4.6853C 18.246,4.6853 18.1668,4.70349 18.1364,4.73999C 18.1061,4.77637 18.0909,4.87183 18.0909,5.02625L 18.0909,7.01379C 18.0909,7.20349 18.2623,7.35364 18.6052,7.46399C 18.7555,7.51978 18.8306,7.59216 18.8306,7.68115C 18.8306,7.77332 18.8171,7.83044 18.7902,7.85242C 18.7632,7.87439 18.689,7.8822 18.5677,7.87573C 17.9753,7.8457 17.3873,7.8457 16.8036,7.87573C 16.714,7.88538 16.6596,7.87842 16.6403,7.85486C 16.6211,7.83118 16.6115,7.76428 16.6115,7.65381C 16.6115,7.54443 16.6774,7.48132 16.8094,7.46399C 17.1089,7.43079 17.2587,7.25391 17.2587,6.93347L 17.2587,2.17664C 17.2587,1.87 17.094,1.67712 16.7646,1.59778C 16.6452,1.56238 16.5744,1.53589 16.5522,1.51819C 16.5301,1.50049 16.519,1.45837 16.519,1.39197L 16.5277,1.28101C 16.546,1.20813 16.6346,1.17639 16.7935,1.18616C 17.5515,1.25476 18.1631,1.25476 18.6284,1.18616C 18.7122,1.17957 18.7668,1.18872 18.7923,1.21338C 18.8179,1.23804 18.8306,1.30408 18.8306,1.41125C 18.8306,1.49268 18.7661,1.55481 18.637,1.59778C 18.4078,1.65466 18.2701,1.69958 18.2238,1.73279C 18.1352,1.79932 18.0909,1.93384 18.0909,2.13647L 18.0909,3.82178C 18.0909,4.05444 18.1896,4.17078 18.3871,4.17078L 21.4139,4.17078C 21.5333,4.17078 21.6075,4.15625 21.6364,4.12732C 21.6768,4.08557 21.6971,3.98145 21.6971,3.81531L 21.6971,2.16223C 21.6971,1.98962 21.6561,1.87439 21.5743,1.81641C 21.5271,1.78113 21.4038,1.74243 21.2044,1.70068C 21.0397,1.65881 20.9573,1.59241 20.9573,1.50122C 20.9573,1.39844 20.972,1.33398 21.0014,1.30835C 21.0308,1.28259 21.1076,1.27612 21.2318,1.28894C 21.5603,1.30933 21.8979,1.30933 22.2446,1.28894C 22.4902,1.28894 22.7373,1.28894 22.9858,1.28894C 23.0686,1.28894 23.1211,1.29919 23.1433,1.31958C 23.1654,1.33997 23.1765,1.4043 23.1765,1.51257C 23.1765,1.61755 23.1158,1.6803 22.9945,1.70068C 22.6843,1.73926 22.5292,1.90649 22.5292,2.20251L 22.5292,6.94788C 22.5292,7.10547 22.5764,7.22131 22.6708,7.29529C 22.7469,7.35315 22.888,7.40942 23.0942,7.46399C 23.2107,7.50159 23.269,7.56482 23.269,7.65381 Z "/>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+	<DrawingBrush x:Key="Refresh" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Brush="#00CC2020" Geometry="F1 M 32,0L 48,0L 48,16L 32,16L 32,0 Z "/>
+					<GeometryDrawing Brush="#FF17D217" Geometry="M 34.9874,11.0778C 33.2875,8.3092 34.1538,4.68713 36.9222,2.9873C 39.6905,1.28748 43.3126,2.15369 45.0125,4.922L 34.9874,11.0778 Z M 43.1496,6.0658C 42.0656,4.30042 39.7767,3.73523 38.0372,4.80334C 36.2976,5.87146 35.7662,8.16846 36.8502,9.93372L 43.1496,6.0658 Z "/>
+					<GeometryDrawing Brush="#FF17D217" Geometry="M 43.4551,8.18726C 44.6323,10.1046 44.0324,12.613 42.1152,13.7903C 40.198,14.9674 37.6895,14.3677 36.5122,12.4503L 43.4551,8.18726 Z M 37.8024,11.6583C 38.5531,12.8809 40.1383,13.2723 41.343,12.5326C 42.5477,11.7928 42.9157,10.202 42.1651,8.97949L 37.8024,11.6583 Z "/>
+					<GeometryDrawing Brush="#FF0DA50D" Geometry="F1 M 45.9798,1.85974L 45.9798,7.31262L 40.3759,7.31262L 40.3661,5.35413L 44.1356,5.34949L 44.1415,1.85974L 45.9798,1.85974 Z "/>
+					<GeometryDrawing Brush="#FF0DA50D" Geometry="F1 M 36.1555,15.6119L 36.1555,11.024L 40.4632,11.024L 40.4829,12.3224L 37.375,12.3224L 37.3711,15.6119L 36.1555,15.6119 Z "/>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

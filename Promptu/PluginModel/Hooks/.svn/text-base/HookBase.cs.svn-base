@@ -1,0 +1,37 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+
+//namespace ZachJohnson.Promptu.PluginModel.Hooks
+//{
+//    public abstract class HookBase
+//    {
+//        private PromptuPlugin plugin;
+
+//        public HookBase(PromptuPlugin plugin)
+//        {
+//            if (plugin == null)
+//            {
+//                throw new ArgumentNullException("plugin");
+//            }
+
+//            this.plugin = plugin;
+//        }
+
+//        public void Install()
+//        {
+//            plugin.AddHook(this);
+//            this.InstallCore();
+//        }
+
+//        public void Uninstall()
+//        {
+//            this.UninstallCore();
+//            plugin.RemoveHook(this);
+//        }
+
+//        protected abstract void InstallCore();
+
+//        protected abstract void UninstallCore();
+//    }
+//}

@@ -1,0 +1,1023 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Collections.ObjectModel;
+using System.Collections.Extensions;
+using System.Collections;
+using System.Extensions;
+using System.Globalization;
+
+namespace ZachJohnson.Promptu.Collections
+{
+    internal class TrieDictionary<TValue> : IEnumerable<string>, ITrie where TValue : class
+    {
+        private readonly List<TrieDictionaryNode> endingNodes = new List<TrieDictionaryNode>();
+        private KeyAbstractionCollection<TrieDictionaryNode> keyAbstraction;
+        private TrieDictionaryNode children;
+        private SortMode sortMode;
+        private int blockingRaiseChanged;
+        private CaseSensitivity defaultCaseSensitivity;
+        private bool allowInsert;
+
+        public TrieDictionary(SortMode sortMode)
+            : this(sortMode, CaseSensitivity.Sensitive)
+        {
+        }
+
+        public TrieDictionary(SortMode sortMode, CaseSensitivity defaultCaseSensitivity)
+            : this(sortMode, defaultCaseSensitivity, false)
+        {
+        }
+
+        public TrieDictionary(SortMode sortMode, CaseSensitivity defaultCaseSensitivity, bool allowInsert)
+        {
+            this.keyAbstraction = new KeyAbstractionCollection<TrieDictionaryNode>(this.endingNodes);
+            this.sortMode = sortMode;
+            this.defaultCaseSensitivity = defaultCaseSensitivity;
+            this.children = new TrieDictionaryNode('a', null, this.sortMode);
+            this.allowInsert = allowInsert;
+        }
+
+        public event EventHandler Changed;
+
+        //public OptimizedStringKeyedDictionary(SortMode sortMode, IEnumerable<string> collection)
+        //    : this(sortMode)
+        //{
+        //    this.AddRange(collection);
+        //}
+
+        public void AddChangeEventBlocker()
+        {
+            this.blockingRaiseChanged++;
+        }
+
+        public void RemoveChangeEventBlocker()
+        {
+            if (this.blockingRaiseChanged > 0)
+            {
+                this.blockingRaiseChanged--;
+            }
+        }
+
+        public SortMode SortMode
+        {
+            get { return this.sortMode; }
+        }
+
+        //public ReadOnlyCollection<string> AllKeys
+        //{
+        //    get { return this.keys.AsReadOnly(); }
+        //}
+
+        public KeyAbstractionCollection<TrieDictionaryNode> Keys
+        {
+            get { return this.keyAbstraction; } 
+        }
+
+        public int Count
+        {
+            get { return this.endingNodes.Count; }
+        }
+        
+        public TValue this[int index]
+        {
+            get { return this.GetItemCore(index); }
+            set { this.SetItemCore(index, value); }
+        }
+
+        public TValue this[string key, CaseSensitivity caseSensitivity]
+        {
+            get 
+            {
+                if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+                {
+                    key = key.ToUpper(CultureInfo.CurrentCulture);
+                    caseSensitivity = CaseSensitivity.Sensitive;
+                }
+
+                return this.GetItemCore(key, caseSensitivity); 
+            }
+
+            set 
+            {
+                if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+                {
+                    key = key.ToUpper(CultureInfo.CurrentCulture);
+                    caseSensitivity = CaseSensitivity.Sensitive;
+                }
+
+                this.SetItemCore(key, caseSensitivity, value); 
+            }
+        }
+
+        public TValue TryGetItem(string key, CaseSensitivity caseSensitivity, out bool found)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                key = key.ToUpper(CultureInfo.CurrentCulture);
+                caseSensitivity = CaseSensitivity.Sensitive;
+            }
+
+            return this.TryGetItemCore(key, caseSensitivity, out found);
+        }
+
+        public void SortKeys()
+        {
+            SortedList<string, TrieDictionaryNode> sortedItems = new SortedList<string, TrieDictionaryNode>(this.endingNodes.Count);
+            foreach (TrieDictionaryNode endingNode in this.endingNodes)
+            {
+                sortedItems.Add(endingNode.GetFollowUpValue(), endingNode);
+            }
+
+            this.endingNodes.Clear();
+            this.endingNodes.AddRange(sortedItems.Values);
+            //this.endingNodes.Sort(new Comparison<FindOptimizedRecursiveCharCollection>(CompareEndingNodes));
+        }
+
+        private static int CompareEndingNodes(TrieDictionaryNode x, TrieDictionaryNode y)
+        {
+            return x.GetFollowUpValue().CompareTo(y.GetFollowUpValue());
+        }
+
+        //public string[] GetAllKeysToArray()
+        //{
+        //    return this.keys.ToArray();
+        //}
+
+        public Dictionary<string, TValue> FindAllThatStartWith(string filter, CaseSensitivity caseSensitivity)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                filter = filter.ToUpper(CultureInfo.CurrentCulture);
+                caseSensitivity = CaseSensitivity.Sensitive;
+            }
+
+            return FindAllThatStartWith(filter, caseSensitivity, null);
+        }
+
+        public Dictionary<string, TValue> FindAllThatStartWith(string filter, CaseSensitivity caseSensitivity, Filter<string, TValue> itemFilter)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                filter = filter.ToUpper(CultureInfo.CurrentCulture);
+                caseSensitivity = CaseSensitivity.Sensitive;
+            }
+
+            Dictionary<string, TValue> filtered = new Dictionary<string, TValue>();
+            this.children.FindAllThatStartWith(filter.ToCharArray(), 0, new char[0], caseSensitivity, filtered, itemFilter);
+            return filtered;
+        }
+
+        //public Dictionary<string, TValue> FindAllThatDoNotStartWith(string filter, CaseSensitivity caseSensitivity)
+        //{
+        //    Dictionary<string, TValue> filtered = new Dictionary<string, TValue>();
+        //    this.children.FindAllThatDoNotStartWith(filter.ToCharArray(), 0, new char[0], caseSensitivity, filtered);
+        //    return filtered;
+        //}
+
+        public void Add(string key, TValue value)
+        {
+            ////string keyToAdd;
+
+            ////if (this.caseSensitivity == CaseSensitivity.Insensitive)
+            ////{
+            ////    keyToAdd = key.ToUpperInvariant();
+            ////}
+            ////else
+            ////{
+            ////    keyToAdd = key;
+            ////}
+            //if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            //{
+            //    key = key.ToUpper();
+            //}
+            
+            //this.InsertCore(key, value);
+            ////this.added.Insert(0, item);
+            //this.OnChanged(EventArgs.Empty);
+            this.Insert(this.Count, key, value);
+        }
+
+        public void Insert(int index, string key, TValue value)
+        {
+            //string keyToAdd;
+
+            //if (this.caseSensitivity == CaseSensitivity.Insensitive)
+            //{
+            //    keyToAdd = key.ToUpperInvariant();
+            //}
+            //else
+            //{
+            //    keyToAdd = key;
+            //}
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                key = key.ToUpper(CultureInfo.CurrentCulture);
+            }
+
+            this.InsertCore(index, key, value);
+            //this.added.Insert(0, item);
+            this.OnChanged(EventArgs.Empty);
+        }
+
+        //public void AddRange(IEnumerable<string> collection)
+        //{
+        //    foreach (string item in collection)
+        //    {
+        //        this.Add(item);
+        //    }
+        //}
+
+        public bool Remove(string key)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                key = key.ToUpper(CultureInfo.CurrentCulture);
+            }
+
+            return this.RemoveCore(key);
+        }
+
+        protected virtual bool RemoveCore(string key)
+        {
+            TrieDictionaryNode endingNode;
+            bool removed = this.children.Remove(ref key, 0, out endingNode);
+
+            if (endingNode != null)
+            {
+                this.endingNodes.Remove(endingNode);
+            }
+
+            if (removed)
+            {
+                this.OnChanged(EventArgs.Empty);
+            }
+
+            return removed;
+        }
+
+        public string TryFindKey(string startsWith, CaseSensitivity caseSensitivity)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                startsWith = startsWith.ToUpper(CultureInfo.CurrentCulture);
+                caseSensitivity = CaseSensitivity.Sensitive;
+            }
+
+            StringBuilder builder = new StringBuilder();
+            //char[] startingChars = startsWith.ToCharArray();
+            //if (startingChars.Length > 0)
+            //{
+            //    builder.Append(startingChars[0].ToString());
+            //}
+
+            if (!this.children.Find(ref startsWith, 0, builder, caseSensitivity, false))
+            {
+                return null;
+                //throw new ArgumentException("There are no strings that start with the provided string.");
+            }
+
+            return builder.ToString();
+        }
+
+        public string TryFindWholeKey(string startsWith, CaseSensitivity caseSensitivity)
+        {
+            if (this.defaultCaseSensitivity == CaseSensitivity.Insensitive)
+            {
+                startsWith = startsWith.ToUpper(CultureInfo.CurrentCulture);
+                caseSensitivity = CaseSensitivity.Sensitive;
+            }
+
+            StringBuilder builder = new StringBuilder();
+            //char[] startingChars = startsWith.ToCharArray();
+            //if (startingChars.Length > 0)
+            //{
+            //    builder.Append(startingChars[0].ToString());
+            //}
+
+            if (!this.children.Find(ref startsWith, 0, builder, caseSensitivity, true))
+            {
+                return null;
+                //throw new ArgumentException("There are no strings that start with the provided string.");
+            }
+
+            return builder.ToString();
+        }
+
+        public void Clear()
+        {
+            this.ClearCore();
+        }
+
+        protected virtual void ClearCore()
+        {
+            this.children = new TrieDictionaryNode('a', null, this.sortMode);
+            this.endingNodes.Clear();
+            this.OnChanged(EventArgs.Empty);
+        }
+
+        public bool Contains(string wholeString, CaseSensitivity caseSensitivity)
+        {
+            if (caseSensitivity == CaseSensitivity.Insensitive && this.defaultCaseSensitivity != CaseSensitivity.Insensitive)
+            {
+                string wholeStringToUpper = wholeString.ToUpperInvariantNullSafe();
+                foreach (string key in this.Keys)
+                {
+                    if (key.ToUpperInvariant() == wholeStringToUpper)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            return this.Keys.Contains(wholeString);
+        }
+
+        public void AddRange(TrieDictionary<TValue> collection)
+        {
+            foreach (string key in collection)
+            {
+                this.Add(key, collection[key, CaseSensitivity.Sensitive]);
+            }
+
+            this.OnChanged(EventArgs.Empty);
+        }
+
+        public IEnumerator<string> GetEnumerator()
+        {
+            return this.keyAbstraction.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
+        }
+
+        protected virtual void InsertCore(int index, string key, TValue value)
+        {
+            TrieDictionaryNode endingNode;
+            this.children.Define(ref key, 0, value, out endingNode);
+
+            if (endingNode != null)
+            {
+                if (this.allowInsert)
+                {
+                    this.endingNodes.Insert(index, endingNode);
+                }
+                else
+                {
+                    this.endingNodes.Add(endingNode);
+                }
+            }
+        }
+
+        protected virtual TValue GetItemCore(int index)
+        {
+            return this.endingNodes[index].Value;
+        }
+
+        protected virtual void SetItemCore(int index, TValue value)
+        {
+            this.endingNodes[index].Value = value;
+        }
+
+        protected virtual TValue GetItemCore(string key, CaseSensitivity caseSensitivity)
+        {
+            bool found;
+            TValue value = this.children.GetValue(ref key, 0, caseSensitivity, out found);
+            if (!found)
+            {
+                throw new KeyNotFoundException(String.Format(CultureInfo.CurrentCulture, "Key '{0}' is not in the list.", key));
+            }
+
+            return value;
+        }
+
+        protected virtual void SetItemCore(string key, CaseSensitivity caseSensitivity, TValue value)
+        {
+            bool found;
+            this.children.SetItem(ref key, 0, caseSensitivity, value, out found);
+            if (!found)
+            {
+                throw new KeyNotFoundException(String.Format(CultureInfo.CurrentCulture, "Key '{0}' is not in the list.", key));
+            }
+
+            this.OnChanged(EventArgs.Empty);
+        }
+
+        protected virtual TValue TryGetItemCore(string key, CaseSensitivity caseSensitivity, out bool found)
+        {
+            return this.children.GetValue(ref key, 0, caseSensitivity, out found);
+        }
+
+        protected virtual void OnChanged(EventArgs e)
+        {
+            if (this.blockingRaiseChanged <= 0)
+            {
+                EventHandler handler = this.Changed;
+                if (handler != null)
+                {
+                    handler(this, e);
+                }
+            }
+        }
+
+        //protected string InsensitizeCaseIfNecessary(string value)
+        //{
+        //    if (this.caseSensitivity == CaseSensitivity.Insensitive)
+        //    {
+        //        return value.ToUpperInvariant();
+        //    }
+        //    else
+        //    {
+        //        return value;
+        //    }
+        //}
+
+        public class TrieDictionaryNode : TrieNodeBase<TrieDictionaryNode>
+        {
+            private TValue value;
+            //private bool ContainsEnding;
+            //private bool EndingLastAdded;
+            //private IDictionary<char, FindOptimizedRecursiveCharCollection> Children;
+            //private SortMode SortMode;
+
+            public TrieDictionaryNode(char character, TrieDictionaryNode parent, SortMode sortMode)
+                : base(character, parent, sortMode)
+            {
+                //this.sortMode = sortMode;
+                //if (sortMode == SortMode.DecendingFromLastAdded)
+                //{
+                //    this.children = new Dictionary<char, FindOptimizedRecursiveCharCollection>(0);
+                //}
+                //else
+                //{
+
+                //    this.children = new SortedDictionary<char, FindOptimizedRecursiveCharCollection>(new CharComparer());
+                //}
+            }
+
+            public TValue Value
+            {
+                get { return this.value; }
+                set { this.value = value; }
+            }
+
+            public void Define(ref string chars, int index, TValue value, out TrieDictionaryNode endingNode)
+            {
+                if (index > chars.Length - 1)
+                {
+                    if (this.ContainsEnding == false)
+                    {
+                        this.value = value;
+                        this.ContainsEnding = true;
+                        this.EndingLastAdded = true;
+                        endingNode = this;
+                    }
+                    else
+                    {
+                        throw new ArgumentException(String.Format(CultureInfo.CurrentCulture, "Key '{0}' is already present.", chars));
+                    }
+                }
+                else
+                {
+                    char charToAdd = chars[index];
+                    if (!this.Children.ContainsKey(charToAdd))
+                    {
+                        if (this.SortMode == SortMode.DecendingFromLastAdded)
+                        {
+                            this.Children.Insert<char, TrieDictionaryNode>(
+                                charToAdd,
+                                new TrieDictionaryNode(charToAdd, this, this.SortMode),
+                                0);
+                        }
+                        else
+                        {
+                            this.Children.Add(charToAdd, new TrieDictionaryNode(charToAdd, this, this.SortMode));
+                        }
+                    }
+                    else if (this.SortMode == SortMode.DecendingFromLastAdded)
+                    {
+                        TrieDictionaryNode collection = this.Children[charToAdd];
+                        this.Children.Remove(charToAdd);
+                        this.Children.Insert<char, TrieDictionaryNode>(
+                                charToAdd,
+                                collection,
+                                0);
+                    }
+
+                    //char[] charsNowLeft = new char[charsLeft.Length - 1];
+
+                    //for (int i = 1; i < charsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = charsLeft[i];
+                    //}
+
+                    this.EndingLastAdded = false;
+                    this.Children[charToAdd].Define(ref chars, index + 1, value, out endingNode);
+                }
+            }
+
+            public bool Remove(ref string chars, int index, out TrieDictionaryNode endingNode)
+            {
+                if (index > chars.Length - 1)
+                {
+                    if (this.ContainsEnding)
+                    {
+                        this.ContainsEnding = false;
+                        endingNode = this;
+                        return true;
+                    }
+
+                    endingNode = null;
+                    return false;
+                }
+                else
+                {
+                    char charToRemove = chars[index];
+                    if (!this.Children.ContainsKey(charToRemove))
+                    {
+                        endingNode = null;
+                        return false;
+                    }
+
+                    //char[] charsNowLeft = new char[charsLeft.Length - 1];
+
+                    //for (int i = 1; i < charsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = charsLeft[i];
+                    //}
+
+                    bool removed = this.Children[charToRemove].Remove(ref chars, index + 1, out endingNode);
+
+                    TrieDictionaryNode child = this.Children[charToRemove];
+
+                    if (child.Children.Count == 0 && !child.ContainsEnding)
+                    {
+                        this.Children.Remove(charToRemove);
+                    }
+
+                    return removed;
+
+                    //if (this.children.Count < 2 && !this.containsEnding)
+                    //{
+                    //    FindOptimizedRecursiveCharCollection onlyGrandchild = null;
+                    //    foreach (FindOptimizedRecursiveCharCollection grandchild in children.Values)
+                    //    {
+                    //        onlyGrandchild = grandchild;
+                    //        break;
+                    //    }
+
+                    //    if (onlyGrandchild.children.Count == 0 && !onlyGrandchild.containsEnding)
+                    //    {
+                    //        this.children.Clear();
+                    //    }
+                    //}
+
+                    //return removed;
+                }
+            }
+
+            public void SetItem(ref string chars, int index, CaseSensitivity caseSensitivity, TValue value, out bool found)
+            {
+                found = true;
+                if (index > chars.Length - 1)
+                {
+                    if (this.ContainsEnding)
+                    {
+                        this.value = value;
+                        return;
+                    }
+                    else
+                    {
+                        found = false;
+                        return;
+                        //if (throwOnFailure)
+                        //{
+                        //    throw new KeyNotFoundException("Key is not in the list.");
+                        //}
+                        //else
+                        //{
+                        //    return null;
+                        //}
+                    }
+                }
+                else
+                {
+                    char nextChar = chars[index];
+
+                    bool containsInThisCasing = this.Children.ContainsKey(nextChar);
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive && !containsInThisCasing)
+                    {
+                        nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                        containsInThisCasing = this.Children.ContainsKey(nextChar);
+                    }
+
+                    if (!containsInThisCasing)
+                    {
+                        found = false;
+                        return;
+                        //throw new KeyNotFoundException("Key is not in the list.");
+                    }
+
+                    //char[] charsNowLeft = new char[charsLeft.Length - 1];
+
+                    //for (int i = 1; i < charsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = charsLeft[i];
+                    //}
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive)
+                    {
+                        //try
+                        //{
+                        bool foundByChild;
+                         this.Children[nextChar].SetItem(ref chars, index + 1, caseSensitivity, value, out foundByChild);
+                        //}
+                        //catch (KeyNotFoundException)
+                        //{
+                         if (!foundByChild)
+                         {
+                             nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                             if (!this.Children.ContainsKey(nextChar))
+                             {
+                                 found = false;
+                                 return;
+                             }
+                         }
+                         else
+                         {
+                             return;
+                         }
+                        //}
+                    }
+
+                    this.Children[nextChar].SetItem(ref chars, index + 1, caseSensitivity, value, out found);
+                }
+            }
+
+            public TValue GetValue(ref string chars, int index, CaseSensitivity caseSensitivity, out bool found)
+            {
+                found = true;
+                if (index > chars.Length - 1)
+                {
+                    if (this.ContainsEnding)
+                    {
+                        return value;
+                    }
+                    else
+                    {
+                        found = false;
+                        return null;
+                        //if (throwOnFailure)
+                        //{
+                        //    throw new KeyNotFoundException("Key is not in the list.");
+                        //}
+                        //else
+                        //{
+                        //    return null;
+                        //}
+                    }
+                }
+                else
+                {
+                    char nextChar = chars[index];
+
+                    bool containsInThisCasing = this.Children.ContainsKey(nextChar);
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive && !containsInThisCasing)
+                    {
+                        nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                        containsInThisCasing = this.Children.ContainsKey(nextChar);
+                    }
+
+                    if (!containsInThisCasing)
+                    {
+                        found = false;
+                        return null;
+                        //throw new KeyNotFoundException("Key is not in the list.");
+                    }
+
+                    //char[] charsNowLeft = new char[charsLeft.Length - 1];
+
+                    //for (int i = 1; i < charsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = charsLeft[i];
+                    //}
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive)
+                    {
+                        //try
+                        //{
+                            bool foundByChild;
+                            TValue value = this.Children[nextChar].GetValue(ref chars, index + 1, caseSensitivity, out foundByChild);
+                        //}
+                        //catch (KeyNotFoundException)
+                        //{
+                            if (!foundByChild)
+                            {
+                                nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                                if (!this.Children.ContainsKey(nextChar))
+                                {
+                                    found = false;
+                                    return null;
+                                }
+                            }
+                            else
+                            {
+                                return value;
+                            }
+                        //}
+                    }
+
+                    return this.Children[nextChar].GetValue(ref chars, index + 1, caseSensitivity, out found);
+                }
+            }
+
+            //public void FindAllThatDoNotStartWith(char[] chars, int index, char[] actualChars, CaseSensitivity caseSensitivity, Dictionary<string, TValue> items)
+            //{
+            //    if (index > chars.Length - 1)
+            //    {
+            //        if (this.containsEnding)
+            //        {
+            //            items.Add(new string(actualChars), this.value);
+            //        }
+
+            //        foreach (char c in children.Keys)
+            //        {
+            //            char[] charsUpToThisPoint = new char[actualChars.Length + 1];
+            //            actualChars.CopyTo(charsUpToThisPoint, 0);
+            //            charsUpToThisPoint[actualChars.Length] = c;
+            //            this.children[c].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items);
+            //        }
+
+
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        char nextChar = chars[index];
+            //        char originalChar = nextChar;
+
+            //        bool containsInThisCasing = this.children.ContainsKey(nextChar);
+
+            //        if (caseSensitivity == CaseSensitivity.Insensitive && !containsInThisCasing)
+            //        {
+            //            nextChar = nextChar.ReverseCasing();
+            //            containsInThisCasing = this.children.ContainsKey(nextChar);
+            //        }
+
+            //        if (!containsInThisCasing)
+            //        {
+            //            return;
+            //            //throw new ArgumentException("There are no strings that start with the provided string.");
+            //        }
+
+            //        //builder.Append(originalChar);
+
+            //        //char[] charsNowLeft = new char[startingCharsLeft.Length - 1];
+
+            //        //for (int i = 1; i < startingCharsLeft.Length; i++)
+            //        //{
+            //        //    charsNowLeft[i - 1] = startingCharsLeft[i];
+            //        //}
+
+            //        char[] charsUpToThisPoint = new char[actualChars.Length + 1];
+            //        actualChars.CopyTo(charsUpToThisPoint, 0);
+            //        charsUpToThisPoint[actualChars.Length] = nextChar;
+
+            //        if (caseSensitivity == CaseSensitivity.Insensitive)
+            //        {
+            //            //try
+            //            //    
+            //            this.children[nextChar].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items);
+
+            //            //builder.Append(nextChar);
+            //            //builder.Append(subsequentBuilder.ToString());
+
+            //            //return true;
+            //            //}
+            //            //catch (ArgumentException)
+            //            //{
+            //            char whatWillBeNextChar = nextChar.ReverseCasing();
+            //            if (whatWillBeNextChar == nextChar || !this.children.ContainsKey(whatWillBeNextChar))
+            //            {
+            //                return;
+            //            }
+
+            //            nextChar = whatWillBeNextChar;
+            //            charsUpToThisPoint[actualChars.Length] = nextChar;
+            //            //}
+            //        }
+
+            //        this.children[nextChar].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items);
+            //    }
+            //}
+
+            public void FindAllThatStartWith(char[] chars, int index, char[] actualChars, CaseSensitivity caseSensitivity, Dictionary<string, TValue> items, Filter<string, TValue> itemFilter)
+            {
+                if (index > chars.Length - 1)
+                {
+                    if (this.ContainsEnding)
+                    {
+                        string name = new string(actualChars);
+                        if (itemFilter != null)
+                        {
+                            if (!itemFilter.IsValid(name, this.value))
+                            {
+                                return;
+                            }
+
+                            name = itemFilter.TranslateKey(name, this.value);
+                        }
+
+                        items.Add(name, this.value);
+                    }
+
+                    foreach (char c in Children.Keys)
+                    {
+                        char[] charsUpToThisPoint = new char[actualChars.Length + 1];
+                        actualChars.CopyTo(charsUpToThisPoint, 0);
+                        charsUpToThisPoint[actualChars.Length] = c;
+                        this.Children[c].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items, itemFilter);
+                    }
+                    
+
+                    return;
+                }
+                else
+                {
+                    char nextChar = chars[index];
+                    char originalChar = nextChar;
+
+                    bool containsInThisCasing = this.Children.ContainsKey(nextChar);
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive && !containsInThisCasing)
+                    {
+                        nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                        containsInThisCasing = this.Children.ContainsKey(nextChar);
+                    }
+
+                    if (!containsInThisCasing)
+                    {
+                        return;
+                        //throw new ArgumentException("There are no strings that start with the provided string.");
+                    }
+
+                    //builder.Append(originalChar);
+
+                    //char[] charsNowLeft = new char[startingCharsLeft.Length - 1];
+
+                    //for (int i = 1; i < startingCharsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = startingCharsLeft[i];
+                    //}
+
+                    char[] charsUpToThisPoint = new char[actualChars.Length + 1];
+                    actualChars.CopyTo(charsUpToThisPoint, 0);
+                    charsUpToThisPoint[actualChars.Length] = nextChar;
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive)
+                    {
+                        //try
+                        //    
+                        this.Children[nextChar].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items, itemFilter);
+
+                            //builder.Append(nextChar);
+                            //builder.Append(subsequentBuilder.ToString());
+
+                            //return true;
+                            //}
+                            //catch (ArgumentException)
+                            //{
+                            char whatWillBeNextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                            if (whatWillBeNextChar == nextChar || !this.Children.ContainsKey(whatWillBeNextChar))
+                            {
+                                return;
+                            }
+
+                            nextChar = whatWillBeNextChar;
+                            charsUpToThisPoint[actualChars.Length] = nextChar;
+                        //}
+                    }
+
+                    this.Children[nextChar].FindAllThatStartWith(chars, index + 1, charsUpToThisPoint, caseSensitivity, items, itemFilter);
+                }
+            }
+
+            public bool Find(ref string chars, int index, StringBuilder builder, CaseSensitivity caseSensitivity, bool onlyReturnWholeKey)
+            {
+                if (index > chars.Length - 1)
+                {
+                    if (onlyReturnWholeKey)
+                    {
+                        return this.ContainsEnding;
+                    }
+
+                    if (!this.ContainsEnding || (this.ContainsEnding && !this.EndingLastAdded && this.SortMode == SortMode.DecendingFromLastAdded))
+                    {
+                        if (this.Children.Count == 0)
+                        {
+                            if (this.ContainsEnding && this.SortMode == SortMode.DecendingFromLastAdded)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                //throw new ArgumentException("There are no strings that start with the provided string.");
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            foreach (char c in Children.Keys)
+                            {
+                                builder.Append(c.ToString());
+                                this.Children[c].Find(ref chars, index + 1, builder, caseSensitivity, onlyReturnWholeKey);
+                                break;
+                            }
+
+                            return true;
+                        }
+                    }
+
+                    return true;
+                }
+                else
+                {
+                    char nextChar = chars[index];
+                    char originalChar = nextChar;
+
+                    bool containsInThisCasing = this.Children.ContainsKey(nextChar);
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive && !containsInThisCasing)
+                    {
+                        nextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+                        containsInThisCasing = this.Children.ContainsKey(nextChar);
+                    }
+
+                    if (!containsInThisCasing)
+                    {
+                        return false;
+                        //throw new ArgumentException("There are no strings that start with the provided string.");
+                    }
+
+                    //builder.Append(originalChar);
+
+                    //char[] charsNowLeft = new char[startingCharsLeft.Length - 1];
+
+                    //for (int i = 1; i < startingCharsLeft.Length; i++)
+                    //{
+                    //    charsNowLeft[i - 1] = startingCharsLeft[i];
+                    //}
+
+                    StringBuilder subsequentBuilder = new StringBuilder();
+
+                    if (caseSensitivity == CaseSensitivity.Insensitive)
+                    {
+                        //try
+                        //    
+                        if (!this.Children[nextChar].Find(ref chars, index + 1, subsequentBuilder, caseSensitivity, onlyReturnWholeKey))
+                        {
+
+                            //builder.Append(nextChar);
+                            //builder.Append(subsequentBuilder.ToString());
+
+                            //return true;
+                            //}
+                            //catch (ArgumentException)
+                            //{
+                            char whatWillBeNextChar = nextChar.ReverseCasing(CultureInfo.CurrentCulture);
+
+                            subsequentBuilder = new StringBuilder();
+                            if (whatWillBeNextChar == nextChar || !this.Children.ContainsKey(whatWillBeNextChar))
+                            {
+                                return false;
+                            }
+
+                            nextChar = whatWillBeNextChar;
+                        }
+                        else
+                        {
+                            builder.Append(nextChar);
+                            builder.Append(subsequentBuilder.ToString());
+                            return true;
+                        }
+                        //}
+                    }
+
+                    builder.Append(nextChar);
+
+                    bool found = this.Children[nextChar].Find(ref chars, index + 1, subsequentBuilder, caseSensitivity, onlyReturnWholeKey);   
+
+                    builder.Append(subsequentBuilder.ToString());
+
+                    return found;
+                }
+            }
+        }   
+    }
+}

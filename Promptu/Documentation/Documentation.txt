@@ -1,0 +1,3 @@
+Ctrl+Enter to copy execution path (commands) or result (functions) to clipboard.
+Drag and Drop moves commands, functions, and assembly references between lists.
+Drag and Drop + Alt copies commands, functions, and assembly references between lists.

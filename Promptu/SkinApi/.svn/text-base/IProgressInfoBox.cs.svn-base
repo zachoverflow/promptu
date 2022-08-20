@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.SkinApi
+{
+    public interface IProgressInfoBox : IInfoBox
+    {
+        string Text { set; }
+
+        int Mininum { set; }
+
+        int Maximum { set; }
+
+        int Value { get; set; }
+    }
+}

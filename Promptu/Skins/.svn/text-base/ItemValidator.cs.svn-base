@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.SkinApi;
+
+namespace ZachJohnson.Promptu.Skins
+{
+    internal class ItemValidator
+    {
+        public ItemValidator()
+        {
+        }
+
+        public virtual bool Include(string name, SuggestionItemType itemType)
+        {
+            return true;
+        }
+    }
+}

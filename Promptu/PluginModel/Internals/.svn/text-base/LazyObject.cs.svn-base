@@ -1,0 +1,37 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+
+//namespace ZachJohnson.Promptu.PluginModel.Internals
+//{
+//    internal class LazyObject<T>
+//    {
+//        private T instance;
+//        private bool hasLoaded;
+//        private Getter<T> getter;
+
+//        public LazyObject(Getter<T> getter)
+//        {
+//            this.getter = getter;
+//        }
+
+//        public bool HasLoaded
+//        {
+//            get { return this.hasLoaded; }
+//        }
+
+//        public T Instance
+//        {
+//            get
+//            {
+//                if (!this.hasLoaded)
+//                {
+//                    this.instance = this.getter();
+//                    this.hasLoaded = true;
+//                }
+
+//                return this.instance;
+//            }
+//        }
+//    }
+//}

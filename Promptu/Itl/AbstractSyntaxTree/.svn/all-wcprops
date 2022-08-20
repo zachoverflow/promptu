@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree
+END
+ExpressionGroup.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/ExpressionGroup.cs
+END
+OptionalSubsitution.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/OptionalSubsitution.cs
+END
+ArgumentSubstitution.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/ArgumentSubstitution.cs
+END
+Expression.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/Expression.cs
+END
+FunctionCall.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/promptu/!svn/ver/41/trunk/Promptu/Itl/AbstractSyntaxTree/FunctionCall.cs
+END
+NotEnoughArgumentsConversionException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/NotEnoughArgumentsConversionException.cs
+END
+Identifier.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/Identifier.cs
+END
+ImperativeSubstitution.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/AbstractSyntaxTree/ImperativeSubstitution.cs
+END
+StringLiteral.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/promptu/!svn/ver/33/trunk/Promptu/Itl/AbstractSyntaxTree/StringLiteral.cs
+END

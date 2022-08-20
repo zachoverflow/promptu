@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.PTK
+{
+    internal class WidgetEventArgs : EventArgs
+    {
+        private Widget widget;
+
+        public WidgetEventArgs(Widget widget)
+        {
+            this.widget = widget;
+        }
+
+        public Widget Widget
+        {
+            get { return this.widget; }
+        }
+    }
+}

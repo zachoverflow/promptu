@@ -1,0 +1,162 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+//using ZachJohnson.Promptu.UIModel.Interfaces;
+//using ZachJohnson.Promptu.UIModel.Presenters;
+//using ZachJohnson.Promptu.UserModel;
+//using System.Windows.Forms;
+//using ZachJohnson.Promptu.UIModel;
+
+//namespace ZachJohnson.Promptu.PTK
+//{
+//    internal class HotkeyWidget : GenericWidget<IBorderedHotkeyControl>
+//    {
+//        private HotkeyControlPresenter basePresenter;
+//        private GlobalHotkey hotkeyToBindTo;
+//        private bool updating;
+
+//        public HotkeyWidget(string id)
+//            : base(id, Globals.GuiManager.ToolkitHost.Factory.ConstructHotkeyControl())
+//        {
+//            this.basePresenter = new HotkeyControlPresenter(this.NativeInterface.HotkeyControl);
+//        }
+
+//        public event EventHandler HotkeyChanged;
+
+//        public event EventHandler HotkeyEnabledChanged;
+
+//        public bool OverrideHotkey
+//        {
+//            get { return this.basePresenter.OverideHotkey; }
+//            set { this.basePresenter.OverideHotkey = value; }
+//        }
+
+//        public bool HotkeyEnabled
+//        {
+//            get { return this.basePresenter.HotkeyEnabled; }
+//            set { this.basePresenter.HotkeyEnabled = value; }
+//        }
+
+//        public bool HotkeyEnabledVisible
+//        {
+//            get { return this.basePresenter.HotkeyEnabledVisible; }
+//            set { this.basePresenter.HotkeyEnabledVisible = value; }
+//        }
+
+//        public string Title
+//        {
+//            get { return this.NativeInterface.Title; }
+//            set { this.NativeInterface.Title = value; }
+//        }
+
+//        public GlobalHotkey HotkeyToBindTo
+//        {
+//            get
+//            {
+//                return this.hotkeyToBindTo;
+//            }
+
+//            set
+//            {
+//                this.hotkeyToBindTo = value;
+//                if (this.hotkeyToBindTo != null)
+//                {
+//                    try
+//                    {
+//                        this.updating = true;
+//                        this.UpdateFrom(this.hotkeyToBindTo);
+//                    }
+//                    finally
+//                    {
+//                        this.updating = false;
+//                    }
+//                }
+//            }
+//        }
+
+//        public ValidHotkeyKey HotkeyKey
+//        {
+//            get { return this.basePresenter.HotkeyKey; }
+//            set { this.basePresenter.HotkeyKey = value; }
+//        }
+
+//        public Keys UnderlyingHotkeyKey
+//        {
+//            get { return this.basePresenter.UnderlyingHotkeyKey; }
+//            set { this.basePresenter.UnderlyingHotkeyKey = value; }
+//        }
+
+//        public HotkeyModifierKeys HotkeyModifierKeys
+//        {
+//            get { return this.basePresenter.HotkeyModifierKeys; }
+//            set { this.basePresenter.HotkeyModifierKeys = value; }
+//        }
+
+//        public void UpdateFrom(GlobalHotkey hotkey)
+//        {
+//            this.basePresenter.UpdateTo(hotkey);
+//        }
+
+//        public void ImpartTo(GlobalHotkey hotkey)
+//        {
+//            this.basePresenter.ImpartTo(hotkey);
+//        }
+
+//        private void HandleHotkeyChanged(object sender, HotkeyChangedEventArgs e)
+//        {
+//            GlobalHotkey bindingHotkey = this.hotkeyToBindTo;
+//            if (!this.updating && bindingHotkey != null)
+//            {
+//                bool wasRegistered = bindingHotkey.Registered;
+//                e.ImpartTo(bindingHotkey);
+
+//                if (wasRegistered)
+//                {
+//                    try
+//                    {
+//                        bindingHotkey.Register();
+//                    }
+//                    catch (HotkeyException)
+//                    {
+//                        if (!this.basePresenter.RollingBack)
+//                        {
+//                            e.Failed = true;
+//                            UIMessageBox.Show(
+//                                String.Format(
+//                                    Localization.MessageFormats.HotkeyUnavailable,
+//                                    Utilities.ConvertHotkeyToString(
+//                                        bindingHotkey.ModifierKeys,
+//                                        bindingHotkey.Key)),
+//                                Localization.Promptu.AppName,
+//                                UIMessageBoxButtons.OK,
+//                                UIMessageBoxIcon.Error,
+//                                UIMessageBoxResult.OK);
+
+//                            this.basePresenter.RollbackToPevious();
+//                        }
+//                    }
+//                }
+//            }
+
+//            this.OnHotkeyChanged(EventArgs.Empty);
+//        }
+
+//        protected virtual void OnHotkeyChanged(EventArgs e)
+//        {
+//            EventHandler handler = this.HotkeyChanged;
+//            if (handler != null)
+//            {
+//                handler(this, e);
+//            }
+//        }
+
+//        protected virtual void OnHotkeyEnabledChanged(EventArgs e)
+//        {
+//            EventHandler handler = this.HotkeyEnabledChanged;
+//            if (handler != null)
+//            {
+//                handler(this, e);
+//            }
+//        }
+//    }
+//}

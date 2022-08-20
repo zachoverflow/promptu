@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    public interface IPropertyEditor
+    {
+        ObjectPropertyBase Context { set; }
+    }
+}

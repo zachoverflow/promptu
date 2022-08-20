@@ -1,0 +1,4254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/../Promptu/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/../Promptu/bin/Debug/Common/Promptu.WpfUI.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Namespaces>
+   <Namespace Name="Promptu.WpfUI">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2010-10-15 03:19:00Z">
+      <Issue>
+       <Item>Promptu.WpfUI</Item>
+      </Issue>
+     </Message>
+     <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+      <Issue Name="Namespace">
+       <Item>Promptu</Item>
+       <Item>Promptu.WpfUI</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="XamlGeneratedNamespace">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2010-10-15 03:19:00Z">
+      <Issue>
+       <Item>XamlGeneratedNamespace</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="ZachJohnson.Promptu.WpfUI.Configuration">
+    <Messages>
+     <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+      <Issue Name="Namespace">
+       <Item>Promptu</Item>
+       <Item>ZachJohnson.Promptu.WpfUI.Configuration</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+   <Namespace Name="ZachJohnson.Promptu.WpfUI.UIComponents">
+    <Messages>
+     <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Created="2010-10-15 03:19:00Z">
+      <Issue>
+       <Item>ZachJohnson.Promptu.WpfUI.UIComponents</Item>
+      </Issue>
+     </Message>
+     <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+      <Issue Name="Namespace">
+       <Item>Promptu</Item>
+       <Item>ZachJohnson.Promptu.WpfUI.UIComponents</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/../Promptu/bin/Debug/Common/Promptu.WpfUI.dll">
+    <Modules>
+     <Module Name="promptu.wpfui.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2010-10-15 03:19:00Z">
+        <Issue Name="NoStrongName">
+         <Item>'Promptu.WpfUI.dll'</Item>
+        </Issue>
+       </Message>
+       <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+        <Issue Name="Assembly">
+         <Item>Promptu</Item>
+         <Item>'Promptu.WpfUI.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Created="2010-10-15 03:19:00Z">
+        <Issue>
+         <Item>'Promptu.WpfUI.dll'</Item>
+        </Issue>
+       </Message>
+       <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Created="2010-10-15 03:19:00Z">
+        <Issue>
+         <Item>'Promptu.WpfUI.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="Promptu.WpfUI">
+        <Types>
+         <Type Name="App">
+          <Members>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'App'</Item>
+               <Item>'IComponentConnector.Connect(int, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI">
+        <Types>
+         <Type Name="App">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'App'</Item>
+             <Item>'HwndSource'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#hwndSource">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'App.hwndSource'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Initialize()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'App.Initialize()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="MainThreadDispatcher">
+          <Members>
+           <Member Name="#Dispatcher">
+            <Accessors>
+             <Accessor Name="#get_Dispatcher()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'MainThreadDispatcher.Dispatcher.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_Dispatcher(System.Windows.Threading.Dispatcher)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'MainThreadDispatcher.Dispatcher.set(Dispatcher)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NativeMethods">
+          <Members>
+           <Member Name="#DeleteObject(System.IntPtr)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.DeleteObject(IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnumChildWindows(System.IntPtr,ZachJohnson.Promptu.WpfUI.NativeMethods+EnumWindowsCallback,System.IntPtr)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.EnumChildWindows(IntPtr, NativeMethods.EnumWindowsCallback, IntPtr)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Return">
+               <Item>'NativeMethods.EnumChildWindows(IntPtr, NativeMethods.EnumWindowsCallback, IntPtr)'</Item>
+               <Item>0</Item>
+               <Item>32-bit</Item>
+               <Item>4</Item>
+               <Item>'void'</Item>
+              </Issue>
+              <Issue Name="Return">
+               <Item>'NativeMethods.EnumChildWindows(IntPtr, NativeMethods.EnumWindowsCallback, IntPtr)'</Item>
+               <Item>0</Item>
+               <Item>64-bit</Item>
+               <Item>4</Item>
+               <Item>'void'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#FindWindow(System.String,System.String)">
+            <Messages>
+             <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lpClassName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lpWindowName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetAncestor(System.IntPtr,System.UInt32)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.GetAncestor(IntPtr, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetClassName(System.IntPtr,System.Text.StringBuilder,System.Int32)">
+            <Messages>
+             <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetClassName(IntPtr, StringBuilder, int)'</Item>
+               <Item>0</Item>
+               <Item>32-bit</Item>
+               <Item>4</Item>
+               <Item>'void'</Item>
+              </Issue>
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetClassName(IntPtr, StringBuilder, int)'</Item>
+               <Item>0</Item>
+               <Item>64-bit</Item>
+               <Item>4</Item>
+               <Item>'void'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lpClassName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetCursorPos(ZachJohnson.Promptu.WpfUI.NativeMethods+POINT&amp;)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetCursorPos(ref NativeMethods.POINT)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetKeyboardState(System.Byte[])">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetKeyboardState(byte[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetWindowLongPtr64(System.IntPtr,System.Int32)">
+            <Messages>
+             <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetWindowLongPtr64(IntPtr, int)'</Item>
+               <Item>4</Item>
+               <Item>64-bit</Item>
+               <Item>8</Item>
+               <Item>'int'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.GetWindowLongPtr64(IntPtr, int)'</Item>
+               <Item>'user32.dll'</Item>
+               <Item>GetWindowLongPtr</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetWindowPlacement(System.IntPtr,ZachJohnson.Promptu.WpfUI.NativeMethods+WINDOWPLACEMENT&amp;)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetWindowPlacement(IntPtr, out NativeMethods.WINDOWPLACEMENT)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetWindowThreadProcessId(System.IntPtr,System.IntPtr&amp;)">
+            <Messages>
+             <Message Id="return" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Return">
+               <Item>'NativeMethods.GetWindowThreadProcessId(IntPtr, out IntPtr)'</Item>
+               <Item>8</Item>
+               <Item>64-bit</Item>
+               <Item>4</Item>
+               <Item>'IntPtr'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadIcon(System.IntPtr,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.LoadIcon(IntPtr, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LoadLibrary(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.LoadLibrary(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LockWorkStation()">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.LockWorkStation()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LookupPrivilegeValue(System.String,System.String,ZachJohnson.Promptu.WpfUI.NativeMethods+LUID&amp;)">
+            <Messages>
+             <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lpSystemName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="1" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lpName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SendMessage(System.IntPtr,System.Int32,System.Boolean,System.IntPtr)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.SendMessage(IntPtr, int, bool, IntPtr)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'wParam'</Item>
+               <Item>'NativeMethods.SendMessage(IntPtr, int, bool, IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SendMessageTimeout(System.IntPtr,System.Int32,System.IntPtr,System.Text.StringBuilder,System.UInt32,System.UInt32,System.IntPtr&amp;)">
+            <Messages>
+             <Message Id="3" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ParameterImplicitAnsi">
+               <Item>'lParam'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetCursor(System.IntPtr)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.SetCursor(IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetOwner(System.Windows.Interop.IWin32Window,System.Windows.Interop.IWin32Window)">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.SetWindowLong(System.Runtime.InteropServices.HandleRef,System.Int32,System.Runtime.InteropServices.HandleRef)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'NativeMethods.SetOwner(IWin32Window, IWin32Window)'</Item>
+               <Item>'NativeMethods.SetWindowLong(HandleRef, int, HandleRef)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetWindowLong(System.Runtime.InteropServices.HandleRef,System.Int32,System.Runtime.InteropServices.HandleRef)">
+            <Messages>
+             <Message Id="2" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Parameter">
+               <Item>'dwNewLong'</Item>
+               <Item>'NativeMethods.SetWindowLong(HandleRef, int, HandleRef)'</Item>
+               <Item>8</Item>
+               <Item>64-bit</Item>
+               <Item>4</Item>
+               <Item>'HandleRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetWindowLongPtr64(System.IntPtr,System.Int32,System.IntPtr)">
+            <Messages>
+             <Message TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.SetWindowLongPtr64(IntPtr, int, IntPtr)'</Item>
+               <Item>'user32.dll'</Item>
+               <Item>SetWindowLongPtr</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetWindowPlacement(System.IntPtr,ZachJohnson.Promptu.WpfUI.NativeMethods+WINDOWPLACEMENT&amp;)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.SetWindowPlacement(IntPtr, ref NativeMethods.WINDOWPLACEMENT)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetWindowPos(System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt32)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.SetWindowPos(IntPtr, IntPtr, int, int, int, int, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SHGetFileInfo(System.String,System.UInt32,ZachJohnson.Promptu.WpfUI.NativeMethods+SHFILEINFO&amp;,System.UInt32,System.UInt32)">
+            <Messages>
+             <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'pszPath'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SHGetSetSettings(ZachJohnson.Promptu.WpfUI.NativeMethods+SHELLSTATE&amp;,System.UInt32,System.Boolean)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'bSet'</Item>
+               <Item>'NativeMethods.SHGetSetSettings(ref NativeMethods.SHELLSTATE, uint, bool)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SHGetSettings(System.Int64&amp;,System.UInt32)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.SHGetSettings(out long, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UnregisterHotKey(System.IntPtr,System.Int32)">
+            <Messages>
+             <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Return">
+               <Item>'NativeMethods.UnregisterHotKey(IntPtr, int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#WindowFromPoint(System.Drawing.Point)">
+            <Messages>
+             <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Parameter">
+               <Item>'lpPoint'</Item>
+               <Item>'NativeMethods.WindowFromPoint(Point)'</Item>
+               <Item>8</Item>
+               <Item>32-bit</Item>
+               <Item>4</Item>
+               <Item>'Point'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NativeMethods+POINT">
+          <Messages>
+           <Message Id="POINT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>POINT</Item>
+             <Item>'NativeMethods.POINT'</Item>
+             <Item>Point</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'NativeMethods.POINT'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Equals">
+             <Item>'NativeMethods.POINT'</Item>
+            </Issue>
+            <Issue Name="op_Equality">
+             <Item>'NativeMethods.POINT'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#x">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.POINT.x'</Item>
+              </Issue>
+             </Message>
+             <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'NativeMethods.POINT.x'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#y">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.POINT.y'</Item>
+              </Issue>
+             </Message>
+             <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+              <Issue Name="MemberMoreMeaningfulName">
+               <Item>'NativeMethods.POINT.y'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NativeMethods+RECT">
+          <Messages>
+           <Message Id="RECT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>RECT</Item>
+             <Item>'NativeMethods.RECT'</Item>
+             <Item>Rect</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'NativeMethods.RECT'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Equals">
+             <Item>'NativeMethods.RECT'</Item>
+            </Issue>
+            <Issue Name="op_Equality">
+             <Item>'NativeMethods.RECT'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#Bottom">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.RECT.Bottom'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Left">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.RECT.Left'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Right">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.RECT.Right'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Top">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.RECT.Top'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NativeMethods+WINDOWPLACEMENT">
+          <Messages>
+           <Message Id="WINDOWPLACEMENT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>WINDOWPLACEMENT</Item>
+             <Item>'NativeMethods.WINDOWPLACEMENT'</Item>
+             <Item>Windowplacement</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'NativeMethods.WINDOWPLACEMENT'</Item>
+            </Issue>
+           </Message>
+           <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Equals">
+             <Item>'NativeMethods.WINDOWPLACEMENT'</Item>
+            </Issue>
+            <Issue Name="op_Equality">
+             <Item>'NativeMethods.WINDOWPLACEMENT'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#flags">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.flags'</Item>
+              </Issue>
+             </Message>
+             <Message Id="flags" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Created="2010-10-15 03:19:00Z">
+              <Issue Name="MemberNoAlternate">
+               <Item>flags</Item>
+               <Item>'NativeMethods.WINDOWPLACEMENT.flags'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#length">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.length'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#maxPosition">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.maxPosition'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#minPosition">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.minPosition'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#normalPosition">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.normalPosition'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#showCmd">
+            <Messages>
+             <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NativeMethods.WINDOWPLACEMENT.showCmd'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SetupPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#grid">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupPanel.grid'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ItemContextMenuInternal">
+            <Accessors>
+             <Accessor Name="#get_ItemContextMenuInternal()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'SetupPanel.ItemContextMenuInternal.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#oldMouseLocation">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupPanel.oldMouseLocation'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SettingChangedCallback">
+            <Accessors>
+             <Accessor Name="#get_SettingChangedCallback()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'SetupPanel.SettingChangedCallback.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'SetupPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'SetupPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UserControl">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupPanel.UserControl'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Taskbar">
+          <Members>
+           <Member Name="#AlwaysOnTop">
+            <Accessors>
+             <Accessor Name="#get_AlwaysOnTop()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'Taskbar.AlwaysOnTop.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#Bounds">
+            <Accessors>
+             <Accessor Name="#get_Bounds()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'Taskbar.Bounds.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#Location">
+            <Accessors>
+             <Accessor Name="#get_Location()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'Taskbar.Location.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Win32Window">
+          <Members>
+           <Member Name="#ChildWindows">
+            <Accessors>
+             <Accessor Name="#get_ChildWindows()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'Win32Window.ChildWindows.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#FromPoint(System.Drawing.Point)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'Win32Window.FromPoint(Point)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetParent()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'Win32Window.GetParent()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetTopLevelParent()">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'Win32Window.GetTopLevelParent()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowDataExtraction">
+          <Members>
+           <Member Name="#.ctor(System.String,System.String,System.String,System.Int32)">
+            <Messages>
+             <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Created="2010-10-15 03:19:00Z">
+              <Issue Name="IncorrectParameterName">
+               <Item>'WindowDataExtraction.WindowDataExtraction(string, string, string, int)'</Item>
+               <Item>'returnCaptureNumber cannot be less than zero.</Item>
+               <Item>'paramName'</Item>
+               <Item>'ArgumentOutOfRangeException'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowsComputer">
+          <Members>
+           <Member Name="#EnsureSE_SHUTDOWN_NAME()">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.LookupPrivilegeValue(System.String,System.String,ZachJohnson.Promptu.WpfUI.NativeMethods+LUID@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'WindowsComputer.EnsureSE_SHUTDOWN_NAME()'</Item>
+               <Item>'NativeMethods.LookupPrivilegeValue(string, string, out NativeMethods.LUID)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.OpenProcessToken(System.IntPtr,System.Int32,System.IntPtr@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'WindowsComputer.EnsureSE_SHUTDOWN_NAME()'</Item>
+               <Item>'NativeMethods.OpenProcessToken(IntPtr, int, out IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LogOffCore()">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.ExitWindowsEx(System.UInt32,System.UInt32)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'WindowsComputer.LogOffCore()'</Item>
+               <Item>'NativeMethods.ExitWindowsEx(uint, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RebootCore()">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.ExitWindowsEx(System.UInt32,System.UInt32)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'WindowsComputer.RebootCore()'</Item>
+               <Item>'NativeMethods.ExitWindowsEx(uint, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ShutDownCore()">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.ExitWindowsEx(System.UInt32,System.UInt32)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="HResultOrErrorCode">
+               <Item>'WindowsComputer.ShutDownCore()'</Item>
+               <Item>'NativeMethods.ExitWindowsEx(uint, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowsGlobalHotkey">
+          <Members>
+           <Member Name="#IsTheSameAs(ZachJohnson.Promptu.WpfUI.WindowsGlobalHotkey)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsGlobalHotkey.IsTheSameAs(WindowsGlobalHotkey)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowsGlobalHotkey+HotKeyReciever">
+          <Members>
+           <Member Name="#.ctor(ZachJohnson.Promptu.WpfUI.WindowsGlobalHotkey)">
+            <Messages>
+             <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsGlobalHotkey.HotKeyReciever.HotKeyReciever(WindowsGlobalHotkey)'</Item>
+               <Item>&#xD;&#xA;&#xD;&#xA;WindowsGlobalHotkey+HotKeyReciever..ctor(WindowsGlobalHotkey)&#xD;&#xA;NativeWindow.CreateHandle(CreateParams):Void</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowsHotkeyHook">
+          <Members>
+           <Member Name="#CallNextHookEx(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.CallNextHookEx(IntPtr, int, IntPtr, IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2010-10-15 03:19:00Z">
+              <Issue Name="OutsideDispose">
+               <Item>'WindowsHotkeyHook.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetKeyState(System.Windows.Forms.Keys)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.GetKeyState(Keys)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetModuleHandle(System.String)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.GetModuleHandle(string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="0" TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'lpModuleName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Key">
+            <Accessors>
+             <Accessor Name="#get_Key()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WindowsHotkeyHook.Key.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#keybd_event(System.Windows.Forms.Keys,System.Byte,System.UInt32,System.UIntPtr)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.keybd_event(Keys, byte, uint, UIntPtr)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="0" TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue Name="Parameter">
+               <Item>'bVk'</Item>
+               <Item>'WindowsHotkeyHook.keybd_event(Keys, byte, uint, UIntPtr)'</Item>
+               <Item>4</Item>
+               <Item>32-bit</Item>
+               <Item>1</Item>
+               <Item>'Keys'</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'bVk'</Item>
+               <Item>'WindowsHotkeyHook.keybd_event(Keys, byte, uint, UIntPtr)'</Item>
+               <Item>4</Item>
+               <Item>64-bit</Item>
+               <Item>1</Item>
+               <Item>'Keys'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ModifierKeys">
+            <Accessors>
+             <Accessor Name="#get_ModifierKeys()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WindowsHotkeyHook.ModifierKeys.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#SetHook(ZachJohnson.Promptu.WpfUI.WindowsHotkeyHook+LowLevelKeyboardProc)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'WindowsHotkeyHook.SetHook(WindowsHotkeyHook.LowLevelKeyboardProc)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SetWindowsHookEx(System.Int32,ZachJohnson.Promptu.WpfUI.WindowsHotkeyHook+LowLevelKeyboardProc,System.IntPtr,System.UInt32)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.SetWindowsHookEx(int, WindowsHotkeyHook.LowLevelKeyboardProc, IntPtr, uint)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UnhookWindowsHookEx(System.IntPtr)">
+            <Messages>
+             <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WindowsHotkeyHook.UnhookWindowsHookEx(IntPtr)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfInternalUndoManager">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'WpfInternalUndoManager'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfInternalUndoManager'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetUndoManager(System.Windows.DependencyObject)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfInternalUndoManager.GetUndoManager(DependencyObject)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfSplashScreenWindow">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'WpfSplashScreenWindow'</Item>
+             <Item>'Timer'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#LayoutRoot">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfSplashScreenWindow.LayoutRoot'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ShowDuration">
+            <Accessors>
+             <Accessor Name="#get_ShowDuration()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfSplashScreenWindow.ShowDuration.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#Window">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfSplashScreenWindow.Window'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfToolkitHost">
+          <Members>
+           <Member Name="#InitializeWindow(System.Windows.Window,ZachJohnson.Promptu.ParameterlessVoid)">
+            <Messages>
+             <Message Id="whileShownCallback" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'whileShownCallback'</Item>
+               <Item>'WpfToolkitHost.InitializeWindow(Window, ParameterlessVoid)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SystemPpi">
+            <Accessors>
+             <Accessor Name="#get_SystemPpi()">
+              <Messages>
+               <Message Id="ZachJohnson.Promptu.WpfUI.NativeMethods.ReleaseDC(System.Runtime.InteropServices.HandleRef,System.Runtime.InteropServices.HandleRef)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+                <Issue Name="HResultOrErrorCode">
+                 <Item>'WpfToolkitHost.SystemPpi.get()'</Item>
+                 <Item>'NativeMethods.ReleaseDC(HandleRef, HandleRef)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfToolkitImages">
+          <Members>
+           <Member Name="#AppIcon">
+            <Accessors>
+             <Accessor Name="#get_AppIcon()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfToolkitImages.AppIcon.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#NativeAppIcon">
+            <Accessors>
+             <Accessor Name="#get_NativeAppIcon()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfToolkitImages.NativeAppIcon.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#NativeAppIconHandle">
+            <Accessors>
+             <Accessor Name="#get_NativeAppIconHandle()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfToolkitImages.NativeAppIconHandle.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfUtilities">
+          <Members>
+           <Member Name="#IsOrAncestorIsType`1(System.Windows.Media.Visual)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfUtilities.IsOrAncestorIsType&lt;T&gt;(this Visual)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LOWORD(System.Int32)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfUtilities.LOWORD(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TryExtendGlass(System.Windows.Window,System.Double,System.Double,System.Double,System.Double)">
+            <Messages>
+             <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfUtilities.TryExtendGlass(Window, double, double, double, double)'</Item>
+               <Item>'HwndSource.CompositionTarget.get()'</Item>
+               <Item>&#xD;&#xA;   -&gt;'WpfUtilities.TryExtendGlass(Window, double, double, double, double)'&#xD;&#xA;   -&gt;'WpfUtilities.TryExtendGlass(Window, double, double, double, double)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI.ClassicSkin">
+        <Types>
+         <Type Name="ClassicPrompt">
+          <Members>
+           <Member Name="#BackgroundColor">
+            <Accessors>
+             <Accessor Name="#get_BackgroundColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.BackgroundColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_BackgroundColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.BackgroundColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#BorderColor">
+            <Accessors>
+             <Accessor Name="#get_BorderColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.BorderColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_BorderColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.BorderColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#OnSourceInitialized(System.EventArgs)">
+            <Messages>
+             <Message Id="intercept" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ClassicPrompt.OnSourceInitialized(EventArgs)'</Item>
+               <Item>'intercept'</Item>
+               <Item>'ClassicPrompt.MouseWheelIntercept'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#PromptWidth">
+            <Accessors>
+             <Accessor Name="#get_PromptWidth()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.PromptWidth.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_PromptWidth(System.Double)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.PromptWidth.set(double)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#ScaledFontSize">
+            <Accessors>
+             <Accessor Name="#get_ScaledFontSize()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.ScaledFontSize.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_ScaledFontSize(System.Double)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.ScaledFontSize.set(double)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#TextColor">
+            <Accessors>
+             <Accessor Name="#get_TextColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.TextColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_TextColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ClassicPrompt.TextColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI.Collections">
+        <Types>
+         <Type Name="VirtualizingCollection">
+          <Members>
+           <Member Name="#RefreshRow(System.Int32)">
+            <Messages>
+             <Message Id="index" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'index'</Item>
+               <Item>'VirtualizingCollection.RefreshRow(int)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VirtualizingCollection+VirtualItem">
+          <Members>
+           <Member Name="#Item[System.Int32]">
+            <Accessors>
+             <Accessor Name="#get_Item(System.Int32)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'VirtualizingCollection.VirtualItem.this.get(int)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_Item(System.Int32,System.Object)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'VirtualizingCollection.VirtualItem.this.set(int, object)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#RaisePropertyChanged(System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'VirtualizingCollection.VirtualItem.RaisePropertyChanged(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI.Configuration">
+        <Types>
+         <Type Name="CommandEditorSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;ZachJohnson.Promptu.WpfUI.NativeMethods+WINDOWPLACEMENT&gt;,ZachJohnson.Promptu.WpfUI.Configuration.ErrorPanelSettings,System.Nullable`1&lt;System.Double&gt;,System.Nullable`1&lt;ZachJohnson.Promptu.WpfUI.UIComponents.ErrorPanelDisplayMode&gt;,ZachJohnson.Promptu.WpfUI.Configuration.DataGridSettings)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CommandEditorSettings.CommandEditorSettings(NativeMethods.WINDOWPLACEMENT?, ErrorPanelSettings, double?, ErrorPanelDisplayMode?, DataGridSettings)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ErrorPanelSettings">
+            <Accessors>
+             <Accessor Name="#get_ErrorPanelSettings()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'CommandEditorSettings.ErrorPanelSettings.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataGridSettings">
+          <Members>
+           <Member Name="#.ctor(System.Collections.Generic.List`1&lt;System.Windows.Controls.DataGridLength&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DataGridSettings.DataGridSettings(List&lt;DataGridLength&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsStarSized">
+            <Accessors>
+             <Accessor Name="#get_IsStarSized()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DataGridSettings.IsStarSized.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_IsStarSized(System.Boolean)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DataGridSettings.IsStarSized.set(bool)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ErrorPanelSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;System.Boolean&gt;,System.Nullable`1&lt;System.Boolean&gt;,System.Nullable`1&lt;System.Boolean&gt;,ZachJohnson.Promptu.WpfUI.Configuration.DataGridSettings)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ErrorPanelSettings.ErrorPanelSettings(bool?, bool?, bool?, DataGridSettings)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FileSystemSuggestionEditorSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;System.Double&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FileSystemSuggestionEditorSettings.FileSystemSuggestionEditorSettings(double?)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionEditorSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;ZachJohnson.Promptu.WpfUI.NativeMethods+WINDOWPLACEMENT&gt;,ZachJohnson.Promptu.WpfUI.Configuration.DataGridSettings)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionEditorSettings.FunctionEditorSettings(NativeMethods.WINDOWPLACEMENT?, DataGridSettings)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionInvocationEditorSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;System.Double&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionInvocationEditorSettings.FunctionInvocationEditorSettings(double?)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionViewerSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;System.Double&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionViewerSettings.FunctionViewerSettings(double?)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileTabSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;System.Double&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileTabSettings.ProfileTabSettings(double?)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SetupPanelSettings">
+          <Members>
+           <Member Name="#.ctor(System.Collections.Generic.List`1&lt;System.Double&gt;)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupPanelSettings.SetupPanelSettings(List&lt;double&gt;)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TempObjectSettings`1">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'TempObjectSettings&lt;T&gt;'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ValueListEditorSettings">
+          <Members>
+           <Member Name="#.ctor(System.Nullable`1&lt;ZachJohnson.Promptu.WpfUI.NativeMethods+WINDOWPLACEMENT&gt;,ZachJohnson.Promptu.WpfUI.Configuration.DataGridSettings)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ValueListEditorSettings.ValueListEditorSettings(NativeMethods.WINDOWPLACEMENT?, DataGridSettings)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ValueListSelectorSettings">
+          <Members>
+           <Member Name="#.ctor(ZachJohnson.Promptu.WpfUI.Configuration.SetupPanelSettings)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ValueListSelectorSettings.ValueListSelectorSettings(SetupPanelSettings)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WindowSettings`1">
+          <Members>
+           <Member Name="#TryParse(System.String)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'WindowSettings&lt;T&gt;.TryParse(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI.DefaultSkin">
+        <Types>
+         <Type Name="DefaultProgressInfoBox">
+          <Members>
+           <Member Name="#Size">
+            <Accessors>
+             <Accessor Name="#set_Size(System.Drawing.Size)">
+              <Messages>
+               <Message Id="converted" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultProgressInfoBox.Size.set(Size)'</Item>
+                 <Item>'converted'</Item>
+                 <Item>'Size'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DefaultPrompt">
+          <Members>
+           <Member Name="#BackgroundColor">
+            <Accessors>
+             <Accessor Name="#get_BackgroundColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.BackgroundColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_BackgroundColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.BackgroundColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#OnSourceInitialized(System.EventArgs)">
+            <Messages>
+             <Message Id="intercept" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultPrompt.OnSourceInitialized(EventArgs)'</Item>
+               <Item>'intercept'</Item>
+               <Item>'DefaultPrompt.MouseWheelIntercept'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#PromptWidth">
+            <Accessors>
+             <Accessor Name="#get_PromptWidth()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.PromptWidth.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_PromptWidth(System.Double)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.PromptWidth.set(double)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#ScaledFontSize">
+            <Accessors>
+             <Accessor Name="#get_ScaledFontSize()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.ScaledFontSize.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_ScaledFontSize(System.Double)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.ScaledFontSize.set(double)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Rectangle'</Item>
+               <Item>'DefaultPrompt.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TextColor">
+            <Accessors>
+             <Accessor Name="#get_TextColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.TextColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_TextColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultPrompt.TextColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DefaultSuggestionProvider">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultSuggestionProvider._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#BackgroundColor">
+            <Accessors>
+             <Accessor Name="#get_BackgroundColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.BackgroundColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_BackgroundColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.BackgroundColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#DISaveSize">
+            <Accessors>
+             <Accessor Name="#get_DISaveSize()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.DISaveSize.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_DISaveSize(System.Windows.Size)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.DISaveSize.set(Size)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#nativeHelper">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultSuggestionProvider.nativeHelper'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#RaiseUserInteractionFinishedEvent(System.Object,System.EventArgs)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultSuggestionProvider.RaiseUserInteractionFinishedEvent(object, EventArgs)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#TextColor">
+            <Accessors>
+             <Accessor Name="#get_TextColor()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.TextColor.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_TextColor(System.Windows.Media.Color)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultSuggestionProvider.TextColor.set(Color)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DefaultTextInfoBox">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultTextInfoBox._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#layoutRoot">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultTextInfoBox.layoutRoot'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Size">
+            <Accessors>
+             <Accessor Name="#set_Size(System.Drawing.Size)">
+              <Messages>
+               <Message Id="converted" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'DefaultTextInfoBox.Size.set(Size)'</Item>
+                 <Item>'converted'</Item>
+                 <Item>'Size'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#Window">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DefaultTextInfoBox.Window'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SuggestionItemWrapper">
+          <Members>
+           <Member Name="#ImageSource">
+            <Accessors>
+             <Accessor Name="#get_ImageSource()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'SuggestionItemWrapper.ImageSource.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="ZachJohnson.Promptu.WpfUI.UIComponents">
+        <Types>
+         <Type Name="AboutPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'AboutPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'AboutPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AppearanceTabPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'AppearanceTabPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ArgumentDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ArgumentDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ArgumentDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="AssemblyReferenceEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'AssemblyReferenceEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'AssemblyReferenceEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'AssemblyReferenceEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'AssemblyReferenceEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'AssemblyReferenceEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BooleanInverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'BooleanInverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ChooseNewOrExistingProfile">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ChooseNewOrExistingProfile._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'ChooseNewOrExistingProfile.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'ChooseNewOrExistingProfile.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ChooseOverrideOrNewHotkey">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ChooseOverrideOrNewHotkey._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'ChooseOverrideOrNewHotkey.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CollectionEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CollectionEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ConvertCellInfo(System.Windows.Controls.DataGridCellInfo)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CollectionEditor.ConvertCellInfo(DataGridCellInfo)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetDataGridCell(System.Windows.DependencyObject)">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+              <Issue>
+               <Item>'CollectionEditor.GetDataGridCell(DependencyObject)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'CollectionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'CollectionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'CollectionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IStyleConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Style'</Item>
+               <Item>'CollectionEditor.IStyleConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CollisionResolvingDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CollisionResolvingDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'CollisionResolvingDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ColorInverterConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ColorInverterConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ColorPicker">
+          <Members>
+           <Member Name="#colorPickerSelf">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ColorPicker.colorPickerSelf'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#comboBox">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ColorPicker.comboBox'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="CommandEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CommandEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#errorPanelSplitter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CommandEditor.errorPanelSplitter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#scrollViewer">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'CommandEditor.scrollViewer'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'CommandEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConditionalVisibilityConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ConditionalVisibilityConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ConfirmDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ConfirmDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'ConfirmDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ConfirmDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ConflictObjectAttributesConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ConflictObjectAttributesConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ConflictObjectTypeConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ConflictObjectTypeConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ContactLinkSanitizingConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ContactLinkSanitizingConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="CtrlClickLinkConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'CtrlClickLinkConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="Custom">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'Custom'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataGridSelectedCellsBridge">
+          <Members>
+           <Member Name="#.ctor(System.Windows.Controls.DataGrid)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DataGridSelectedCellsBridge.DataGridSelectedCellsBridge(DataGrid)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DataTemplateAttachments">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'DataTemplateAttachments'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DoubleRounderConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'DoubleRounderConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="DrawingBrushConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'DrawingBrushConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="DrawingBrushConverterExtension">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'DrawingBrushConverterExtension'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="EnumSelectedValueConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'EnumSelectedValueConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="EnumValuesConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'EnumValuesConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ErrorAdorner">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ErrorAdorner'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ErrorPanel">
+          <Members>
+           <Member Name="#errorPanel">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ErrorPanel.errorPanel'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#stackPanel">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ErrorPanel.stackPanel'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'DataGridTextColumn'</Item>
+               <Item>'ErrorPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'DataGridTextColumn'</Item>
+               <Item>'ErrorPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBoxButton'</Item>
+               <Item>'ErrorPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBoxButton'</Item>
+               <Item>'ErrorPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ErrorPanelIndexGetter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ErrorPanelIndexGetter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ExistingProfile">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ExistingProfile._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FeedbackStartConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'FeedbackStartConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="FeedbackTypeConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'FeedbackTypeConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="FileSystemParameterSuggestionEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FileSystemParameterSuggestionEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#errorPanelSplitter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FileSystemParameterSuggestionEditor.errorPanelSplitter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'FileSystemParameterSuggestionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FontFamiliesGetter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'FontFamiliesGetter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="FrameworkElementAttachments">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FrameworkElementAttachments'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'Label'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'PromptuTextBox'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfComboInput'</Item>
+               <Item>'FunctionEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionInvocationEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionInvocationEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#errorPanelSplitter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionInvocationEditor.errorPanelSplitter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'FunctionInvocationEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FunctionViewer">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionViewer._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#splitter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'FunctionViewer.splitter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'FunctionViewer.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'FunctionViewer.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GetDrawingExtension">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'GetDrawingExtension'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="GetPluginsPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'GetPluginsPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="GroupingConversionInfoConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'GroupingConversionInfoConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="HeightDifferenceConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'HeightDifferenceConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="HotkeyBindingWrapper">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'HotkeyBindingWrapper'</Item>
+             <Item>'HotkeyControlPresenter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="HotkeyControl">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'HotkeyControl._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#HotkeyState">
+            <Accessors>
+             <Accessor Name="#get_HotkeyState()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'HotkeyControl.HotkeyState.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'HotkeyControl.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'HotkeyControl.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'HotkeyControl.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'HotkeyControl.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="HotkeyInUseDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'HotkeyInUseDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'HotkeyInUseDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="HotkeyInUseNewHotkey">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'HotkeyInUseNewHotkey._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ImageAndText">
+          <Members>
+           <Member Name="#ImageSource">
+            <Accessors>
+             <Accessor Name="#get_ImageSource()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ImageAndText.ImageSource.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_ImageSource(System.Windows.Media.ImageSource)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ImageAndText.ImageSource.set(ImageSource)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#Text">
+            <Accessors>
+             <Accessor Name="#get_Text()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ImageAndText.Text.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_Text(System.String)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'ImageAndText.Text.set(string)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IndentConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'IndentConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="InstalledPluginsPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'InstalledPluginsPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IntCompareConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'IntCompareConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IntToVisibilityConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'IntToVisibilityConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ItemInfoAttributesConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ItemInfoAttributesConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="LeftMarginConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'LeftMarginConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2010-10-15 03:19:00Z">
+              <Issue Name="TooGeneric">
+               <Item>'LeftMarginConverter.ConvertBack(object, Type, object, CultureInfo)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ListSelector">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ListSelector._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfMenuItem'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfSplitToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfSplitToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfToolbarButton'</Item>
+               <Item>'ListSelector.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ListViewSelectedIndexCollection">
+          <Members>
+           <Member Name="#.ctor(System.Windows.Controls.ListView)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ListViewSelectedIndexCollection.ListViewSelectedIndexCollection(ListView)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="LocalizedValueExtension">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'LocalizedValueExtension'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="NewUserDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NewUserDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'NewUserDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'NewUserDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotBinding">
+          <Members>
+           <Member Name="#.ctor(System.Windows.Data.Binding,System.Object)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NotBinding.NotBinding(Binding, object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Binding">
+            <Accessors>
+             <Accessor Name="#get_Binding()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'NotBinding.Binding.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+           <Member Name="#NotEqualTo">
+            <Accessors>
+             <Accessor Name="#get_NotEqualTo()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'NotBinding.NotEqualTo.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NotEqualConverter">
+          <Members>
+           <Member Name="#.ctor(System.Object)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NotEqualConverter.NotEqualConverter(object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="NullableDoubleConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'NullableDoubleConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="NumericUpDown">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'NumericUpDown'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#minusButton">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NumericUpDown.minusButton'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#plusButton">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'NumericUpDown.plusButton'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ObjectDisambiguator">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ObjectDisambiguator._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ObjectDisambiguator.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ObjectImageConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ObjectImageConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ObjectNameConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ObjectNameConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="ObservableCollection">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ObservableCollection'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="OptionsCollectionEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'OptionsCollectionEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OptionsDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'OptionsDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OptionsTabPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'OptionsTabPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="OptionsTemplateSelector">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'OptionsTemplateSelector'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="OverwriteDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'OverwriteDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'OverwriteDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'CommandLink'</Item>
+               <Item>'OverwriteDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PluginImageConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'PluginImageConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="PluginsTabPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'PluginsTabPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PluginUpdateDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'PluginUpdateDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'PluginUpdateDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileAdvanced">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileAdvanced._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfRadioButton'</Item>
+               <Item>'ProfileAdvanced.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfRadioButton'</Item>
+               <Item>'ProfileAdvanced.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileBasics">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileBasics._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'ProfileBasics.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'ProfileBasics.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileConfigPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileConfigPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ProfileConfigPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ProfileConfigPanel.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileFinish">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileFinish._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'ProfileFinish.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ProfileTabPanel">
+          <Members>
+           <Member Name="#errorPanelSplitter">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ProfileTabPanel.errorPanelSplitter'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PromptuOptionsPanel">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'PromptuOptionsPanel._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PromptuTextBox">
+          <Messages>
+           <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>Promptu</Item>
+             <Item>'PromptuTextBox'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'PromptuTextBox'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#Dispose()">
+            <Messages>
+             <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Created="2010-10-15 03:19:00Z">
+              <Issue Name="NotCalled">
+               <Item>'PromptuTextBox.Dispose()'</Item>
+               <Item>'GC.SuppressFinalize(object)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#PhysicalWidth">
+            <Messages>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2010-10-15 03:19:00Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'PromptuTextBox.PhysicalWidth'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044" Created="2010-10-15 03:19:00Z">
+              <Issue Name="AddGetter">
+               <Item>'PromptuTextBox.PhysicalWidth'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+            <Accessors>
+             <Accessor Name="#set_PhysicalWidth(System.Nullable`1&lt;System.Int32&gt;)">
+              <Messages>
+               <Message Id="value" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Created="2010-10-15 03:19:00Z" FixCategory="DependsOnFix">
+                <Issue>
+                 <Item>'value'</Item>
+                 <Item>'PromptuTextBox.PhysicalWidth.set(int?)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="PromptuWindow">
+          <Messages>
+           <Message Id="Promptu" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>Promptu</Item>
+             <Item>'PromptuWindow'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="RenameDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'RenameDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'RenameDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ResourceGettingConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ResourceGettingConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="RgbHexConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'RgbHexConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="RTLabel">
+          <Members>
+           <Member Name="#RenderRTGroup(ZachJohnson.Promptu.UIModel.RichText.RTGroup,System.Windows.Controls.StackPanel)">
+            <Messages>
+             <Message Id="lineBreak" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'RTLabel.RenderRTGroup(RTGroup, StackPanel)'</Item>
+               <Item>'lineBreak'</Item>
+               <Item>'LineBreak'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SetupDialog">
+          <Members>
+           <Member Name="#OnSourceInitialized(System.EventArgs)">
+            <Messages>
+             <Message Id="ZachJohnson.Promptu.WpfUI.UIComponents.SetupDialog+SetupDialogMessageWindow" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Created="2010-10-15 03:19:00Z">
+              <Issue Name="ObjectCreation">
+               <Item>'SetupDialog.OnSourceInitialized(EventArgs)'</Item>
+               <Item>'SetupDialog.SetupDialogMessageWindow'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#setupDialog">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SetupDialog.setupDialog'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SimpleCollectionViewer">
+          <Members>
+           <Member Name="#CellTemplate">
+            <Accessors>
+             <Accessor Name="#get_CellTemplate()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'SimpleCollectionViewer.CellTemplate.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+             <Accessor Name="#set_CellTemplate(System.Windows.DataTemplate)">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'SimpleCollectionViewer.CellTemplate.set(DataTemplate)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SkinImageConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'SkinImageConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="SuperTabControl">
+          <Members>
+           <Member Name="#itemContent">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'SuperTabControl.itemContent'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UnhandledExceptionDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'UnhandledExceptionDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UpdateAvailableDialog">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'UpdateAvailableDialog._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'TextBlock'</Item>
+               <Item>'UpdateAvailableDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'UpdateAvailableDialog.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="UpdateDownloadProgress">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'UpdateDownloadProgress._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ValueListEditor">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ValueListEditor._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ValueListEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfCheckBox'</Item>
+               <Item>'ValueListEditor.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ValueListSelectorWindow">
+          <Members>
+           <Member Name="#_CreateDelegate(System.Type,System.String)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'ValueListSelectorWindow._CreateDelegate(Type, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2010-10-15 03:19:00Z">
+              <Issue Name="Parameter">
+               <Item>'target'</Item>
+               <Item>'WpfButton'</Item>
+               <Item>'ValueListSelectorWindow.IComponentConnector.Connect(int, object)'</Item>
+               <Item>castclass</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="VersionConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'VersionConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="VisibilityConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'VisibilityConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="WeakEventSetter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'WeakEventSetter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="WindowUtils">
+          <Messages>
+           <Message Id="Utils" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2010-10-15 03:19:00Z">
+            <Issue Name="Type">
+             <Item>Utils</Item>
+             <Item>'WindowUtils'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="WpfButton">
+          <Members>
+           <Member Name="#.cctor()">
+            <Messages>
+             <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfButton'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfMenuSeparator">
+          <Members>
+           <Member Name="#Available">
+            <Accessors>
+             <Accessor Name="#get_Available()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfMenuSeparator.Available.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfNotifyIcon">
+          <Messages>
+           <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Created="2010-10-15 03:19:00Z" FixCategory="NonBreaking">
+            <Issue Name="NonBreaking">
+             <Item>'WpfNotifyIcon'</Item>
+             <Item>'NotifyIcon'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="WpfRadioButton">
+          <Members>
+           <Member Name="#Image">
+            <Accessors>
+             <Accessor Name="#get_Image()">
+              <Messages>
+               <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2010-10-15 03:19:00Z">
+                <Issue>
+                 <Item>'WpfRadioButton.Image.get()'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="WpfToolbarButton">
+          <Messages>
+           <Message Id="Toolbar" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2010-10-15 03:19:00Z">
+            <Issue Name="TypeShouldBeCompoundWord">
+             <Item>Toolbar</Item>
+             <Item>'WpfToolbarButton'</Item>
+             <Item>ToolBar</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#imageAndText">
+            <Messages>
+             <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Created="2010-10-15 03:19:00Z">
+              <Issue>
+               <Item>'WpfToolbarButton.imageAndText'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="ZeroToOnePercentageConverter">
+          <Messages>
+           <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Created="2010-10-15 03:19:00Z">
+            <Issue>
+             <Item>'ZeroToOnePercentageConverter'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+    <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+    <Resolution Name="Default">{0} is an internal class that is apparently never instantiated. If so, remove the code from the assembly. If this class is intended to contain only static methods, consider adding a private constructor to prevent the compiler from generating a default constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+    <Resolution Name="Default">It appears that field {0} is never used or is only ever assigned to. Use this field or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+    <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Resolution>
+    <Resolution Name="OutsideDispose">{0} calls {1}, a method that is typically only called within an implementation of 'IDisposable.Dispose'. Refer to the IDisposable pattern for more information.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="TypeShouldBeCompoundWord">The discrete term '{0}' in type name {1} should be expressed as a compound word, '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+    <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+    <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+    <Resolution Name="HResultOrErrorCode">{0} calls {1} but does not use the HRESULT or error code that the method returns. This could lead to unexpected behavior in error conditions or low-resource situations. Use the result in a conditional statement, assign the result to a variable, or pass it as an argument to another method.</Resolution>
+    <Resolution Name="ObjectCreation">{0} creates a new instance of {1} which is never used. Pass the instance as an argument to another method, assign the instance to a variable, or remove the object creation if it is unnecessary.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+    <Resolution Name="Default">{0} calls into {1} which has a LinkDemand. By making this call, {1} is indirectly exposed to user code. Review the following call stack that might expose a way to circumvent security protection: {2}</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+    <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Type">Correct the casing of '{0}' in type name {1} by changing it to '{2}'.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+    <Resolution Name="MemberMoreMeaningfulName">Consider providing a more meaningful name than member name {0}.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+    <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   </Rule>
+   <Rule TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208">
+    <Resolution Name="IncorrectParameterName">Method {0} passes '{1}' as the {2} argument to a {3} constructor. Replace this argument with one of the method's parameter names. Note that the provided parameter name should have the exact casing as declared on the method.</Resolution>
+   </Rule>
+   <Rule TypeName="InterfaceMethodsShouldBeCallableByChildTypes" Category="Microsoft.Design" CheckId="CA1033">
+    <Resolution Name="Default">Make {0} sealed (a breaking change if this class has previously shipped), implement the method non-explicitly, or implement a new method that exposes the functionality of {1} and is visible to derived classes.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+    <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+    <Resolution Name="Default">Because assembly {0} contains a ResX-based resource file, mark it with the NeutralResourcesLanguage attribute, specifying the language of the resources within the assembly. This could improve lookup performance the first time a resource is retrieved.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414">
+    <Resolution Name="Default">Add the MarshalAsAttribute to parameter {0} of P/Invoke {1}. If the corresponding unmanaged parameter is a 4-byte Win32 'BOOL', use [MarshalAs(UnmanagedType.Bool)]. For a 1-byte C++ 'bool', use MarshalAs(UnmanagedType.U1).</Resolution>
+    <Resolution Name="Return">Add the MarshalAsAttribute to the return type of P/Invoke {0}. If the corresponding unmanaged return type is a 4-byte Win32 'BOOL', use MarshalAs(UnmanagedType.Bool). For a 1-byte C++ 'bool', use MarshalAs(UnmanagedType.U1).</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+    <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   </Rule>
+   <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+    <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   </Rule>
+   <Rule TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815">
+    <Resolution Name="Equals">{0} should override Equals.</Resolution>
+    <Resolution Name="op_Equality">{0} should override the equality (==) and inequality (!=) operators.</Resolution>
+   </Rule>
+   <Rule TypeName="PInvokeDeclarationsShouldBePortable" Category="Microsoft.Portability" CheckId="CA1901">
+    <Resolution Name="Parameter">As it is declared in your code, parameter {0} of P/Invoke {1} will be {2} bytes wide on {3} platforms. This is not correct, as the actual native declaration of this API indicates it should be {4} bytes wide on {3} platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of {5}.</Resolution>
+    <Resolution Name="Return">As it is declared in your code, the return type of P/Invoke {0} will be {1} bytes wide on {2} platforms. This is not correct, as the actual native declaration of this API indicates it should be {3} bytes wide on {2} platforms. Consult the MSDN Platform SDK documentation for help determining what data type should be used instead of {4}.</Resolution>
+   </Rule>
+   <Rule TypeName="PInvokeEntryPointsShouldExist" Category="Microsoft.Interoperability" CheckId="CA1400">
+    <Resolution Name="Default">Correct the declaration of {0} so that it correctly points to an existing entry point in {1}. The unmanaged entry point name currently linked to is {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotBeWriteOnly" Category="Microsoft.Design" CheckId="CA1044">
+    <Resolution Name="AddGetter">Because property {0} is write-only, either add a property getter with an accessibility that is greater than or equal to its setter or convert this property into a method.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801">
+    <Resolution Name="Default">Parameter {0} of {1} is never used. Remove the parameter or use it in the method body.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyMarshalingForPInvokeStringArguments" Category="Microsoft.Globalization" CheckId="CA2101">
+    <Resolution Name="Parameter">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+    <Resolution Name="ParameterImplicitAnsi">To reduce security risk, marshal parameter {0} as Unicode, by setting DllImport.CharSet to CharSet.Unicode, or by explicitly marshaling the parameter as UnmanagedType.LPWStr. If you need to marshal this string as ANSI or system-dependent, specify MarshalAs explicitly, and set BestFitMapping=false; for added security, also set ThrowOnUnmappableChar=true.</Resolution>
+   </Rule>
+   <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+    <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+    <Resolution Name="MemberNoAlternate">Replace the term '{0}' in member name {1} with an appropriate alternate or remove it entirely.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

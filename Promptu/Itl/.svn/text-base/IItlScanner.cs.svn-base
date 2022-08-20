@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.Itl
+{
+    internal interface IItlScanner
+    {
+        List<ScanToken> Results { get; }
+
+        bool HasJustText { get; }
+
+        FeedbackCollection Feedback { get; }
+    }
+}

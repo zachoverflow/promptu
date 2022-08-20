@@ -1,0 +1,26 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+
+//namespace ZachJohnson.Promptu.PluginModel.Hooks
+//{
+//    //public delegate HookAction CommandExecutingHookMethod(string textToExecute, ExecuteMode mode);
+
+//    public sealed class CommandExecutingHook : HookBase
+//    {
+//        public CommandExecutingHook(PromptuPlugin plugin)
+//            : base(plugin)
+//        {
+//        }
+
+//        protected override void InstallCore()
+//        {
+//            Hooks.InstalledHooks.CommandExecutingHooks.Add(this);
+//        }
+
+//        protected override void UninstallCore()
+//        {
+//            Hooks.InstalledHooks.CommandExecutingHooks.Remove(this);
+//        }
+//    }
+//}

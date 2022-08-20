@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.SkinApi;
+using System.Drawing;
+using ZachJohnson.Promptu.UIModel.RichText;
+
+namespace ZachJohnson.Promptu.Skins
+{
+    internal static class MessageBoxProvider
+    {
+        public static void GiveError(string message, PromptHandler.SeparateSuggestionHandler suggestionHandler, ISuggestionProvider suggester, int resetsToDestroy)
+        {
+            ITextInfoBox informationBox = InternalGlobals.CurrentSkinInstance.CreateTextInfoBox();
+            //REVISIT Globals.CurrentSkin.ToolTipSettings.ApplyTo(informationBox);
+
+            informationBox.InfoType = InfoType.Error;
+
+            informationBox.MaxWidth = 500;
+
+            //informationBox.Size = new Size(informationBox.Size.Height, 500);
+
+            //informationBox.Content.Font = PromptuFonts.UnauthorizedAccessFont;
+            //informationBox.Content.ForeColor = Color.Tomato;
+
+            informationBox.Content = new Text(message, TextStyle.Normal);
+
+            Size preferredSize;
+
+            InternalGlobals.CurrentSkinInstance.LayoutManager.PositionInfoBox(
+                new PositioningContext(InternalGlobals.CurrentSkin, InternalGlobals.CurrentSkinInstance, new InfoBoxes(suggestionHandler.InformationBoxMananger)),
+                informationBox,
+                out preferredSize);
+
+            //informationBox.SizeAndPositionYourself(new Rectangle(Globals.CurrentSkin.Prompt.Location,
+            //    Globals.CurrentSkin.Prompt.Size), new List<Rectangle>(), Size.Empty);
+
+            suggestionHandler.InformationBoxMananger.RegisterAndShow(informationBox, true, suggester);
+
+            if (resetsToDestroy > 0)
+            {
+                suggestionHandler.InformationBoxMananger.SetResetsTillDestroy(informationBox, resetsToDestroy);
+            }
+        }
+    }
+}

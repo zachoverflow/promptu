@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/22/trunk/Promptu/PluginModel/Internals
+END
+ErrorConsole.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/promptu/!svn/ver/41/trunk/Promptu/PluginModel/Internals/ErrorConsole.cs
+END
+CompatibilityAnalyzer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/44/trunk/Promptu/PluginModel/Internals/CompatibilityAnalyzer.cs
+END
+BindingNode.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/3/trunk/Promptu/PluginModel/Internals/BindingNode.cs
+END
+PluginUpdate.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/promptu/!svn/ver/41/trunk/Promptu/PluginModel/Internals/PluginUpdate.cs
+END
+PromptuHookManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/50/trunk/Promptu/PluginModel/Internals/PromptuHookManager.cs
+END
+LazyObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/39/trunk/Promptu/PluginModel/Internals/LazyObject.cs
+END
+PluginConfigWindowManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/promptu/!svn/ver/41/trunk/Promptu/PluginModel/Internals/PluginConfigWindowManager.cs
+END
+PromptuAssemblyResolver.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/promptu/!svn/ver/44/trunk/Promptu/PluginModel/Internals/PromptuAssemblyResolver.cs
+END
+LazyExternalObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/promptu/!svn/ver/38/trunk/Promptu/PluginModel/Internals/LazyExternalObject.cs
+END
+BindingContextManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/promptu/!svn/ver/30/trunk/Promptu/PluginModel/Internals/BindingContextManager.cs
+END
+BindingExpression.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/promptu/!svn/ver/41/trunk/Promptu/PluginModel/Internals/BindingExpression.cs
+END

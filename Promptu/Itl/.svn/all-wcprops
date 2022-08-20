@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl
+END
+IItlScanner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/IItlScanner.cs
+END
+InlineItlScanner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/42/trunk/Promptu/Itl/InlineItlScanner.cs
+END
+ScanTokenLiteral.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/ScanTokenLiteral.cs
+END
+ItlCompiler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/ItlCompiler.cs
+END
+StandardItlScanner.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/42/trunk/Promptu/Itl/StandardItlScanner.cs
+END
+ItlUtilities.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/ItlUtilities.cs
+END
+ItlParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/promptu/!svn/ver/42/trunk/Promptu/Itl/ItlParser.cs
+END
+ScanToken.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/ScanToken.cs
+END
+ItlType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/promptu/!svn/ver/2/trunk/Promptu/Itl/ItlType.cs
+END

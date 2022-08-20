@@ -1,0 +1,15 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
+
+//namespace ZachJohnson.Promptu.PluginModel.Hooks
+//{
+//    internal static class InstalledHooks
+//    {
+//        private static List<CommandExecutingHook> commandExecutingHooks = new List<CommandExecutingHook>();
+
+//        public static List<CommandExecutingHook> CommandExecutingHooks
+//        {
+//            get { return commandExecutingHooks; }
+//    }
+//}

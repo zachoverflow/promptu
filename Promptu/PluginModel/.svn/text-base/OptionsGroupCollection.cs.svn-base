@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using ZachJohnson.Promptu.UIModel;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    public class OptionsGroupCollection : BindingCollection<OptionsGroup>
+    {
+        public OptionsGroupCollection()
+        {
+        }
+
+        public void DisposeAllChildren()
+        {
+            foreach (OptionsGroup group in this)
+            {
+                foreach (object o in group)
+                {
+                    IDisposable disposable = o as IDisposable;
+                    if (disposable != null)
+                    {
+                        disposable.Dispose();
+                    }
+                }
+            }
+        }
+    }
+}

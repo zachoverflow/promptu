@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace ZachJohnson.Promptu.SkinApi
+{
+    public interface IInfoBox : IUIElement
+    {
+        //event MouseEventHandler MouseDown;
+
+        void Show();
+
+        void Hide();
+
+        bool Visible { get; }
+
+        Size Size { get; set; }
+
+        Size ActualSize { get; }
+
+        Point Location { get; set; }
+
+        Size GetPreferredSize(Size proposedSize);
+
+        bool TopMost { get; set; }
+
+        void Refresh();
+
+        void BringToFront();
+
+        int? MaxWidth { get; set; }
+    }
+}

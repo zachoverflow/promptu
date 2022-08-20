@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZachJohnson.Promptu.PluginModel
+{
+    [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
+    public sealed class IdAttribute : Attribute
+    {
+        private string id;
+
+        public IdAttribute(string id)
+        {
+            if (id == null)
+            {
+                throw new ArgumentNullException("id");
+            }
+
+            this.id = id;
+        }
+
+        public string Id
+        {
+            get { return this.id; }
+        }
+    }
+}

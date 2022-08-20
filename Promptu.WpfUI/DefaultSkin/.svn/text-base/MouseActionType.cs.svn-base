@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ZachJohnson.Promptu.WpfUI.DefaultSkin
+{
+    internal enum MouseActionType
+    {
+        Move = 0,
+        Resize
+    }
+}

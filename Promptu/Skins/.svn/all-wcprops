@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/promptu/!svn/ver/49/trunk/Promptu/Skins
+END
+ToolTipSettings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/ToolTipSettings.cs
+END
+PromptHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/50/trunk/Promptu/Skins/PromptHandler.cs
+END
+Skin-Old.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/Skin-Old.cs
+END
+SkinCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/SkinCollection.cs
+END
+MockSuggester.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/48/trunk/Promptu/Skins/MockSuggester.cs
+END
+IInstanceOnDemand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/IInstanceOnDemand.cs
+END
+SuggestionUtilities.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/promptu/!svn/ver/19/trunk/Promptu/Skins/SuggestionUtilities.cs
+END
+SuggestionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/SuggestionHandler.cs
+END
+InformationBoxLayoutManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/InformationBoxLayoutManager.cs
+END
+InvisibleEndQuote.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/InvisibleEndQuote.cs
+END
+InformationBoxManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/promptu/!svn/ver/33/trunk/Promptu/Skins/InformationBoxManager.cs
+END
+DoPopulationInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/promptu/!svn/ver/44/trunk/Promptu/Skins/DoPopulationInfo.cs
+END
+SkinFinder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/SkinFinder.cs
+END
+ParameterHelpContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/promptu/!svn/ver/42/trunk/Promptu/Skins/ParameterHelpContext.cs
+END
+InformationBoxType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/InformationBoxType.cs
+END
+FunctionAndCommandContextItemValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/promptu/!svn/ver/19/trunk/Promptu/Skins/FunctionAndCommandContextItemValidator.cs
+END
+SuggestionProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/42/trunk/Promptu/Skins/SuggestionProvider.cs
+END
+ItemValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/ItemValidator.cs
+END
+Skin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/Skin.cs
+END
+PopulationProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/44/trunk/Promptu/Skins/PopulationProvider.cs
+END
+PopulationInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/PopulationInfo.cs
+END
+PropertiesMiddleMan.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/2/trunk/Promptu/Skins/PropertiesMiddleMan.cs
+END
+MessageBoxProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/promptu/!svn/ver/38/trunk/Promptu/Skins/MessageBoxProvider.cs
+END
+FunctionSuggestionProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/promptu/!svn/ver/19/trunk/Promptu/Skins/FunctionSuggestionProvider.cs
+END
+SeparateSuggestionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/promptu/!svn/ver/48/trunk/Promptu/Skins/SeparateSuggestionHandler.cs
+END
